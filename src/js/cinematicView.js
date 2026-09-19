@@ -40,7 +40,7 @@ export class CinematicView {
             <li><a class="cine-nav-link" href="#projects" data-section="projects">Projects</a></li>
             <li><a class="cine-nav-link" href="#experience" data-section="experience">Academics</a></li>
             <li><a class="cine-nav-link" href="#research" data-section="research">Research</a></li>
-            <li><a class="cine-nav-link" href="#ai-assistant" data-section="ai-assistant">AI Assistant</a></li>
+            <li><a class="cine-nav-link" href="#ai-assistant" data-section="ai-assistant">Resume Assistant</a></li>
             <li><a class="cine-nav-link" href="#contact" data-section="contact">Contact</a></li>
           </ul>
         </div>
@@ -79,8 +79,8 @@ export class CinematicView {
             <span>IEEE Publication</span>
           </a>
           <a class="cine-mobile-nav-link" href="#ai-assistant" data-section="ai-assistant">
-            <span class="m-link-icon">🤖</span>
-            <span>AI Resume Assistant</span>
+            <span class="m-link-icon">📋</span>
+            <span>Resume Assistant</span>
           </a>
           <a class="cine-mobile-nav-link" href="#contact" data-section="contact">
             <span class="m-link-icon">✉️</span>
@@ -107,7 +107,7 @@ export class CinematicView {
           </h1>
 
           <p class="cine-hero-sub">
-            Hi, I'm <strong>Abhishek Kumar</strong> — B.Tech ECE candidate at <strong>IEM Kolkata (8.73 CGPA)</strong>, 
+            Hi, I'm <strong>Abhishek Kumar</strong> — B.Tech ECE 4th year candidate at <strong>IEM Kolkata (8.73 CGPA)</strong>, 
             published IEEE researcher, and VLSI/embedded firmware developer with hands-on industrial internships at <strong>Jadavpur University</strong> and <strong>SAIL</strong>.
           </p>
 
@@ -117,7 +117,7 @@ export class CinematicView {
               <span>↓</span>
             </a>
             <a href="#ai-assistant" class="btn-cine-secondary">
-              <span>🤖 Chat with AI Assistant</span>
+              <span>📋 Ask Resume Assistant</span>
             </a>
             <a href="#contact" class="btn-cine-secondary">
               <span>✉️ Get in Touch</span>
@@ -173,7 +173,7 @@ export class CinematicView {
                 <div class="cine-profile-badge">🎓</div>
               </div>
               <h3 class="cine-profile-name">${resumeData.personal.name}</h3>
-              <div class="cine-profile-role">ECE Engineer • VLSI & Software</div>
+              <div class="cine-profile-role">B.Tech ECE 4th Year Candidate • VLSI & Software</div>
               <p class="cine-profile-bio">
                 ${resumeData.personal.summary}
               </p>
@@ -302,20 +302,20 @@ export class CinematicView {
           </div>
         </section>
 
-        <!-- ================= EMBEDDED AI ASSISTANT ================= -->
+        <!-- ================= INTERACTIVE RESUME ASSISTANT ================= -->
         <section class="cine-section" id="ai-assistant">
           <div class="cine-section-header">
-            <span class="cine-section-pill">Interactive AI Engine</span>
-            <h2 class="cine-section-title">Ask AI About Abhishek Kumar</h2>
-            <p class="cine-section-subtitle">Directly interrogate Abhishek's resume, academic standing, project architectures, and placement readiness.</p>
+            <span class="cine-section-pill">Interactive Knowledge Base</span>
+            <h2 class="cine-section-title">Ask About Abhishek Kumar</h2>
+            <p class="cine-section-subtitle">Instantly query Abhishek's verified resume, academic standing, project architectures, and placement readiness.</p>
           </div>
 
           <div class="cine-ai-assistant-card">
             <div class="cine-ai-head">
-              <div class="cine-ai-avatar">🤖</div>
+              <div class="cine-ai-avatar">📋</div>
               <div class="cine-ai-title-wrap">
-                <h4>Placement AI Assistant</h4>
-                <span>Trained on Abhishek's Complete Resume, Transcripts & Project Repos</span>
+                <h4>Placement Resume Assistant</h4>
+                <span>Verified Knowledge Base of Abhishek's Resume, Transcripts & Project Repos</span>
               </div>
             </div>
 
@@ -329,13 +329,13 @@ export class CinematicView {
 
             <div class="cine-ai-chat-box" id="cine-chat-log">
               <div class="cine-chat-msg assistant">
-                Hello! I am Abhishek's AI portfolio assistant. Click any prompt above or type your question below to explore his technical qualifications.
+                Hello! I am Abhishek's Interactive Resume Assistant. Click any prompt above or type your question below to explore his technical qualifications and placement readiness.
               </div>
             </div>
 
             <form class="cine-ai-form" id="cine-ai-form">
               <input type="text" class="cine-ai-input" id="cine-ai-input" placeholder="Ask anything about Abhishek (e.g. 'Can he code in Python and C++?')..." required />
-              <button type="submit" class="btn-cine-ai-ask">Ask AI</button>
+              <button type="submit" class="btn-cine-ai-ask">Ask Assistant</button>
             </form>
           </div>
         </section>

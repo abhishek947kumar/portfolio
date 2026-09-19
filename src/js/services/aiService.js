@@ -130,7 +130,7 @@ Always answer warmly, concisely, and with persuasive evidence of Abhishek's tech
 
     // 2. Specific intent handlers
     if (qLower.includes('who') || qLower.includes('abhishek') || qLower.includes('intro') || qLower.includes('about')) {
-      return `**${resumeData.personal.name}** is an Electronics & Communication Engineering undergraduate (Class of 2027) at **Institute of Engineering & Management (IEM), Kolkata** with a **8.73 CGPA**.\n\nHe specializes in **Embedded Systems, Hardware-Software Co-Design, and Software Engineering (Python/C++)**. He has published research with IEEE (IEMENTECH 2026) and completed industrial internships at **Jadavpur University** (VLSI Design) and **SAIL** (Plant Automation).`;
+      return `**${resumeData.personal.name}** is a **B.Tech ECE 4th year candidate** (Class of 2027) at **Institute of Engineering & Management (IEM), Kolkata** with an **8.73 CGPA**.\n\nHe specializes in **Embedded Systems, Hardware-Software Co-Design, and Software Engineering (Python/C++)**. He has published research with IEEE (IEMENTECH 2026) and completed industrial internships at **Jadavpur University** (VLSI Design) and **SAIL** (Plant Automation).`;
     }
 
     if (qLower.includes('project') || qLower.includes('work') || qLower.includes('portfolio') || qLower.includes('build')) {

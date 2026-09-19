@@ -10,7 +10,7 @@
 
 ## 👨‍💻 Candidate Overview
 - **Name**: Abhishek Kumar
-- **Degree**: B.Tech in Electronics & Communication Engineering (ECE) — **CGPA: 8.73**
+- **Degree**: B.Tech in Electronics & Communication Engineering (ECE) — **4th Year Candidate (CGPA: 8.73)**
 - **Institution**: Institute of Engineering & Management (IEM), Kolkata (Class of 2027)
 - **Specialization**: Embedded Systems, VLSI Design, Firmware Engineering & Full-Stack / AI Systems
 - **Research**: First-Author IEEE Publication at **IEMENTECH 2026** (DOI: 10.1109/IEMENTech202669403.2026.11434403)
@@ -22,7 +22,7 @@
 
 ## ⚡ Portfolio Features
 - **Cinematic Scrollytelling**: Interactive 3D layer explosion visualization built with canvas physics.
-- **Placement AI Assistant**: Natural language QA trained on Abhishek's complete resume, coursework, and GitHub projects with structured bullet points.
+- **Placement Resume Assistant**: Natural language query engine covering Abhishek's verified resume, coursework, and GitHub projects with structured bullet points.
 - **Dynamic Navbar Highlight Slider**: Smooth scroll-linked highlight tracking active sections across the entire page.
 - **100% Mobile Responsive**: Dedicated mobile island navigation, animated hamburger menu, touch-swipe filter tabs, and responsive layouts for smartphones and tablets.
 - **GitHub Live Sync**: Featured repositories and recent engineering case studies.

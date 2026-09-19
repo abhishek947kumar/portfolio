@@ -1,7 +1,7 @@
 export const resumeData = {
   personal: {
     name: "Abhishek Kumar",
-    tagline: "ECE Undergrad (Class of 2027) | Embedded Systems, VLSI & Software Engineer",
+    tagline: "B.Tech ECE 4th Year Candidate | Embedded Systems, VLSI & Software Engineer",
     address: "Sector-3, Bokaro Steel City, Jharkhand - 827003",
     location: "Kolkata, West Bengal / Bokaro, Jharkhand, India",
     email: "abhishek1297kumar@gmail.com",
@@ -10,7 +10,7 @@ export const resumeData = {
     linkedinHandle: "abhishek947kumar",
     github: "https://github.com/abhishek947kumar",
     githubHandle: "abhishek947kumar",
-    summary: "Electronics and Communication Engineering student (Class of 2027) at Institute of Engineering & Management, Kolkata with a strong foundation in Object-Oriented Programming (OOP), algorithmic logic, control systems, and software-hardware co-design. Experienced in real-time data processing, VLSI design pipelines, and plant automation. Proficient in Python, MATLAB, C/C++, and version control, with proven IEEE publication and high-impact projects in embedded IoT and AI."
+    summary: "B.Tech ECE 4th year candidate at Institute of Engineering & Management (IEM), Kolkata (Class of 2027) with an 8.73 CGPA. Built with a strong foundation in Object-Oriented Programming (OOP), algorithmic logic, control systems, and software-hardware co-design. Experienced in real-time data processing, VLSI design pipelines, and plant automation. Proficient in Python, MATLAB, C/C++, and version control, with proven IEEE publication and high-impact projects in embedded IoT and software architectures."
   },
 
   placementPitch: {
