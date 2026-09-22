@@ -304,7 +304,7 @@ export class MenuBar {
 
     const items = [
       { type: 'app', title: 'Resume (Preview PDF)', sub: 'View or download resume', id: 'resume', icon: '📄' },
-      { type: 'app', title: 'Projects (App Store)', sub: '7 engineering projects (last 6 months & hardware)', id: 'projects', icon: '🛍️' },
+      { type: 'app', title: 'Projects (App Store)', sub: '8 engineering projects (recent & hardware/DFIR)', id: 'projects', icon: '🛍️' },
       { type: 'app', title: 'Siri & Gemini AI Assistant', sub: 'Ask questions about Abhishek with AI', id: 'siri', icon: '🤖' },
       { type: 'app', title: 'Terminal (zsh)', sub: 'Interactive command-line interface', id: 'terminal', icon: '💻' },
       { type: 'app', title: 'Social & Activity Hub', sub: 'Live GitHub commits & LinkedIn posts', id: 'social', icon: '⚡' },
@@ -315,6 +315,7 @@ export class MenuBar {
       { type: 'detail', title: 'VLSI Design Internship', sub: 'Jadavpur University — IC design flow & EDA bare-metal', id: 'settings', icon: '⚡' },
       { type: 'detail', title: 'Vocational Trainee', sub: 'Steel Authority of India Limited (SAIL) — Plant automation', id: 'settings', icon: '🏭' },
       { type: 'detail', title: 'IEEE IEMENTECH 2026 Publication', sub: 'Piezoelectric energy harvesting wearable therapy (DOI)', id: 'safari', icon: '📑' },
+      { type: 'detail', title: 'BitTrace DFIR Bitcoin Forensic Tool', sub: 'Live volatile RAM triage, registry hives & ISO/IEC 27037 (Sep 2026)', id: 'projects', icon: '🛡️' },
       { type: 'detail', title: 'Embedded Night-Vision System', sub: 'Active IR + Thermal sensors with YOLOv2 (Sep 2026)', id: 'projects', icon: '🌙' },
       { type: 'detail', title: 'Logistics Management System', sub: 'Python & Django multi-dealer supply chain (Sep 2026)', id: 'projects', icon: '📦' }
     ];

@@ -164,6 +164,7 @@ ${resumeData.placementPitch.keyStrengths.map((s, i) => `${i + 1}. ${s}`).join('<
         response = `
 <div class="term-box">
   <span class="term-bold">Get In Touch with Abhishek Kumar:</span><br>
+  🌐 Portfolio: <a href="${resumeData.personal.portfolio}" target="_blank" class="term-link">${resumeData.personal.portfolio}</a><br>
   📧 Email: <a href="mailto:${resumeData.personal.email}" class="term-link">${resumeData.personal.email}</a><br>
   📞 Phone: ${resumeData.personal.phone}<br>
   💼 LinkedIn: <a href="${resumeData.personal.linkedin}" target="_blank" class="term-link">${resumeData.personal.linkedin}</a><br>

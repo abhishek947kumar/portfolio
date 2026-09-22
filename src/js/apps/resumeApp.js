@@ -60,6 +60,8 @@ export class ResumeApp {
                     <span class="bullet">•</span>
                     <span>${resumeData.personal.phone}</span>
                     <span class="bullet">•</span>
+                    <a href="${resumeData.personal.portfolio}" target="_blank" rel="noreferrer" class="doc-link">${resumeData.personal.portfolioHandle}</a>
+                    <span class="bullet">•</span>
                     <a href="${resumeData.personal.linkedin}" target="_blank" rel="noreferrer" class="doc-link">linkedin.com/in/abhishek947kumar</a>
                     <span class="bullet">•</span>
                     <a href="${resumeData.personal.github}" target="_blank" rel="noreferrer" class="doc-link">github.com/abhishek947kumar</a>
@@ -153,7 +155,7 @@ export class ResumeApp {
               <div class="paper-sheet paper-back" id="page-2">
                 <header class="doc-header mini">
                   <span class="doc-name-small">${resumeData.personal.name} — Page 2</span>
-                  <span class="doc-contact-small">${resumeData.personal.email} | ${resumeData.personal.phone}</span>
+                  <span class="doc-contact-small">${resumeData.personal.email} | ${resumeData.personal.portfolioHandle} | ${resumeData.personal.phone}</span>
                 </header>
 
                 <!-- PUBLICATIONS & CERTIFICATIONS -->
@@ -257,7 +259,7 @@ export class ResumeApp {
     const copyBtn = container.querySelector('#btn-copy-resume-text');
     if (copyBtn) {
       copyBtn.addEventListener('click', async () => {
-        const text = `ABHISHEK KUMAR\nSector-3, Bokaro Steel City, Jharkhand - 827003\n${resumeData.personal.email} | ${resumeData.personal.phone}\nLinkedIn: ${resumeData.personal.linkedin}\nGitHub: ${resumeData.personal.github}\n\nABOUT ME:\n${resumeData.personal.summary}\n\nEDUCATION:\nB.Tech in ECE, IEM Kolkata (2023-2027) | CGPA: 8.73\nClass 12, MGM Bokaro (2023): 86.5%\nClass 10, MGM Bokaro (2021): 95%\n\nINTERNSHIPS:\n1. VLSI Design Intern, Jadavpur University (Dec 2025 - Jan 2026)\n2. Vocational Trainee, SAIL (May 2025 - June 2025)\n\nPUBLICATIONS:\nIEMENTECH 2026: Enhancing Wearable Depression Management (DOI: 10.1109/IEMENTech202669403.2026.11434403)\n\nCERTIFICATIONS:\nIoT and AI Cloud - UC San Diego\n\nSKILLS:\nEmbedded Systems, Microcontrollers, VLSI, C/C++, Python, MATLAB, Vivado, Wokwi, Git.`;
+        const text = `ABHISHEK KUMAR\nSector-3, Bokaro Steel City, Jharkhand - 827003\n${resumeData.personal.email} | ${resumeData.personal.phone}\nPortfolio: ${resumeData.personal.portfolio}\nLinkedIn: ${resumeData.personal.linkedin}\nGitHub: ${resumeData.personal.github}\n\nABOUT ME:\n${resumeData.personal.summary}\n\nEDUCATION:\nB.Tech in ECE, IEM Kolkata (2023-2027) | CGPA: 8.73\nClass 12, MGM Bokaro (2023): 86.5%\nClass 10, MGM Bokaro (2021): 95%\n\nINTERNSHIPS:\n1. VLSI Design Intern, Jadavpur University (Dec 2025 - Jan 2026)\n2. Vocational Trainee, SAIL (May 2025 - June 2025)\n\nPUBLICATIONS:\nIEMENTECH 2026: Enhancing Wearable Depression Management (DOI: 10.1109/IEMENTech202669403.2026.11434403)\n\nCERTIFICATIONS:\nIoT and AI Cloud - UC San Diego\n\nKEY RECENT PROJECTS:\n1. BitTrace DFIR: Automated Live RAM & Postmortem Bitcoin Forensics Tool for Windows (ISO/IEC 27037)\n2. Embedded Night-Vision System for Pedestrian Detection (Active IR + Thermal + YOLOv2)\n3. Logistics Management System (Python & Django Enterprise Supply Chain)\n\nSKILLS:\nEmbedded Systems, Microcontrollers, VLSI, Digital Forensics, C/C++, Python, FastAPI, Django, React, MATLAB, Vivado, Wokwi, Git.`;
         try {
           await navigator.clipboard.writeText(text);
           const originalText = copyBtn.innerHTML;

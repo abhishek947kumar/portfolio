@@ -41,6 +41,9 @@ export class SafariApp {
 
         <!-- Safari Bookmarks Bar -->
         <div class="safari-bookmarks-bar">
+          <button class="safari-bookmark" data-url="https://abhishek947kumar.github.io/portfolio/">
+            <span class="bm-icon">🌐</span> Live Portfolio
+          </button>
           <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar">
             <span class="bm-icon">🐙</span> GitHub Profile
           </button>
@@ -49,6 +52,9 @@ export class SafariApp {
           </button>
           <button class="safari-bookmark" data-url="https://doi.org/10.1109/IEMENTech202669403.2026.11434403">
             <span class="bm-icon">📄</span> IEEE Paper (DOI)
+          </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems">
+            <span class="bm-icon">🛡️</span> BitTrace DFIR
           </button>
           <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/Embedded-Night-Vision-System">
             <span class="bm-icon">🌙</span> Night Vision System
@@ -99,6 +105,80 @@ export class SafariApp {
                 <h4>${resumeData.publications[0].title}</h4>
                 <p>${resumeData.publications[0].venue} • Published 2026</p>
                 <a href="${resumeData.publications[0].link}" target="_blank" class="li-link">View in IEEE Xplore &rarr;</a>
+              </div>
+            </div>
+
+            <div class="li-body-section">
+              <h3>Featured Projects & Activity (Last 1 Week)</h3>
+              <div class="li-projects-list">
+                <div class="li-project-item">
+                  <div class="li-proj-icon">🛡️</div>
+                  <div class="li-proj-details">
+                    <h4>BitTrace DFIR: Automated Live & Postmortem Bitcoin Forensics</h4>
+                    <p class="li-proj-meta">Launched Sep 21, 2026 • Python, FastAPI, React & ISO/IEC 27037</p>
+                    <p class="li-proj-desc">Automated volatile RAM inspection (BIP-39 mnemonic recovery, WIF keys), Berkeley DB wallet.dat parsing, ROT13 UserAssist decoding, and court-ready audit reports.</p>
+                    <div class="li-proj-links">
+                      <a href="${resumeData.personal.linkedin}" target="_blank" class="li-link">View Post on LinkedIn &rarr;</a>
+                      <a href="https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems" target="_blank" class="li-link-gh">GitHub Repo &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="li-project-item">
+                  <div class="li-proj-icon">🌙</div>
+                  <div class="li-proj-details">
+                    <h4>Embedded Night-Vision System for Pedestrian Detection</h4>
+                    <p class="li-proj-meta">Launched Sep 19, 2026 • Python, Active IR + LWIR Thermal, YOLOv2</p>
+                    <p class="li-proj-desc">Advanced Driver-Assistance System (ADAS) fusing active infrared and LWIR thermal feeds with HAAR+AdaBoost and lightweight quantized YOLOv2.</p>
+                    <div class="li-proj-links">
+                      <a href="${resumeData.personal.linkedin}" target="_blank" class="li-link">View Post on LinkedIn &rarr;</a>
+                      <a href="https://github.com/abhishek947kumar/Embedded-Night-Vision-System" target="_blank" class="li-link-gh">GitHub Repo &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="li-project-item">
+                  <div class="li-proj-icon">🚚</div>
+                  <div class="li-proj-details">
+                    <h4>Logistics Management System (LogiTrack Pro)</h4>
+                    <p class="li-proj-meta">Launched Sep 18, 2026 • Python & Django Enterprise Ecosystem</p>
+                    <p class="li-proj-desc">Multi-dealer inventory synchronization, order dispatch scheduling, route tracking, and automated consignment status updates.</p>
+                    <div class="li-proj-links">
+                      <a href="${resumeData.personal.linkedin}" target="_blank" class="li-link">View Post on LinkedIn &rarr;</a>
+                      <a href="https://github.com/abhishek947kumar/Logistics-Management-System" target="_blank" class="li-link-gh">GitHub Repo &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems') || url.includes('BitTrace')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">🛡️</span>
+              <h3>abhishek947kumar / <strong>BitTrace-DFIR</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">BitTrace DFIR: Automated Live & Postmortem Bitcoin Forensic Analysis Tool for Windows (ISO/IEC 27037 Compliance)</p>
+            <div class="gh-meta-row">
+              <span>🐍 Python 3.10+ & FastAPI</span>
+              <span>⚛️ React 18</span>
+              <span>⭐ 1 Star</span>
+              <span>📅 Updated Sep 21, 2026 (Last 1 Week)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>Volatile Memory Triage:</strong> Process memory inspection recovering 12–24 word BIP-39 recovery seeds, WIF private keys, and public addresses with byte-aligned Hex/ASCII viewer.</p>
+              <p><strong>Postmortem & Remnants Engine:</strong> Deep scan of %APPDATA% for Berkeley DB wallet.dat files (0x00053162), Windows Prefetch launch metrics, and UserAssist ROT13 decoded logs.</p>
+              <p><strong>Chain of Custody:</strong> ISO/IEC 27037 digital evidence preservation with cryptographic SHA-256 and MD5 verification ledger and 1-click printable PDF/HTML court reports.</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
               </div>
             </div>
           </div>
@@ -203,8 +283,13 @@ export class SafariApp {
           </div>
 
           <div class="gh-pinned-repos">
-            <h4>Pinned & Recent Repositories (Last 6 Months)</h4>
+            <h4>Pinned & Recent Repositories (Last 1 Week & Recent)</h4>
             <div class="gh-pinned-grid">
+              <div class="gh-pin-card">
+                <h5>BitTrace-DFIR</h5>
+                <p>Live memory triage, registry analysis & ISO/IEC 27037 digital forensic tool for Bitcoin.</p>
+                <span class="pin-lang">Python & FastAPI</span>
+              </div>
               <div class="gh-pin-card">
                 <h5>Embedded-Night-Vision-System</h5>
                 <p>Pedestrian detection using active IR and thermal sensor fusion with YOLOv2.</p>

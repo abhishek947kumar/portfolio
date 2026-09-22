@@ -178,6 +178,9 @@ export class CinematicView {
                 ${resumeData.personal.summary}
               </p>
               <div class="cine-social-links-row">
+                <a href="${resumeData.personal.portfolio}" target="_blank" class="cine-social-btn" title="Live Portfolio Website">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </a>
                 <a href="${resumeData.personal.linkedin}" target="_blank" class="cine-social-btn" title="LinkedIn">
                   <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
@@ -321,9 +324,10 @@ export class CinematicView {
 
             <div class="cine-ai-suggestions">
               <button class="ai-suggest-chip" data-q="Why should we hire Abhishek for our engineering team?">Why hire Abhishek?</button>
+              <button class="ai-suggest-chip" data-q="Tell me about the BitTrace Bitcoin Forensics tool built this week">BitTrace Bitcoin Forensics?</button>
               <button class="ai-suggest-chip" data-q="What are Abhishek's VLSI and bare-metal EDA skills?">VLSI & Bare-Metal Skills?</button>
               <button class="ai-suggest-chip" data-q="Tell me about his IEEE conference publication">IEEE Publication Details?</button>
-              <button class="ai-suggest-chip" data-q="What projects did Abhishek build in the last 6 months?">Projects in Last 6 Months?</button>
+              <button class="ai-suggest-chip" data-q="What projects did Abhishek build in the last week and recent months?">Projects in Last Week?</button>
               <button class="ai-suggest-chip" data-q="What is his CGPA and college track record?">CGPA & College?</button>
             </div>
 
@@ -380,6 +384,9 @@ export class CinematicView {
               </div>
 
               <div style="margin-top: 24px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="${resumeData.personal.portfolio}" target="_blank" class="btn-cine-primary" style="font-size: 13px;">
+                  🌐 Live Portfolio ↗
+                </a>
                 <a href="${resumeData.personal.linkedin}" target="_blank" class="btn-cine-secondary" style="font-size: 13px;">
                   Connect on LinkedIn ↗
                 </a>
@@ -426,17 +433,17 @@ export class CinematicView {
   renderProjectCards(filter) {
     let list = resumeData.projects;
     if (filter === 'recent') {
-      list = list.filter(p => p.createdPeriod === 'Last 6 Months' || p.badge.includes('Recent'));
+      list = list.filter(p => p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week' || p.badge.includes('Recent'));
     } else if (filter === 'embedded') {
       list = list.filter(p => p.tags.some(t => ['Embedded Systems', 'VLSI', 'IoT', 'Wokwi', 'Hardware'].includes(t)) || p.title.toLowerCase().includes('embedded') || p.title.toLowerCase().includes('traffic'));
     } else if (filter === 'software') {
-      list = list.filter(p => p.tags.some(t => ['Python', 'Django', 'REST APIs', 'Enterprise Architecture', 'AI'].includes(t)));
+      list = list.filter(p => p.tags.some(t => ['Python', 'FastAPI', 'Django', 'REST APIs', 'Enterprise Architecture', 'AI', 'Digital Forensics', 'Cryptography'].includes(t)));
     }
 
     return list.map(p => `
-      <div class="cine-project-card ${p.createdPeriod === 'Last 6 Months' ? 'is-hot' : ''}">
+      <div class="cine-project-card ${(p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week') ? 'is-hot' : ''}">
         <div class="cine-project-top">
-          <span class="${p.createdPeriod === 'Last 6 Months' ? 'cine-tag-hot' : 'cine-tag-normal'}">
+          <span class="${(p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week') ? 'cine-tag-hot' : 'cine-tag-normal'}">
             ${p.badge}
           </span>
           <span class="cine-project-period">${p.createdPeriod}</span>

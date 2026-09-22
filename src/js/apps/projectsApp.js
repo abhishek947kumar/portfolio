@@ -31,7 +31,7 @@ export class ProjectsApp {
             </button>
             <button class="nav-item special-highlight" data-filter="recent">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              <span>Last 6 Months (New)</span>
+              <span>Recent (Last 1 Week)</span>
               <span class="nav-pill">Hot</span>
             </button>
             <button class="nav-item" data-filter="embedded">
@@ -44,7 +44,7 @@ export class ProjectsApp {
             </button>
             <button class="nav-item" data-filter="security">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              <span>Cybersecurity & C++</span>
+              <span>Cybersecurity & DFIR</span>
             </button>
           </nav>
 
@@ -61,7 +61,7 @@ export class ProjectsApp {
           <!-- Featured Header with 3D Depth Card -->
           <div class="appstore-hero 3d-hero-card" id="appstore-hero-card">
             <div class="hero-badge">PLACEMENT SHOWCASE 2026</div>
-            <h2 class="hero-title">Embedded Systems, VLSI & Production Software</h2>
+            <h2 class="hero-title">Embedded Systems, DFIR Security & Production Software</h2>
             <p class="hero-subtitle">High-performance engineering projects built with algorithmic precision, hardware-software co-design, and modern scalable architectures.</p>
             <div class="hero-stats">
               <div class="stat-box">
@@ -73,7 +73,7 @@ export class ProjectsApp {
                 <span class="stat-label">IEEE Publication</span>
               </div>
               <div class="stat-box">
-                <span class="stat-num">8+</span>
+                <span class="stat-num">9+</span>
                 <span class="stat-label">GitHub Repos</span>
               </div>
               <div class="stat-box">
@@ -86,7 +86,7 @@ export class ProjectsApp {
           <!-- Section Title -->
           <div class="section-header-bar">
             <h3 class="section-heading" id="projects-section-title">All Engineering Projects</h3>
-            <span class="section-count" id="projects-count-label">7 Projects</span>
+            <span class="section-count" id="projects-count-label">${resumeData.projects.length} Projects</span>
           </div>
 
           <!-- Projects Grid with 3D Tilt Elements -->
@@ -111,15 +111,15 @@ export class ProjectsApp {
   filterProjects() {
     return resumeData.projects.filter(proj => {
       if (this.activeFilter === 'recent') {
-        if (proj.createdPeriod !== 'Last 6 Months') return false;
+        if (proj.createdPeriod !== 'Last 6 Months' && proj.createdPeriod !== 'Last 1 Week' && !proj.badge.includes('Recent')) return false;
       } else if (this.activeFilter === 'embedded') {
         const isEmb = proj.tags.some(t => ['Embedded Systems', 'Embedded C', 'Microcontrollers', 'Wokwi', 'Xilinx Vivado', 'Finite State Machines'].includes(t));
         if (!isEmb) return false;
       } else if (this.activeFilter === 'software') {
-        const isSw = proj.tags.some(t => ['Python', 'Django', 'React', 'GraphQL', 'Gemini AI API', 'TypeScript'].includes(t));
+        const isSw = proj.tags.some(t => ['Python', 'FastAPI', 'Django', 'React', 'GraphQL', 'Gemini AI API', 'TypeScript'].includes(t));
         if (!isSw) return false;
       } else if (this.activeFilter === 'security') {
-        const isSec = proj.tags.some(t => ['Cryptography', 'Security Algorithms', 'Pixel Manipulation', 'C++'].includes(t));
+        const isSec = proj.tags.some(t => ['Digital Forensics', 'Cryptography', 'Security Algorithms', 'Pixel Manipulation', 'Windows API', 'ISO 27037', 'C++'].includes(t));
         if (!isSec) return false;
       }
 

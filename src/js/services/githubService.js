@@ -34,7 +34,7 @@ export class GitHubService {
       name: resumeData.personal.name,
       avatar_url: "https://avatars.githubusercontent.com/u/153946376?v=4",
       html_url: `https://github.com/${this.username}`,
-      public_repos: 8,
+      public_repos: 9,
       followers: 1,
       following: 3,
       bio: resumeData.personal.tagline
@@ -175,6 +175,19 @@ export class GitHubService {
   getFallbackRepos() {
     return [
       {
+        id: 0,
+        name: "Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems",
+        fullName: "abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems",
+        description: "BitTrace DFIR: Automated live volatile memory (RAM) and postmortem disk/registry analysis tool for Bitcoin on Windows systems with ISO/IEC 27037 chain of custody.",
+        url: "https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems",
+        language: "Python",
+        stars: 1,
+        forks: 0,
+        updatedFormatted: "Sep 21, 2026",
+        isLast6Months: true,
+        topics: ["digital-forensics", "bitcoin", "fastapi", "react", "volatile-memory", "iso-27037", "dfir"]
+      },
+      {
         id: 1,
         name: "Embedded-Night-Vision-System",
         fullName: "abhishek947kumar/Embedded-Night-Vision-System",
@@ -257,6 +270,24 @@ export class GitHubService {
 
   getFallbackEvents() {
     return [
+      {
+        id: "evt-0",
+        type: "PushEvent",
+        repo: "Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems",
+        repoUrl: "https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems",
+        date: "Sep 21, 2026",
+        description: "Pushed 3 commits: 'BitTrace DFIR live memory triage, ROT13 decoder & ISO 27037 ledger'",
+        icon: "git-push"
+      },
+      {
+        id: "evt-0b",
+        type: "CreateEvent",
+        repo: "Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems",
+        repoUrl: "https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems",
+        date: "Sep 21, 2026",
+        description: "Created repository 'Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems'",
+        icon: "plus-circle"
+      },
       {
         id: "evt-1",
         type: "PushEvent",

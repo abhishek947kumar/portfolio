@@ -18,6 +18,12 @@
   - **Jadavpur University** — VLSI Design & Semiconductor EDA Intern (Dec 2025 – Jan 2026)
   - **Steel Authority of India Limited (SAIL)** — Industrial Automation Trainee (May 2025 – June 2025)
 
+## 🚀 Key Featured Projects (Recent & Highlighted)
+1. **BitTrace DFIR** ([Repository](https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems)): Automated Live Volatile Memory (RAM) & Postmortem Bitcoin Forensic Analysis Tool for Windows compliant with ISO/IEC 27037 evidence standards (FastAPI + React).
+2. **Embedded Night-Vision System** ([Repository](https://github.com/abhishek947kumar/Embedded-Night-Vision-System)): Active 850nm IR + LWIR Thermal sensor fusion with HAAR+AdaBoost and YOLOv2 for pedestrian recognition.
+3. **Logistics Management System (LogiTrack Pro)** ([Repository](https://github.com/abhishek947kumar/Logistics-Management-System)): Enterprise commercial multi-dealer freight & supply-chain platform built with Python & Django.
+4. **Piezo-Electric Wearable Device**: Microcontroller-based IoT acupressure therapy device powered by biomechanical energy harvesting (Published in IEEE).
+
 ---
 
 ## ⚡ Portfolio Features

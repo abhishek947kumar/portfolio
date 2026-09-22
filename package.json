@@ -2,6 +2,7 @@
   "name": "abhishek-portfolio",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://abhishek947kumar.github.io/portfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",

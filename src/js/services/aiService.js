@@ -134,11 +134,12 @@ Always answer warmly, concisely, and with persuasive evidence of Abhishek's tech
     }
 
     if (qLower.includes('project') || qLower.includes('work') || qLower.includes('portfolio') || qLower.includes('build')) {
-      return `Abhishek has engineered standout projects across hardware, AI, and software:\n\n` +
+      return `Abhishek has engineered standout projects across digital forensics, hardware, AI, and software:\n\n` +
+        `• **BitTrace DFIR** (Recent): Automated Live RAM & Postmortem Bitcoin Forensic platform with ISO/IEC 27037 evidence vault.\n` +
         `• **Embedded Night-Vision System** (Recent): Active IR + Thermal sensor fusion with YOLOv2 for pedestrian recognition.\n` +
+        `• **Logistics Management System** (Recent): Enterprise multi-dealer supply-chain tracking engine in Python/Django.\n` +
         `• **Piezo-electric Acupressure Wearable**: Microcontroller IoT system harvesting kinetic energy for depression management (Published in IEEE).\n` +
         `• **Camera-Assisted 7-State Traffic Controller**: Dynamic algorithmic FSM in C simulated on Xilinx Vivado.\n` +
-        `• **Logistics Management System**: Enterprise multi-dealer tracking engine in Python/Django.\n` +
         `• **YourFinance**: Budget control center powered by Google Gemini AI.`;
     }
 
@@ -159,20 +160,23 @@ Always answer warmly, concisely, and with persuasive evidence of Abhishek's tech
       return `Abhishek's technical stack:\n\n` +
         `• **Core Languages**: C, C++, Embedded C, Python, MATLAB, JavaScript/TypeScript, OOP\n` +
         `• **Embedded & Hardware**: Microcontrollers (ARM/AVR/ESP), GPIO/UART/SPI/I2C interfacing, Digital Logic, FSMs, Control Systems\n` +
+        `• **Security & Forensics**: Live Volatile RAM Triage, ISO/IEC 27037 Evidence Handling, Windows Prefetch & Registry Analysis, Cryptographic Hashing\n` +
         `• **Tools & Platforms**: Xilinx Vivado, Wokwi Simulator, EDA tools, Git/GitHub, CI/CD, Agile/Jira, LaTeX\n` +
-        `• **Frameworks & Cloud**: Django, REST APIs, UC San Diego IoT & AI Cloud certification`;
+        `• **Frameworks & Cloud**: FastAPI, React, Django, REST APIs, UC San Diego IoT & AI Cloud certification`;
     }
 
     if (qLower.includes('hire') || qLower.includes('placement') || qLower.includes('recruit') || qLower.includes('role')) {
       return `**Top Reasons to Hire Abhishek Kumar:**\n\n` +
         `1. **Strong Academic Pedigree**: 8.73 CGPA with deep grasp of control systems, digital logic, and algorithms.\n` +
-        `2. **Dual-Spectrum Competency**: Rare skill combination of bare-metal embedded firmware/VLSI + modern high-level Python/web/AI engineering.\n` +
+        `2. **Dual-Spectrum Competency**: Rare skill combination of bare-metal embedded firmware/VLSI + modern high-level Python/FastAPI/Django/AI systems.\n` +
         `3. **Published IEEE Author**: Demonstrates independent research, peer-reviewed rigor, and creative problem-solving.\n` +
-        `4. **Industrial Proof**: Proven delivery in bare-metal EDA research at Jadavpur Univ and plant automation at SAIL.`;
+        `4. **Systems & Security Depth**: Engineered BitTrace DFIR for live volatile memory analysis and cryptographic chain of custody.\n` +
+        `5. **Industrial Proof**: Proven delivery in bare-metal EDA research at Jadavpur Univ and plant automation at SAIL.`;
     }
 
-    if (qLower.includes('contact') || qLower.includes('email') || qLower.includes('phone') || qLower.includes('linkedin')) {
+    if (qLower.includes('contact') || qLower.includes('email') || qLower.includes('phone') || qLower.includes('linkedin') || qLower.includes('portfolio') || qLower.includes('link') || qLower.includes('website')) {
       return `Get in touch with Abhishek:\n\n` +
+        `• **Live Portfolio**: [abhishek947kumar.github.io/portfolio](https://abhishek947kumar.github.io/portfolio/)\n` +
         `• **Email**: [abhishek1297kumar@gmail.com](mailto:abhishek1297kumar@gmail.com)\n` +
         `• **Phone**: +91 9470303282\n` +
         `• **LinkedIn**: [linkedin.com/in/abhishek947kumar](https://www.linkedin.com/in/abhishek947kumar)\n` +
@@ -180,7 +184,7 @@ Always answer warmly, concisely, and with persuasive evidence of Abhishek's tech
     }
 
     // Default intelligent overview
-    return `Abhishek Kumar is a B.Tech ECE student at IEM Kolkata (CGPA 8.73, Class of 2027) with an IEEE publication at IEMENTECH 2026, VLSI internship at Jadavpur University, industrial training at SAIL, and multiple recent projects in Embedded Systems (YOLOv2 Night-Vision, Piezoelectric wearable, 7-state Vivado traffic controller) and Software/AI.\n\nFeel free to ask about his **CGPA**, **internships**, **projects from the last 6 months**, **IEEE paper**, or **why you should hire him**!`;
+    return `Abhishek Kumar is a B.Tech ECE student at IEM Kolkata (CGPA 8.73, Class of 2027) with an IEEE publication at IEMENTECH 2026, VLSI internship at Jadavpur University, industrial training at SAIL, and multiple recent projects in Systems & Forensics (BitTrace DFIR), Embedded Systems (YOLOv2 Night-Vision, Piezoelectric wearable, 7-state Vivado traffic controller) and Software/AI.\n\nFeel free to ask about his **CGPA**, **internships**, **recent projects from the last week**, **IEEE paper**, or **why you should hire him**!`;
   }
 }
 

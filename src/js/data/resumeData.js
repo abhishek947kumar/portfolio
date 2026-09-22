@@ -10,6 +10,8 @@ export const resumeData = {
     linkedinHandle: "abhishek947kumar",
     github: "https://github.com/abhishek947kumar",
     githubHandle: "abhishek947kumar",
+    portfolio: "https://abhishek947kumar.github.io/portfolio/",
+    portfolioHandle: "abhishek947kumar.github.io/portfolio",
     summary: "B.Tech ECE 4th year candidate at Institute of Engineering & Management (IEM), Kolkata (Class of 2027) with an 8.73 CGPA. Built with a strong foundation in Object-Oriented Programming (OOP), algorithmic logic, control systems, and software-hardware co-design. Experienced in real-time data processing, VLSI design pipelines, and plant automation. Proficient in Python, MATLAB, C/C++, and version control, with proven IEEE publication and high-impact projects in embedded IoT and software architectures."
   },
 
@@ -17,14 +19,16 @@ export const resumeData = {
     headline: "Placement Candidate Profile: Abhishek Kumar",
     keyStrengths: [
       "High Academic Distinction: CGPA 8.73 (up to 6th semester) in B.Tech ECE at IEM Kolkata.",
-      "Dual Expertise: Strong grasp across both bare-metal hardware/embedded firmware (Wokwi, Vivado, C/C++, microcontrollers) and high-level software engineering (Python, Django, React, AI Cloud).",
+      "Dual Expertise: Strong grasp across both bare-metal hardware/embedded firmware (Wokwi, Vivado, C/C++, microcontrollers) and high-level software & systems engineering (Python, FastAPI, Django, React, AI Cloud).",
       "Published IEEE Researcher: First-author publication at IEEE IEMENTECH 2026 on wearable piezoelectric energy harvesting & healthcare technology.",
+      "Digital Forensics & Systems Security: Architected BitTrace DFIR for live volatile RAM inspection and ISO/IEC 27037 evidence preservation.",
       "Hands-On Industrial Internships: Bare-metal IC design optimization at Jadavpur University & plant automation software systems at SAIL (Steel Authority of India Limited).",
-      "Active Continuous Learner: Built & updated 5+ production-grade software and embedded systems in the last 6 months alone."
+      "Active Continuous Learner: Built & updated 6+ production-grade software, cybersecurity, and embedded systems in 2026 alone."
     ],
     targetRoles: [
       "Embedded Software Engineer / Firmware Engineer",
       "VLSI Design & Hardware Systems Engineer",
+      "Digital Forensics & Incident Response (DFIR) / Systems Security Engineer",
       "IoT Systems & Hardware-Software Co-Design Engineer",
       "Software Development Engineer (Python / C++ / Full Stack)",
       "Systems Validation & Automation Engineer"
@@ -96,11 +100,26 @@ export const resumeData = {
 
   projects: [
     {
+      id: "bittrace-dfir",
+      title: "BitTrace DFIR - Automated Live & Postmortem Bitcoin Forensic Tool",
+      subtitle: "Volatile RAM Inspection, Windows Registry Hives & ISO/IEC 27037 Evidence Vault",
+      badge: "Recent (Sep 2026) | Cybersecurity & DFIR",
+      createdPeriod: "Last 1 Week",
+      githubUrl: "https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems",
+      tags: ["Python", "FastAPI", "React", "Digital Forensics", "Cryptography", "Windows API", "ISO 27037"],
+      description: "An automated digital forensics and incident response (DFIR) platform engineered to conduct both live volatile memory (RAM) and persistent postmortem disk/registry analysis of Bitcoin artifacts on Windows systems. Adheres to ISO/IEC 27037 digital evidence preservation standards with immutable SHA-256/MD5 hashing.",
+      highlights: [
+        "Live Volatile Forensics: Inspects running wallet processes (Bitcoin-Qt, Electrum, Armory) to recover 12-24 word BIP-39 seed phrases, WIF/Hex private keys, and addresses with a byte-aligned Hex/ASCII viewer.",
+        "Postmortem Remnant Extraction: Scans %APPDATA% for Berkeley DB wallet.dat headers (0x00053162), parses Windows Prefetch (.pf) execution frequencies, and decodes UserAssist ROT13 keys for uninstalled wallet remnants.",
+        "Browser Artifacts & Evidence Ledger: Implements SQLite shadow copying across Chrome, Edge, and Firefox without database locks; generates court-ready audit reports with 1-click PDF/HTML export."
+      ]
+    },
+    {
       id: "night-vision",
       title: "Embedded Night-Vision System for Pedestrian Detection",
       subtitle: "Active IR + Thermal Sensors with HAAR+AdaBoost & YOLOv2",
       badge: "Recent (Sep 2026) | AI & Embedded",
-      createdPeriod: "Last 6 Months",
+      createdPeriod: "Last 1 Week",
       githubUrl: "https://github.com/abhishek947kumar/Embedded-Night-Vision-System",
       tags: ["Python", "Embedded Systems", "Computer Vision", "Thermal IR", "YOLOv2", "AdaBoost"],
       description: "Embedded night-vision driver-assistance architecture combining active infrared and thermal imaging feeds. Features a dual-stage detection pipeline utilizing HAAR+AdaBoost for low-compute candidate extraction and custom-pruned YOLOv2 for real-time pedestrian recognition under pitch-black and hazardous road environments.",
@@ -115,7 +134,7 @@ export const resumeData = {
       title: "Logistics Management System",
       subtitle: "Commercial Multi-Dealer & Consumer Logistics Platform",
       badge: "Recent (Sep 2026) | Enterprise Full-Stack",
-      createdPeriod: "Last 6 Months",
+      createdPeriod: "Last 1 Week",
       githubUrl: "https://github.com/abhishek947kumar/Logistics-Management-System",
       tags: ["Python", "Django", "PostgreSQL", "REST APIs", "Enterprise Architecture"],
       description: "An enterprise-grade commercial logistics and supply chain engine designed for multi-dealer inventory synchronization, order dispatch scheduling, route tracking, and automated consignment status updates.",
@@ -205,23 +224,25 @@ export const resumeData = {
       { name: "Embedded Systems & Firmware", icon: "chip", level: 90 },
       { name: "Digital Electronics & Logic Design", icon: "git-commit", level: 88 },
       { name: "Hardware Interfacing (GPIO, UART, SPI, I2C)", icon: "sliders", level: 92 },
+      { name: "Digital Forensics & Security Engineering", icon: "shield", level: 88 },
       { name: "VLSI Design & EDA Workflows", icon: "layers", level: 84 },
       { name: "Control Systems & Real-Time Processing", icon: "activity", level: 86 }
     ],
     languages: [
       { name: "C / C++", level: 92, tag: "Primary Systems Language" },
       { name: "Embedded C", level: 90, tag: "Firmware & Microcontrollers" },
-      { name: "Python", level: 94, tag: "AI, Automation, Backend" },
+      { name: "Python", level: 95, tag: "Forensics, AI, Automation, Backend" },
       { name: "MATLAB", level: 85, tag: "Simulation & Modeling" },
-      { name: "JavaScript / TypeScript", level: 82, tag: "Web & Tooling" },
+      { name: "JavaScript / TypeScript", level: 84, tag: "Web & Tooling" },
       { name: "OOP (Object-Oriented Programming)", level: 90, tag: "Software Architecture" }
     ],
     tools: [
       "Xilinx Vivado", "Wokwi Simulator", "Git / GitHub", "CI/CD Pipelines",
-      "LaTeX", "Agile / Jira", "Linux / Bash", "EDA Tools", "VS Code", "Django", "REST APIs"
+      "FastAPI", "React", "LaTeX", "Agile / Jira", "Linux / Bash", "EDA Tools", "VS Code", "Django", "REST APIs"
     ],
     fundamentals: [
       "Data Structures & Algorithms (DSA)",
+      "Digital Evidence Preservation (ISO/IEC 27037)",
       "Finite State Machines (FSM)",
       "Hardware-Software Co-Design",
       "Software Testing & Validation",
@@ -248,15 +269,14 @@ export const resumeData = {
   certifications: [
     {
       title: "Internet of Things and AI Cloud",
-      issuer: "University of California San Diego (Coursera)",
-      skills: ["IoT Cloud Architecture", "Sensor Telemetry", "Edge-to-Cloud Pipelines", "Cloud Analytics"],
-      verificationUrl: "https://coursera.org"
+      issuer: "University of California, San Diego (Coursera)",
+      skills: ["IoT Architecture", "Cloud Integration", "Smart Systems"]
     }
   ],
 
-  activities: [
+  extracurriculars: [
     {
-      type: "Professional Memberships",
+      category: "Professional Memberships",
       items: [
         "Member of IEEE (Institute of Electrical and Electronics Engineers)",
         "Member of IEEE MTT-S (Microwave Theory and Technology Society)",
@@ -264,14 +284,13 @@ export const resumeData = {
       ]
     },
     {
-      type: "Volunteering & Leadership",
+      category: "Volunteering & Leadership",
       items: [
-        "Volunteer at SYTRON '25 (Technical Symposium)",
-        "Student Mentorship & Peer Electronics Workshop Mentor"
+        "Volunteer at SYTRON '25 (Annual Tech Fest, Department of ECE, IEM Kolkata)"
       ]
     },
     {
-      type: "Competitions",
+      category: "Competitions",
       items: [
         "Participant in QUIZZOPHRENIA '25 (National Level Technical Quiz)"
       ]
@@ -279,6 +298,36 @@ export const resumeData = {
   ],
 
   socialFeed: [
+    {
+      id: "post-li-bittrace",
+      platform: "LinkedIn",
+      author: "Abhishek Kumar",
+      date: "September 21, 2026",
+      title: "Launched BitTrace DFIR: Automated Live & Postmortem Bitcoin Forensics on Windows! 🛡️💻",
+      content: "Excited to unveil my latest cybersecurity & systems project: BitTrace DFIR! An open-source forensic platform designed to conduct live volatile memory (RAM) triage and persistent postmortem disk/registry analysis of cryptocurrency artifacts on Windows. Engineered with a FastAPI bridge, interactive React glassmorphism dashboard, BIP-39 mnemonic recovery, Berkeley DB parser, and ISO/IEC 27037 compliant cryptographic evidence vault.",
+      url: "https://www.linkedin.com/in/abhishek947kumar",
+      tags: ["#DigitalForensics", "#DFIR", "#Cybersecurity", "#Python", "#FastAPI", "#React", "#Bitcoin"]
+    },
+    {
+      id: "post-li-nightvision",
+      platform: "LinkedIn",
+      author: "Abhishek Kumar",
+      date: "September 19, 2026",
+      title: "Engineered Embedded Night-Vision System for Pedestrian Detection! 🌙🚗",
+      content: "Thrilled to share my work on an intelligent Advanced Driver-Assistance System (ADAS). By fusing dual feeds from active 850nm infrared illuminators and LWIR thermal sensors with a hybrid HAAR+AdaBoost candidate filter and quantized YOLOv2 neural network, the system detects pedestrians in zero-visibility conditions with low latency on resource-constrained embedded edge hardware.",
+      url: "https://www.linkedin.com/in/abhishek947kumar",
+      tags: ["#EmbeddedSystems", "#ComputerVision", "#ADAS", "#SensorFusion", "#DeepLearning", "#EdgeAI"]
+    },
+    {
+      id: "post-li-logistics",
+      platform: "LinkedIn",
+      author: "Abhishek Kumar",
+      date: "September 18, 2026",
+      title: "Built LogiTrack Pro: Enterprise Commercial Logistics Management System 🚚📦",
+      content: "Proud to present LogiTrack Pro, a full-stack commercial multi-dealer and consumer logistics management ecosystem built with Python and Django. Features multi-tenant dealer inventory synchronization, automated shipment manifests, route optimization dispatch schedules, and JWT-authenticated telemetry alerts.",
+      url: "https://www.linkedin.com/in/abhishek947kumar",
+      tags: ["#FullStack", "#Python", "#Django", "#Logistics", "#SupplyChain", "#EnterpriseSoftware"]
+    },
     {
       id: "post-1",
       platform: "LinkedIn",
@@ -324,6 +373,10 @@ export const resumeData = {
   // Structured Knowledge Base for Instant Natural Language Search
   qaKnowledgeBase: [
     {
+      keywords: ["bittrace", "bitcoin", "forensic", "forensics", "dfir", "cybersecurity", "memory", "ram", "iso 27037", "postmortem", "volatile"],
+      answer: "BitTrace DFIR (Automated Live & Postmortem Bitcoin Forensic Analysis Tool for Windows - Built Sep 2026):\n• **Live Volatile Memory Forensics**: Inspects running wallet processes (Bitcoin-Qt, Electrum, Armory) to recover 12–24 word BIP-39 recovery seeds, WIF/Hex private keys, and Bitcoin addresses with an aligned byte Hex/ASCII viewer.\n• **Postmortem Disk & Registry Analysis**: Scans %APPDATA% for Berkeley DB wallet.dat files (0x00053162), decodes UserAssist ROT13 registry launch logs, and parses Windows Prefetch (.pf) files for uninstalled remnants.\n• **ISO/IEC 27037 Evidence Vault**: Computes SHA-256 and MD5 cryptographic hashes with real-time tamper re-verification and 1-click court-ready printable PDF/HTML reports.\n• **Tech Stack**: Python 3.10+, FastAPI, React 18, Vite, Windows API, Cryptography.\n• **GitHub**: [github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems](https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems)"
+    },
+    {
       keywords: ["cgpa", "marks", "grades", "percentage", "score", "academic", "standing", "result"],
       answer: "Abhishek maintains an exceptional academic record across engineering and schooling:\n• **B.Tech in ECE (IEM Kolkata, 2023–2027)**: 8.73 CGPA (up to 6th semester) with top department standing.\n• **CBSE Class 12 (PCM + IP)**: 86.5% at M.G.M. Higher Secondary School, Bokaro (2023).\n• **CBSE Class 10**: 95.0% at M.G.M. Higher Secondary School, Bokaro (2021)."
     },
@@ -344,8 +397,8 @@ export const resumeData = {
       answer: "Camera-Assisted Adaptive 7-State Traffic Controller:\n• Synthesized and simulated on Xilinx Vivado with full timing analysis.\n• Architected a 7-state Finite State Machine (FSM) in C to dynamically balance multi-directional traffic flow.\n• Drastically minimized state transition latency and eliminated traffic gridlock conditions."
     },
     {
-      keywords: ["github", "recent projects", "last 6 months", "6 months", "latest", "new projects"],
-      answer: "Over the last 6 months (2026), Abhishek built and updated key repositories on GitHub (@abhishek947kumar):\n• **Embedded-Night-Vision-System**: Active IR & thermal sensor fusion with YOLOv2 for real-time pedestrian recognition.\n• **Logistics-Management-System**: Enterprise commercial logistics and fleet tracking engine engineered in Python and Django.\n• **YourFinance**: Modern financial tracker with AI-driven expense categorization powered by Google Gemini.\n• **Evershop**: High-performance full-stack eCommerce platform built with TypeScript and React."
+      keywords: ["github", "recent projects", "last 6 months", "6 months", "latest", "new projects", "last 1 week", "1 week", "last week"],
+      answer: "Over the last week and recent months (September 2026), Abhishek engineered and released major flagship projects on GitHub (@abhishek947kumar) and LinkedIn:\n• **BitTrace DFIR (Built Sep 21, 2026)**: Automated Live RAM and Postmortem Bitcoin Forensics Tool for Windows compliant with ISO/IEC 27037.\n• **Embedded-Night-Vision-System (Built Sep 19, 2026)**: Active IR & thermal sensor fusion with quantized YOLOv2 for real-time pedestrian recognition.\n• **Logistics-Management-System (Built Sep 18, 2026)**: Enterprise commercial multi-dealer logistics and fleet tracking platform in Python and Django.\n• **YourFinance**: Modern financial tracker with AI-driven wealth advice powered by Google Gemini.\n• **Evershop**: High-performance full-stack eCommerce platform built with TypeScript and React."
     },
     {
       keywords: ["publication", "paper", "research", "ieee", "iementech", "doi"],
@@ -353,15 +406,15 @@ export const resumeData = {
     },
     {
       keywords: ["skills", "technologies", "languages", "tech stack", "python", "c++", "embedded"],
-      answer: "Abhishek's verified technical proficiencies:\n• **Programming Languages**: C, C++, Embedded C, Python, MATLAB, JavaScript/TypeScript, SQL\n• **Hardware & Protocols**: ARM/AVR/ESP Microcontrollers, GPIO, UART, SPI, I2C, VLSI Design, Control Systems\n• **EDA & Simulation Tools**: Xilinx Vivado, Wokwi Simulator, Logic Analyzers, Multisim\n• **Software & Web Engineering**: Django, REST APIs, Google Gemini AI, Git/GitHub, CI/CD, Agile/Jira"
+      answer: "Abhishek's verified technical proficiencies:\n• **Programming Languages**: C, C++, Embedded C, Python, MATLAB, JavaScript/TypeScript, SQL\n• **Hardware & Protocols**: ARM/AVR/ESP Microcontrollers, GPIO, UART, SPI, I2C, VLSI Design, Control Systems\n• **EDA & Simulation Tools**: Xilinx Vivado, Wokwi Simulator, Logic Analyzers, Multisim\n• **Security & Forensics**: Live Volatile RAM Triage, ISO/IEC 27037 Evidence Handling, Windows Prefetch & Registry Analysis, Cryptographic Hashing\n• **Software & Web Engineering**: FastAPI, Django, React, REST APIs, Google Gemini AI, Git/GitHub, CI/CD, Agile/Jira"
     },
     {
       keywords: ["why hire", "hire", "placement", "value", "strengths", "fit", "candidate"],
-      answer: "Why Abhishek Kumar is a top candidate for engineering teams:\n• **Top Academic Rigor**: 8.73 CGPA in B.Tech ECE with deep fundamentals in OOP, DSA, and Control Systems.\n• **Rare Bridge of Hardware & Software**: Hands-on mastery from bare-metal VLSI/firmware up to Python/Django/AI systems.\n• **Proven Researcher**: First-author IEEE conference publication at IEMENTECH 2026.\n• **Real Industrial Exposure**: On-site internships at Jadavpur University (VLSI EDA) and SAIL (Plant Automation).\n• **Placement Ready**: Immediately productive in Embedded Systems, Firmware, Hardware Design, or Software Engineering roles."
+      answer: "Why Abhishek Kumar is a top candidate for engineering teams:\n• **Top Academic Rigor**: 8.73 CGPA in B.Tech ECE with deep fundamentals in OOP, DSA, and Control Systems.\n• **Rare Bridge of Hardware & Software**: Hands-on mastery from bare-metal VLSI/firmware up to Python/FastAPI/Django/AI systems.\n• **Proven Researcher**: First-author IEEE conference publication at IEMENTECH 2026.\n• **Real Industrial Exposure**: On-site internships at Jadavpur University (VLSI EDA) and SAIL (Plant Automation).\n• **Systems & Security Depth**: Built and demonstrated end-to-end DFIR platforms (BitTrace) and real-time ADAS edge models.\n• **Placement Ready**: Immediately productive in Embedded Systems, Firmware, Hardware Design, or Software Engineering roles."
     },
     {
-      keywords: ["contact", "email", "phone", "reach", "call", "address", "location", "message"],
-      answer: "Direct contact channels for Abhishek Kumar:\n• **Email**: abhishek1297kumar@gmail.com\n• **Phone / WhatsApp**: +91 9470303282\n• **LinkedIn**: linkedin.com/in/abhishek947kumar\n• **GitHub**: github.com/abhishek947kumar\n• **Locations**: Kolkata, West Bengal & Bokaro Steel City, Jharkhand"
+      keywords: ["contact", "email", "phone", "reach", "call", "address", "location", "message", "portfolio", "website", "live link", "link", "url"],
+      answer: "Direct contact channels & portfolio links for Abhishek Kumar:\n• **Live Portfolio**: [abhishek947kumar.github.io/portfolio](https://abhishek947kumar.github.io/portfolio/)\n• **Email**: abhishek1297kumar@gmail.com\n• **Phone / WhatsApp**: +91 9470303282\n• **LinkedIn**: [linkedin.com/in/abhishek947kumar](https://www.linkedin.com/in/abhishek947kumar)\n• **GitHub**: [github.com/abhishek947kumar](https://github.com/abhishek947kumar)\n• **Locations**: Kolkata, West Bengal & Bokaro Steel City, Jharkhand"
     },
     {
       keywords: ["activities", "ieee", "sytron", "quizzophrenia", "societies"],

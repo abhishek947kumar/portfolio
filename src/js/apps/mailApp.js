@@ -121,7 +121,7 @@ export class MailApp {
 
     if (copyContactBtn) {
       copyContactBtn.addEventListener('click', async () => {
-        const contactInfo = `Abhishek Kumar\nEmail: ${resumeData.personal.email}\nPhone: ${resumeData.personal.phone}\nLinkedIn: ${resumeData.personal.linkedin}\nGitHub: ${resumeData.personal.github}`;
+        const contactInfo = `Abhishek Kumar\nEmail: ${resumeData.personal.email}\nPhone: ${resumeData.personal.phone}\nPortfolio: ${resumeData.personal.portfolio}\nLinkedIn: ${resumeData.personal.linkedin}\nGitHub: ${resumeData.personal.github}`;
         await navigator.clipboard.writeText(contactInfo);
         copyContactBtn.textContent = 'Copied to Clipboard!';
         setTimeout(() => {
