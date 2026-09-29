@@ -38,13 +38,16 @@ Profile Highlights:
 - Publications:
   1) IEEE IEMENTECH 2026: "Enhancing Wearable Depression Management: Integrating Piezoelectric Energy Harvesting and Acupressure-Based Therapy." (Published, DOI: 10.1109/IEMENTech202669403.2026.11434403).
 - Projects:
-  1) Piezo-Electric Acupressure Wearable (IoT, Wokwi, Embedded C, Sensors)
-  2) Camera-Assisted Adaptive 7-State Traffic Controller (Xilinx Vivado, FSM in C)
-  3) Embedded Night-Vision System for Pedestrian Detection (Active IR + Thermal sensors with YOLOv2 & HAAR) - Created/Updated in last 6 months (Sep 2026)
-  4) Logistics Management System (Python/Django enterprise logistics) - Created/Updated in last 6 months (Sep 2026)
-  5) YourFinance (Full-stack personal finance with Gemini AI) - Created/Updated in last 6 months (Jul 2026)
-  6) EverShop (TypeScript, React, GraphQL eCommerce) - Created/Updated in last 6 months (Aug 2026)
-  7) Cybersecurity Suite (Image encryption using pixel manipulation, Caesar cipher, password checker, keylogger)
+  1) SplitFlow (Smart Group Expense Splitter & Settlement Engine with OCR Scanner & FX Rates) - Latest (Sep 2026)
+  2) PulseFlow Agile (Enterprise Agile Project Management with Real-Time WebSockets & D3.js Burndown) - Latest (Sep 2026)
+  3) BitTrace DFIR (Live Volatile RAM & Postmortem Bitcoin Forensics Tool, ISO 27037) - Recent (Sep 2026)
+  4) Embedded Night-Vision System for Pedestrian Detection (Active IR + Thermal sensors with YOLOv2 & HAAR) - Recent (Sep 2026)
+  5) Logistics Management System (Python/Django enterprise logistics) - Recent (Sep 2026)
+  6) Piezo-Electric Acupressure Wearable (IoT, Wokwi, Embedded C, Sensors, IEEE Publication)
+  7) Camera-Assisted Adaptive 7-State Traffic Controller (Xilinx Vivado, FSM in C)
+  8) YourFinance (Full-stack personal finance with Gemini AI) - (Jul 2026)
+  9) EverShop (TypeScript, React, GraphQL eCommerce) - (Aug 2026)
+  10) Cybersecurity Suite (Image encryption using pixel manipulation, Caesar cipher, password checker, keylogger)
 - Core Skills: Microprocessors, Microcontrollers, Embedded C, C/C++, Python, MATLAB, JavaScript/TypeScript, Hardware Interfacing (GPIO, UART, SPI, I2C), VLSI Design, Xilinx Vivado, Wokwi, Git, Agile/Jira.
 - Certifications: Internet of Things and AI Cloud (UC San Diego / Coursera).
 - Activities: IEEE, IEEE MTT-S, IEEE CAS-S Member, SYTRON '25 Volunteer.
@@ -135,6 +138,8 @@ Always answer warmly, concisely, and with persuasive evidence of Abhishek's tech
 
     if (qLower.includes('project') || qLower.includes('work') || qLower.includes('portfolio') || qLower.includes('build')) {
       return `Abhishek has engineered standout projects across digital forensics, hardware, AI, and software:\n\n` +
+        `• **SplitFlow** (Latest, Sep 2026): Smart group expense splitter with OCR receipt parsing, live FX rates, greedy debt simplification graph, and UPI QR settlements.\n` +
+        `• **PulseFlow Agile** (Latest, Sep 2026): Enterprise agile workspace with real-time WebSockets, D3.js sprint burndown analytics, AI Copilot, and Gantt roadmap.\n` +
         `• **BitTrace DFIR** (Recent): Automated Live RAM & Postmortem Bitcoin Forensic platform with ISO/IEC 27037 evidence vault.\n` +
         `• **Embedded Night-Vision System** (Recent): Active IR + Thermal sensor fusion with YOLOv2 for pedestrian recognition.\n` +
         `• **Logistics Management System** (Recent): Enterprise multi-dealer supply-chain tracking engine in Python/Django.\n` +
@@ -184,7 +189,7 @@ Always answer warmly, concisely, and with persuasive evidence of Abhishek's tech
     }
 
     // Default intelligent overview
-    return `Abhishek Kumar is a B.Tech ECE student at IEM Kolkata (CGPA 8.73, Class of 2027) with an IEEE publication at IEMENTECH 2026, VLSI internship at Jadavpur University, industrial training at SAIL, and multiple recent projects in Systems & Forensics (BitTrace DFIR), Embedded Systems (YOLOv2 Night-Vision, Piezoelectric wearable, 7-state Vivado traffic controller) and Software/AI.\n\nFeel free to ask about his **CGPA**, **internships**, **recent projects from the last week**, **IEEE paper**, or **why you should hire him**!`;
+    return `Abhishek Kumar is a B.Tech ECE student at IEM Kolkata (CGPA 8.73, Class of 2027) with an IEEE publication at IEMENTECH 2026, VLSI internship at Jadavpur University, industrial training at SAIL, and multiple production projects in Software & FinTech (SplitFlow, PulseFlow Agile), Systems & Forensics (BitTrace DFIR), Embedded Systems (YOLOv2 Night-Vision, Piezoelectric wearable, 7-state Vivado traffic controller).\n\nFeel free to ask about his **CGPA**, **internships**, **latest GitHub releases (SplitFlow, PulseFlow Agile)**, **IEEE paper**, or **why you should hire him**!`;
   }
 }
 

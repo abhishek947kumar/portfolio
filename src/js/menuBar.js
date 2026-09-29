@@ -304,13 +304,15 @@ export class MenuBar {
 
     const items = [
       { type: 'app', title: 'Resume (Preview PDF)', sub: 'View or download resume', id: 'resume', icon: '📄' },
-      { type: 'app', title: 'Projects (App Store)', sub: '8 engineering projects (recent & hardware/DFIR)', id: 'projects', icon: '🛍️' },
+      { type: 'app', title: 'Projects (App Store)', sub: `${resumeData.projects.length} engineering projects (FinTech, real-time, hardware & DFIR)`, id: 'projects', icon: '🛍️' },
       { type: 'app', title: 'Siri & Gemini AI Assistant', sub: 'Ask questions about Abhishek with AI', id: 'siri', icon: '🤖' },
       { type: 'app', title: 'Terminal (zsh)', sub: 'Interactive command-line interface', id: 'terminal', icon: '💻' },
       { type: 'app', title: 'Social & Activity Hub', sub: 'Live GitHub commits & LinkedIn posts', id: 'social', icon: '⚡' },
       { type: 'app', title: 'System Settings', sub: 'Academic CGPA, hardware stack, wallpapers', id: 'settings', icon: '⚙️' },
       { type: 'app', title: 'Safari Browser', sub: 'Web demos & publications', id: 'safari', icon: '🌐' },
       { type: 'app', title: 'Mail', sub: 'Send placement interview invitation', id: 'mail', icon: '✉️' },
+      { type: 'detail', title: 'SplitFlow — Expense Splitter', sub: 'OCR receipt scanner, greedy debt graph & live FX rates (Sep 2026)', id: 'projects', icon: '⚡' },
+      { type: 'detail', title: 'PulseFlow Agile Platform', sub: 'Real-time WebSockets, D3.js burndown & AI Copilot (Sep 2026)', id: 'projects', icon: '📊' },
       { type: 'detail', title: 'CGPA: 8.73 in B.Tech ECE', sub: 'Institute of Engineering & Management, Kolkata', id: 'resume', icon: '🎓' },
       { type: 'detail', title: 'VLSI Design Internship', sub: 'Jadavpur University — IC design flow & EDA bare-metal', id: 'settings', icon: '⚡' },
       { type: 'detail', title: 'Vocational Trainee', sub: 'Steel Authority of India Limited (SAIL) — Plant automation', id: 'settings', icon: '🏭' },

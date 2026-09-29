@@ -53,6 +53,12 @@ export class SafariApp {
           <button class="safari-bookmark" data-url="https://doi.org/10.1109/IEMENTech202669403.2026.11434403">
             <span class="bm-icon">📄</span> IEEE Paper (DOI)
           </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/splitflow">
+            <span class="bm-icon">⚡</span> SplitFlow App
+          </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/pulseflow-agile">
+            <span class="bm-icon">📊</span> PulseFlow Agile
+          </button>
           <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems">
             <span class="bm-icon">🛡️</span> BitTrace DFIR
           </button>
@@ -109,8 +115,34 @@ export class SafariApp {
             </div>
 
             <div class="li-body-section">
-              <h3>Featured Projects & Activity (Last 1 Week)</h3>
+              <h3>Featured Projects & Activity (Latest Releases)</h3>
               <div class="li-projects-list">
+                <div class="li-project-item">
+                  <div class="li-proj-icon">⚡</div>
+                  <div class="li-proj-details">
+                    <h4>SplitFlow: Smart Group Expense Splitter & Settlement Engine</h4>
+                    <p class="li-proj-meta">Launched Sep 29, 2026 • JavaScript, OCR Scanner, Live FX Rates & QR Payments</p>
+                    <p class="li-proj-desc">Automated greedy debt minimization graph reducing multi-person circular debts, OCR itemized receipt parsing, and real-time multi-currency settlement links.</p>
+                    <div class="li-proj-links">
+                      <a href="${resumeData.personal.linkedin}" target="_blank" class="li-link">View Post on LinkedIn &rarr;</a>
+                      <a href="https://github.com/abhishek947kumar/splitflow" target="_blank" class="li-link-gh">GitHub Repo &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="li-project-item">
+                  <div class="li-proj-icon">📊</div>
+                  <div class="li-proj-details">
+                    <h4>PulseFlow Agile: Enterprise Project Management & Telemetry</h4>
+                    <p class="li-proj-meta">Launched Sep 29, 2026 • JavaScript, WebSockets, D3.js & AI Copilot</p>
+                    <p class="li-proj-desc">Real-time collaborative Kanban with WebSocket synchronization, mathematical D3.js sprint burndown analytics, AI user story generation, and interactive Gantt roadmap.</p>
+                    <div class="li-proj-links">
+                      <a href="${resumeData.personal.linkedin}" target="_blank" class="li-link">View Post on LinkedIn &rarr;</a>
+                      <a href="https://github.com/abhishek947kumar/pulseflow-agile" target="_blank" class="li-link-gh">GitHub Repo &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="li-project-item">
                   <div class="li-proj-icon">🛡️</div>
                   <div class="li-proj-details">
@@ -268,6 +300,65 @@ export class SafariApp {
       `;
     }
 
+    if (url.includes('splitflow')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">⚡</span>
+              <h3>abhishek947kumar / <strong>splitflow</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">⚡ A modern group expense splitter with live multi-currency rates, flexible splits, OCR receipt scanner, visual debt graph, and payment QR codes.</p>
+            <div class="gh-meta-row">
+              <span>🟡 JavaScript (ES6 Modules)</span>
+              <span>📷 Tesseract OCR</span>
+              <span>⭐ Latest Release (Sep 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>Greedy Debt Simplification:</strong> Graph-theoretic algorithm consolidating circular group IOUs into the minimum possible transactions with visual Canvas flow diagram.</p>
+              <p><strong>OCR Receipt Ingestion:</strong> Optical character recognition parsing scanned receipts to automatically populate line items, tax, and discretionary tips.</p>
+              <p><strong>Multi-Currency FX & UPI QR:</strong> Live foreign exchange rate caching with instant dynamic UPI and settlement QR codes.</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/splitflow" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('pulseflow-agile') || url.includes('pulseflow')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">📊</span>
+              <h3>abhishek947kumar / <strong>pulseflow-agile</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">⚡ Enterprise Agile Project Management Platform with Real-Time WebSockets, D3.js Sprint Burndown, AI Copilot, Gantt Roadmap, and Multi-Theme Engine.</p>
+            <div class="gh-meta-row">
+              <span>🟡 JavaScript</span>
+              <span>🔌 Real-Time WebSockets</span>
+              <span>📈 D3.js Analytics</span>
+              <span>⭐ Latest Release (Sep 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>Real-Time Sync:</strong> Bi-directional WebSocket channels broadcasting Kanban task transitions, assignments, and comments with zero layout shift.</p>
+              <p><strong>D3.js Burndown Engine:</strong> Mathematical sprint burndown curves, team velocity distributions, and cumulative flow velocity tracking.</p>
+              <p><strong>AI Copilot Integration:</strong> Automatic acceptance criteria generation, sprint risk assessment, and smart task estimation.</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/pulseflow-agile" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     // Default GitHub profile page
     return `
       <div class="safari-web-page gh-profile-page">
@@ -283,8 +374,18 @@ export class SafariApp {
           </div>
 
           <div class="gh-pinned-repos">
-            <h4>Pinned & Recent Repositories (Last 1 Week & Recent)</h4>
+            <h4>Pinned & Recent Repositories (Latest Releases)</h4>
             <div class="gh-pinned-grid">
+              <div class="gh-pin-card">
+                <h5>splitflow</h5>
+                <p>Modern group expense splitter with OCR receipt scanner, visual debt graph & FX rates.</p>
+                <span class="pin-lang">JavaScript & FinTech</span>
+              </div>
+              <div class="gh-pin-card">
+                <h5>pulseflow-agile</h5>
+                <p>Enterprise Agile workspace with real-time WebSockets, D3.js burndown & AI Copilot.</p>
+                <span class="pin-lang">JavaScript & D3.js</span>
+              </div>
               <div class="gh-pin-card">
                 <h5>BitTrace-DFIR</h5>
                 <p>Live memory triage, registry analysis & ISO/IEC 27037 digital forensic tool for Bitcoin.</p>

@@ -23,7 +23,7 @@ export const resumeData = {
       "Published IEEE Researcher: First-author publication at IEEE IEMENTECH 2026 on wearable piezoelectric energy harvesting & healthcare technology.",
       "Digital Forensics & Systems Security: Architected BitTrace DFIR for live volatile RAM inspection and ISO/IEC 27037 evidence preservation.",
       "Hands-On Industrial Internships: Bare-metal IC design optimization at Jadavpur University & plant automation software systems at SAIL (Steel Authority of India Limited).",
-      "Active Continuous Learner: Built & updated 6+ production-grade software, cybersecurity, and embedded systems in 2026 alone."
+      "Active Continuous Learner: Built & deployed 10+ production-grade software, cybersecurity, and embedded systems in 2026 alone with continuous GitHub releases."
     ],
     targetRoles: [
       "Embedded Software Engineer / Firmware Engineer",
@@ -99,6 +99,38 @@ export const resumeData = {
   ],
 
   projects: [
+    {
+      id: "splitflow",
+      title: "SplitFlow — Smart Group Expense Splitter & Settlement Engine",
+      subtitle: "OCR Receipt Scanner, Live FX Rates, Visual Debt Graph & UPI QR Settlements",
+      badge: "Latest (Sep 2026) | FinTech & Web Systems",
+      createdPeriod: "Last 1 Week",
+      githubUrl: "https://github.com/abhishek947kumar/splitflow",
+      tags: ["JavaScript", "Web APIs", "OCR Scanner", "Debt Simplification", "D3 / Canvas", "FinTech", "QR Settlement"],
+      description: "A modern, responsive group expense management platform engineered to eliminate shared financial friction. Features an OCR receipt scanner for itemized split extraction, real-time multi-currency exchange rates, a greedy debt minimization algorithm with interactive debt-flow graph, and automated payment QR codes.",
+      highlights: [
+        "Greedy Debt Minimization: Algorithmic settlement engine reducing N-party circular debts into the minimum number of direct transactions, visualized via dynamic Canvas/SVG debt graphs.",
+        "OCR Receipt Parsing & Itemized Allocation: Ingests receipt photos to extract itemized costs, taxes, and tips, allowing unequal, percentage-based, and exact share splits.",
+        "Live Multi-Currency & Instant Settlement: Real-time currency conversion across global currencies via exchange rate APIs with integrated UPI and instant payment QR code generation.",
+        "Export & Audit Trail: Generates court and personal audit-ready exports in PDF, CSV, and Excel formats with tamper-evident balance ledgers."
+      ]
+    },
+    {
+      id: "pulseflow-agile",
+      title: "PulseFlow Agile — Enterprise Project Management & Telemetry Platform",
+      subtitle: "Real-Time WebSockets, D3.js Sprint Burndown, AI Copilot & Gantt Roadmap",
+      badge: "Latest (Sep 2026) | Enterprise & Real-Time",
+      createdPeriod: "Last 1 Week",
+      githubUrl: "https://github.com/abhishek947kumar/pulseflow-agile",
+      tags: ["JavaScript", "WebSockets", "D3.js", "AI Copilot", "Agile / Scrum", "Gantt Roadmap", "Enterprise Architecture"],
+      description: "An enterprise-grade collaborative agile project management platform designed for distributed engineering teams. Features real-time multi-user Kanban boards via WebSockets, predictive sprint analytics with interactive D3.js burndown charts, AI-assisted user story generation, and interactive Gantt roadmap timelines.",
+      highlights: [
+        "Real-Time Collaborative Kanban: Bidirectional WebSockets synchronization with optimistic state updates, conflict resolution, and granular role-based permissions.",
+        "Interactive D3.js Sprint Analytics: Mathematical velocity tracking, scope-creep indicators, and dynamic burndown/burnup projections computed in real time.",
+        "AI Copilot for Agile Teams: Automated user story drafting, sprint velocity prediction, automated test-case generation, and blocker triage.",
+        "Interactive Gantt Roadmap: Drag-and-drop chronological timeline with milestone dependency resolution and critical path calculation."
+      ]
+    },
     {
       id: "bittrace-dfir",
       title: "BitTrace DFIR - Automated Live & Postmortem Bitcoin Forensic Tool",
@@ -397,8 +429,16 @@ export const resumeData = {
       answer: "Camera-Assisted Adaptive 7-State Traffic Controller:\n• Synthesized and simulated on Xilinx Vivado with full timing analysis.\n• Architected a 7-state Finite State Machine (FSM) in C to dynamically balance multi-directional traffic flow.\n• Drastically minimized state transition latency and eliminated traffic gridlock conditions."
     },
     {
+      keywords: ["splitflow", "expense splitter", "split", "expense", "receipt", "ocr", "debt graph", "settlement"],
+      answer: "SplitFlow (Launched Sep 29, 2026 on GitHub @abhishek947kumar):\n• **Architecture**: Modern group expense splitter with real-time multi-currency FX rates, flexible unequal splits, and instant UPI QR payments.\n• **OCR Scanner**: Optical Character Recognition engine parsing itemized receipt totals, taxes, and service fees.\n• **Debt Simplification**: Greedy graph algorithm minimizing transactions across multi-person group trips.\n• **Repository**: [github.com/abhishek947kumar/splitflow](https://github.com/abhishek947kumar/splitflow)"
+    },
+    {
+      keywords: ["pulseflow", "agile", "scrum", "kanban", "burndown", "websockets", "d3", "gantt"],
+      answer: "PulseFlow Agile (Launched Sep 29, 2026 on GitHub @abhishek947kumar):\n• **Architecture**: Enterprise agile workspace with real-time WebSocket collaborative boards and multi-theme engine.\n• **Telemetry & Analytics**: D3.js interactive sprint burndown, velocity distribution, and cumulative flow diagrams.\n• **AI Copilot**: Automatically generates user stories, acceptance criteria, and flags scope creep before sprint close.\n• **Repository**: [github.com/abhishek947kumar/pulseflow-agile](https://github.com/abhishek947kumar/pulseflow-agile)"
+    },
+    {
       keywords: ["github", "recent projects", "last 6 months", "6 months", "latest", "new projects", "last 1 week", "1 week", "last week"],
-      answer: "Over the last week and recent months (September 2026), Abhishek engineered and released major flagship projects on GitHub (@abhishek947kumar) and LinkedIn:\n• **BitTrace DFIR (Built Sep 21, 2026)**: Automated Live RAM and Postmortem Bitcoin Forensics Tool for Windows compliant with ISO/IEC 27037.\n• **Embedded-Night-Vision-System (Built Sep 19, 2026)**: Active IR & thermal sensor fusion with quantized YOLOv2 for real-time pedestrian recognition.\n• **Logistics-Management-System (Built Sep 18, 2026)**: Enterprise commercial multi-dealer logistics and fleet tracking platform in Python and Django.\n• **YourFinance**: Modern financial tracker with AI-driven wealth advice powered by Google Gemini.\n• **Evershop**: High-performance full-stack eCommerce platform built with TypeScript and React."
+      answer: "Over the last week and recent releases (September 2026), Abhishek engineered and released major flagship projects on GitHub (@abhishek947kumar):\n• **SplitFlow (Sep 29, 2026)**: Smart group expense splitter with OCR receipt scanner, live FX conversion, greedy debt simplification graph, and UPI QR settlements.\n• **PulseFlow Agile (Sep 29, 2026)**: Enterprise agile platform with real-time WebSockets, D3.js sprint burndown telemetry, AI Copilot, and Gantt roadmaps.\n• **BitTrace DFIR (Sep 21, 2026)**: Automated Live RAM and Postmortem Bitcoin Forensics Tool for Windows compliant with ISO/IEC 27037.\n• **Embedded-Night-Vision-System (Sep 19, 2026)**: Active IR & thermal sensor fusion with quantized YOLOv2 for real-time pedestrian recognition.\n• **Logistics-Management-System (Sep 18, 2026)**: Enterprise commercial multi-dealer logistics and fleet tracking platform in Python and Django.\n• **YourFinance**: Modern financial control center with AI-driven wealth advice powered by Google Gemini.\n• **Evershop**: High-performance full-stack eCommerce platform built with TypeScript and React."
     },
     {
       keywords: ["publication", "paper", "research", "ieee", "iementech", "doi"],

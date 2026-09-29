@@ -73,7 +73,7 @@ export class ProjectsApp {
                 <span class="stat-label">IEEE Publication</span>
               </div>
               <div class="stat-box">
-                <span class="stat-num">9+</span>
+                <span class="stat-num">12+</span>
                 <span class="stat-label">GitHub Repos</span>
               </div>
               <div class="stat-box">
@@ -111,12 +111,12 @@ export class ProjectsApp {
   filterProjects() {
     return resumeData.projects.filter(proj => {
       if (this.activeFilter === 'recent') {
-        if (proj.createdPeriod !== 'Last 6 Months' && proj.createdPeriod !== 'Last 1 Week' && !proj.badge.includes('Recent')) return false;
+        if (proj.createdPeriod !== 'Last 6 Months' && proj.createdPeriod !== 'Last 1 Week' && !proj.badge.includes('Recent') && !proj.badge.includes('Latest')) return false;
       } else if (this.activeFilter === 'embedded') {
-        const isEmb = proj.tags.some(t => ['Embedded Systems', 'Embedded C', 'Microcontrollers', 'Wokwi', 'Xilinx Vivado', 'Finite State Machines'].includes(t));
+        const isEmb = proj.tags.some(t => ['Embedded Systems', 'Embedded C', 'Microcontrollers', 'Wokwi', 'Xilinx Vivado', 'Finite State Machines', 'Thermal IR', 'YOLOv2'].includes(t));
         if (!isEmb) return false;
       } else if (this.activeFilter === 'software') {
-        const isSw = proj.tags.some(t => ['Python', 'FastAPI', 'Django', 'React', 'GraphQL', 'Gemini AI API', 'TypeScript'].includes(t));
+        const isSw = proj.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'Django', 'React', 'GraphQL', 'Gemini AI API', 'WebSockets', 'D3.js', 'FinTech', 'Enterprise Architecture'].includes(t));
         if (!isSw) return false;
       } else if (this.activeFilter === 'security') {
         const isSec = proj.tags.some(t => ['Digital Forensics', 'Cryptography', 'Security Algorithms', 'Pixel Manipulation', 'Windows API', 'ISO 27037', 'C++'].includes(t));
@@ -148,7 +148,7 @@ export class ProjectsApp {
     }
 
     return list.map(proj => {
-      const isRecent = proj.createdPeriod === 'Last 6 Months';
+      const isRecent = proj.createdPeriod === 'Last 6 Months' || proj.createdPeriod === 'Last 1 Week' || proj.badge.includes('Latest') || proj.badge.includes('Recent');
       return `
         <div class="project-card 3d-tilt-card ${isRecent ? 'is-recent' : ''}" data-project-id="${proj.id}">
           <div class="card-header">

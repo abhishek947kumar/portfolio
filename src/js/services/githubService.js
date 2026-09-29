@@ -34,7 +34,7 @@ export class GitHubService {
       name: resumeData.personal.name,
       avatar_url: "https://avatars.githubusercontent.com/u/153946376?v=4",
       html_url: `https://github.com/${this.username}`,
-      public_repos: 9,
+      public_repos: 12,
       followers: 1,
       following: 3,
       bio: resumeData.personal.tagline
@@ -175,6 +175,32 @@ export class GitHubService {
   getFallbackRepos() {
     return [
       {
+        id: 1396154535,
+        name: "splitflow",
+        fullName: "abhishek947kumar/splitflow",
+        description: "⚡ A modern group expense splitter with live multi-currency rates, flexible splits, OCR receipt scanner, visual debt graph, and payment QR codes.",
+        url: "https://github.com/abhishek947kumar/splitflow",
+        language: "JavaScript",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Sep 29, 2026",
+        isLast6Months: true,
+        topics: ["expense-splitter", "ocr-scanner", "debt-graph", "fintech", "currency-converter", "qr-payments"]
+      },
+      {
+        id: 1395897468,
+        name: "pulseflow-agile",
+        fullName: "abhishek947kumar/pulseflow-agile",
+        description: "⚡ Enterprise Agile Project Management Platform with Real-Time WebSockets, D3.js Sprint Burndown, AI Copilot, Gantt Roadmap, and Multi-Theme Engine.",
+        url: "https://github.com/abhishek947kumar/pulseflow-agile",
+        language: "JavaScript",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Sep 29, 2026",
+        isLast6Months: true,
+        topics: ["agile", "scrum", "kanban", "websockets", "d3js", "sprint-burndown", "ai-copilot", "gantt"]
+      },
+      {
         id: 0,
         name: "Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems",
         fullName: "abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems",
@@ -270,6 +296,24 @@ export class GitHubService {
 
   getFallbackEvents() {
     return [
+      {
+        id: "evt-splitflow-1",
+        type: "PushEvent",
+        repo: "splitflow",
+        repoUrl: "https://github.com/abhishek947kumar/splitflow",
+        date: "Sep 29, 2026",
+        description: "Pushed: 'Release SplitFlow: OCR receipt scanner, greedy debt graph & live FX currency settlement'",
+        icon: "git-push"
+      },
+      {
+        id: "evt-pulseflow-1",
+        type: "PushEvent",
+        repo: "pulseflow-agile",
+        repoUrl: "https://github.com/abhishek947kumar/pulseflow-agile",
+        date: "Sep 29, 2026",
+        description: "Pushed: 'PulseFlow Enterprise Agile: WebSocket sync, D3.js sprint analytics & AI Copilot'",
+        icon: "git-push"
+      },
       {
         id: "evt-0",
         type: "PushEvent",

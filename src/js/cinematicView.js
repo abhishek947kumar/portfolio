@@ -221,12 +221,12 @@ export class CinematicView {
           <div class="cine-section-header">
             <span class="cine-section-pill">Portfolio Showcase</span>
             <h2 class="cine-section-title">Featured Engineering Projects</h2>
-            <p class="cine-section-subtitle">Real-world systems spanning computer vision, microcontrollers, FSM hardware, and cloud logistics.</p>
+            <p class="cine-section-subtitle">Production systems spanning FinTech settlement engines, real-time agile platforms, digital forensics, computer vision, and bare-metal hardware.</p>
           </div>
 
           <div class="cine-filter-tabs">
             <button class="cine-filter-btn active" data-filter="all">All Projects</button>
-            <button class="cine-filter-btn" data-filter="recent">🔥 Last 6 Months (GitHub)</button>
+            <button class="cine-filter-btn" data-filter="recent">🔥 Recent Releases (GitHub)</button>
             <button class="cine-filter-btn" data-filter="embedded">Embedded & VLSI</button>
             <button class="cine-filter-btn" data-filter="software">Software & AI</button>
           </div>
@@ -433,17 +433,19 @@ export class CinematicView {
   renderProjectCards(filter) {
     let list = resumeData.projects;
     if (filter === 'recent') {
-      list = list.filter(p => p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week' || p.badge.includes('Recent'));
+      list = list.filter(p => p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week' || p.badge.includes('Recent') || p.badge.includes('Latest'));
     } else if (filter === 'embedded') {
-      list = list.filter(p => p.tags.some(t => ['Embedded Systems', 'VLSI', 'IoT', 'Wokwi', 'Hardware'].includes(t)) || p.title.toLowerCase().includes('embedded') || p.title.toLowerCase().includes('traffic'));
+      list = list.filter(p => p.tags.some(t => ['Embedded Systems', 'VLSI', 'IoT', 'Wokwi', 'Hardware', 'Thermal IR', 'YOLOv2', 'Finite State Machines'].includes(t)) || p.title.toLowerCase().includes('embedded') || p.title.toLowerCase().includes('traffic'));
     } else if (filter === 'software') {
-      list = list.filter(p => p.tags.some(t => ['Python', 'FastAPI', 'Django', 'REST APIs', 'Enterprise Architecture', 'AI', 'Digital Forensics', 'Cryptography'].includes(t)));
+      list = list.filter(p => p.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'Django', 'REST APIs', 'Enterprise Architecture', 'AI', 'Digital Forensics', 'Cryptography', 'WebSockets', 'D3.js', 'FinTech', 'OCR Scanner', 'Debt Simplification'].includes(t)));
     }
 
-    return list.map(p => `
-      <div class="cine-project-card ${(p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week') ? 'is-hot' : ''}">
+    return list.map(p => {
+      const isHot = p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week' || p.badge.includes('Latest') || p.badge.includes('Recent');
+      return `
+      <div class="cine-project-card ${isHot ? 'is-hot' : ''}">
         <div class="cine-project-top">
-          <span class="${(p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week') ? 'cine-tag-hot' : 'cine-tag-normal'}">
+          <span class="${isHot ? 'cine-tag-hot' : 'cine-tag-normal'}">
             ${p.badge}
           </span>
           <span class="cine-project-period">${p.createdPeriod}</span>
@@ -466,7 +468,8 @@ export class CinematicView {
           </a>
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
   }
 
   initListeners(container) {
