@@ -21,14 +21,16 @@ export const resumeData = {
       "High Academic Distinction: CGPA 8.73 (up to 6th semester) in B.Tech ECE at IEM Kolkata.",
       "Dual Expertise: Strong grasp across both bare-metal hardware/embedded firmware (Wokwi, Vivado, C/C++, microcontrollers) and high-level software & systems engineering (Python, FastAPI, Django, React, AI Cloud).",
       "Published IEEE Researcher: First-author publication at IEEE IEMENTECH 2026 on wearable piezoelectric energy harvesting & healthcare technology.",
+      "Machine Learning & Cyber Defense: Engineered FraudGuard.AI (sub-10ms XGBoost ensemble & Explainable AI for real-time payment fraud prevention) and Cloud DLP Shield (dual-engine AST SQLi detection & AESX authenticated field encryption).",
       "Digital Forensics & Systems Security: Architected BitTrace DFIR for live volatile RAM inspection and ISO/IEC 27037 evidence preservation.",
       "Hands-On Industrial Internships: Bare-metal IC design optimization at Jadavpur University & plant automation software systems at SAIL (Steel Authority of India Limited).",
-      "Active Continuous Learner: Built & deployed 10+ production-grade software, cybersecurity, and embedded systems in 2026 alone with continuous GitHub releases."
+      "Active Continuous Learner: Built & deployed 14+ production-grade software, AI, cybersecurity, and embedded systems in 2026 alone with continuous GitHub releases."
     ],
     targetRoles: [
       "Embedded Software Engineer / Firmware Engineer",
       "VLSI Design & Hardware Systems Engineer",
       "Digital Forensics & Incident Response (DFIR) / Systems Security Engineer",
+      "AI / Machine Learning Engineer (Fraud Defense & Systems)",
       "IoT Systems & Hardware-Software Co-Design Engineer",
       "Software Development Engineer (Python / C++ / Full Stack)",
       "Systems Validation & Automation Engineer"
@@ -99,6 +101,38 @@ export const resumeData = {
   ],
 
   projects: [
+    {
+      id: "fraudguard-ai",
+      title: "FraudGuard.AI — Real-Time Credit Card Fraud Detection Platform",
+      subtitle: "Sub-10ms Risk Scoring, XGBoost Ensemble, Explainable AI & Automated Tiered Action Rules",
+      badge: "Latest (Sep 2026) | AI & Cyber Defense",
+      createdPeriod: "Last 1 Week",
+      githubUrl: "https://github.com/abhishek947kumar/credit-card-fraud-detection",
+      tags: ["Python", "FastAPI", "XGBoost", "Scikit-Learn", "Machine Learning", "Explainable AI", "Cyber Defense", "FinTech", "REST APIs"],
+      description: "An enterprise AI platform engineered to evaluate credit card transaction risk in real-time under extreme class imbalance (~1% fraud prevalence). Features sub-10ms inference, domain geo-velocity calculation (impossible travel / card cloning), multi-model ensemble benchmark, and Explainable AI (XAI) diagnostics.",
+      highlights: [
+        "Real-Time ML Ensemble: Blended decision engine combining cost-weighted XGBoost, Balanced Random Forest, HistGradientBoosting, and Isolation Forest with 100% recall and 1.000 PR-AUC on holdout test benchmarks, reducing latency to ~2.8ms.",
+        "Domain Feature Engineering: Computes real-time geo-velocity (km/h travel speed identifying physical impossible teleportation), 1h/24h authorization velocity surges, cardholder 30-day spend baseline ratios, and device fingerprint suspicion.",
+        "Explainable AI (XAI) for Compliance: Structured risk driver diagnostics complying with FCRA and GDPR Art. 22 regulations, providing human fraud analysts with transparent explanations for flagged transactions.",
+        "Automated Tiered Action Policies: Instant routing into AUTO_APPROVE (<25% risk), STEP_UP_AUTH (25-65% OTP / 3D Secure challenge), and DECLINE_AND_FREEZE (>65% risk with automated card lock)."
+      ]
+    },
+    {
+      id: "cloud-dlp-shield",
+      title: "Cloud DLP Shield — Detecting Data Leaks Using SQL & Cloud DLP Architecture",
+      subtitle: "Dual-Engine Content & Contextual Inspection, Real-Time SQLi Detection & AESX Field Encryption",
+      badge: "Latest (Sep 2026) | Cloud Security & DLP",
+      createdPeriod: "Last 1 Week",
+      githubUrl: "https://github.com/abhishek947kumar/detecting-data-leaks",
+      tags: ["JavaScript", "Node.js", "Cloud Security", "Data Loss Prevention", "SQL Injection", "AES-256-GCM", "Server-Sent Events", "Express"],
+      description: "An enterprise-grade Cloud Data Loss Prevention (DLP) and application security platform designed to defend e-commerce and cloud web services against data exfiltration. Combines dual-engine inspection (Content & Contextual Analysis) with AESX authenticated field encryption and dynamic honeypot decoy mitigation.",
+      highlights: [
+        "Dual-Engine Inspection Gateway: Layer 1 Content Engine intercepts full-spectrum SQL injections (Tautology, Union exfiltration, Schema harvesting), validates credit cards via mathematical Luhn algorithm, and neutralizes keystroke logging scripts; Layer 2 Contextual Engine analyzes user behavior, query velocity bursts, and sub-15ms typing cadence anomalies.",
+        "AESX Authenticated Field Encryption: Zero-trust database storage utilizing AES-256-GCM with key whitening, IV randomness, and tamper-resistant 128-bit authentication tags preventing ciphertext bit flipping.",
+        "User Threat Categorization & Honeypot Defense: Real-time risk scoring categorizing users into Benign (0-29), Suspicious (30-69), and Assaulter (70-100), serving deceptive Honeytoken decoys to assaulters while safeguarding production data.",
+        "Real-Time SOC Observability & Interactive Storefront: Live Server-Sent Events (SSE) threat stream, deep payload AST sandbox terminal, database vault explorer, and dual-mode Nexus E-Shop featuring a toggleable 'DLP Shield vs Vulnerable Raw SQL' demonstration."
+      ]
+    },
     {
       id: "splitflow",
       title: "SplitFlow — Smart Group Expense Splitter & Settlement Engine",
@@ -331,6 +365,46 @@ export const resumeData = {
 
   socialFeed: [
     {
+      id: "post-li-fraudguard",
+      platform: "LinkedIn",
+      author: "Abhishek Kumar",
+      date: "September 30, 2026",
+      title: "Launched FraudGuard.AI: Enterprise Real-Time Credit Card Fraud Detection Platform! 💳🤖",
+      content: "Excited to unveil FraudGuard.AI, an enterprise machine learning platform for real-time digital payment defense! Engineered with Python, FastAPI, and an ensemble of cost-weighted XGBoost, Balanced Random Forest, and Isolation Forest. Features sub-10ms risk scoring, geo-velocity impossible travel calculation (detecting card cloning), automated tiered action policies (Approve, Challenge, Decline & Freeze), and Explainable AI (XAI) diagnostics compliant with FCRA and GDPR Art. 22 standards.",
+      url: "https://www.linkedin.com/in/abhishek947kumar",
+      tags: ["#MachineLearning", "#CyberDefense", "#FinTech", "#XGBoost", "#FastAPI", "#ExplainableAI", "#Python", "#AI"]
+    },
+    {
+      id: "post-li-clouddlp",
+      platform: "LinkedIn",
+      author: "Abhishek Kumar",
+      date: "September 30, 2026",
+      title: "Unveiled Cloud DLP Shield: Real-Time SQLi Interception & Cloud Data Loss Prevention! 🛡️☁️",
+      content: "Proud to announce Cloud DLP Shield, an enterprise-grade cloud security system engineered to defend web services and e-commerce stores against data leaks and SQL injections. Powered by a Dual-Engine Gateway (Content Inspection with Luhn verification + Contextual Behavioral Analytics with typing cadence & query velocity tracking) and AESX authenticated field encryption with tamper-proof AuthTags, plus a live SSE Security Operations Center (SOC).",
+      url: "https://www.linkedin.com/in/abhishek947kumar",
+      tags: ["#Cybersecurity", "#CloudSecurity", "#DataLossPrevention", "#Cryptography", "#NodeJS", "#AppSec", "#InfoSec"]
+    },
+    {
+      id: "post-gh-fraudguard",
+      platform: "GitHub",
+      author: "abhishek947kumar",
+      date: "September 30, 2026",
+      title: "Pushed FraudGuard.AI to GitHub @abhishek947kumar 🚀",
+      content: "Released repository for real-time credit card fraud detection with XGBoost ensemble, automated synthetic data generator, sub-10ms scoring API, and Explainable AI triage dashboard.",
+      url: "https://github.com/abhishek947kumar/credit-card-fraud-detection",
+      tags: ["#MachineLearning", "#Python", "#FastAPI", "#OpenSource"]
+    },
+    {
+      id: "post-gh-clouddlp",
+      platform: "GitHub",
+      author: "abhishek947kumar",
+      date: "September 30, 2026",
+      title: "Pushed detecting-data-leaks (Cloud DLP Shield) to GitHub 🛡️",
+      content: "Open-sourced full cloud DLP gateway implementation with AST SQLi parsing, Luhn card validation, AESX 256-bit encryption vault, and live SSE SOC dashboard.",
+      url: "https://github.com/abhishek947kumar/detecting-data-leaks",
+      tags: ["#CloudSecurity", "#DLP", "#NodeJS", "#Cryptography"]
+    },
+    {
       id: "post-li-bittrace",
       platform: "LinkedIn",
       author: "Abhishek Kumar",
@@ -429,6 +503,14 @@ export const resumeData = {
       answer: "Camera-Assisted Adaptive 7-State Traffic Controller:\n• Synthesized and simulated on Xilinx Vivado with full timing analysis.\n• Architected a 7-state Finite State Machine (FSM) in C to dynamically balance multi-directional traffic flow.\n• Drastically minimized state transition latency and eliminated traffic gridlock conditions."
     },
     {
+      keywords: ["fraud", "fraudguard", "credit card", "xgboost", "explainable ai", "xai", "financial fraud"],
+      answer: "FraudGuard.AI (Enterprise Real-Time Credit Card Fraud Detection Platform - Released Sep 30, 2026 on GitHub @abhishek947kumar):\n• **Architecture & Performance**: Real-time FastAPI scoring pipeline evaluating transactions in under 2.8ms with 100% recall and 1.000 PR-AUC under extreme ~1% class imbalance.\n• **ML Ensemble**: Cost-weighted XGBoost, Balanced Random Forest, HistGradientBoosting, and unsupervised Isolation Forest for zero-day fraud pattern discovery.\n• **Geo-Velocity & Feature Engineering**: Calculates impossible travel speeds in km/h (card cloning detection), 1h/24h velocity surges, and 30-day cardholder spend outlier ratios.\n• **Explainable AI (XAI)**: Generates transparent risk drivers for regulatory compliance (FCRA, GDPR Art. 22) and automated tiered actions (AUTO_APPROVE, STEP_UP_AUTH, DECLINE_AND_FREEZE).\n• **Repository**: [github.com/abhishek947kumar/credit-card-fraud-detection](https://github.com/abhishek947kumar/credit-card-fraud-detection)"
+    },
+    {
+      keywords: ["dlp", "data leak", "data loss prevention", "cloud dlp", "sqli", "sql injection", "aesx", "aes-256-gcm", "honeypot"],
+      answer: "Cloud DLP Shield (Detecting Data Leaks Using SQL & Cloud DLP Architecture - Released Sep 30, 2026 on GitHub @abhishek947kumar):\n• **Dual-Engine Inspection**: Layer 1 Content Engine intercepts SQL injection AST patterns, Luhn-validates credit card numbers, and detects keylogger scripts; Layer 2 Contextual Engine monitors user behavior, query velocity bursts, and sub-15ms typing cadences.\n• **AESX Field Encryption**: Zero-trust AES-256-GCM authenticated encryption with key whitening and 128-bit authentication tags preventing ciphertext tampering.\n• **User Threat Categorization & Honeypots**: Categorizes users into Benign, Suspicious, and Assaulters, serving deceptive Honeytoken decoys to assaulters while locking down sessions.\n• **Real-Time SOC Observability**: Live Server-Sent Events (SSE) threat stream, deep payload AST sandbox terminal, and toggleable 'DLP Shield vs Raw SQL' store demonstration.\n• **Repository**: [github.com/abhishek947kumar/detecting-data-leaks](https://github.com/abhishek947kumar/detecting-data-leaks)"
+    },
+    {
       keywords: ["splitflow", "expense splitter", "split", "expense", "receipt", "ocr", "debt graph", "settlement"],
       answer: "SplitFlow (Launched Sep 29, 2026 on GitHub @abhishek947kumar):\n• **Architecture**: Modern group expense splitter with real-time multi-currency FX rates, flexible unequal splits, and instant UPI QR payments.\n• **OCR Scanner**: Optical Character Recognition engine parsing itemized receipt totals, taxes, and service fees.\n• **Debt Simplification**: Greedy graph algorithm minimizing transactions across multi-person group trips.\n• **Repository**: [github.com/abhishek947kumar/splitflow](https://github.com/abhishek947kumar/splitflow)"
     },
@@ -438,7 +520,7 @@ export const resumeData = {
     },
     {
       keywords: ["github", "recent projects", "last 6 months", "6 months", "latest", "new projects", "last 1 week", "1 week", "last week"],
-      answer: "Over the last week and recent releases (September 2026), Abhishek engineered and released major flagship projects on GitHub (@abhishek947kumar):\n• **SplitFlow (Sep 29, 2026)**: Smart group expense splitter with OCR receipt scanner, live FX conversion, greedy debt simplification graph, and UPI QR settlements.\n• **PulseFlow Agile (Sep 29, 2026)**: Enterprise agile platform with real-time WebSockets, D3.js sprint burndown telemetry, AI Copilot, and Gantt roadmaps.\n• **BitTrace DFIR (Sep 21, 2026)**: Automated Live RAM and Postmortem Bitcoin Forensics Tool for Windows compliant with ISO/IEC 27037.\n• **Embedded-Night-Vision-System (Sep 19, 2026)**: Active IR & thermal sensor fusion with quantized YOLOv2 for real-time pedestrian recognition.\n• **Logistics-Management-System (Sep 18, 2026)**: Enterprise commercial multi-dealer logistics and fleet tracking platform in Python and Django.\n• **YourFinance**: Modern financial control center with AI-driven wealth advice powered by Google Gemini.\n• **Evershop**: High-performance full-stack eCommerce platform built with TypeScript and React."
+      answer: "Over the last week and recent releases (September 2026), Abhishek engineered and released major flagship projects on GitHub (@abhishek947kumar) and LinkedIn:\n• **FraudGuard.AI (Sep 30, 2026)**: Enterprise real-time credit card fraud detection platform with sub-10ms scoring, XGBoost ensemble, and Explainable AI (XAI).\n• **Cloud DLP Shield (Sep 30, 2026)**: Enterprise Cloud Data Loss Prevention platform with AST SQLi interception, Luhn validation, AESX field encryption, and live SSE SOC.\n• **SplitFlow (Sep 29, 2026)**: Smart group expense splitter with OCR receipt scanner, live FX conversion, greedy debt simplification graph, and UPI QR settlements.\n• **PulseFlow Agile (Sep 29, 2026)**: Enterprise agile platform with real-time WebSockets, D3.js sprint burndown telemetry, AI Copilot, and Gantt roadmaps.\n• **BitTrace DFIR (Sep 21, 2026)**: Automated Live RAM and Postmortem Bitcoin Forensics Tool for Windows compliant with ISO/IEC 27037.\n• **Embedded-Night-Vision-System (Sep 19, 2026)**: Active IR & thermal sensor fusion with quantized YOLOv2 for real-time pedestrian recognition.\n• **Logistics-Management-System (Sep 18, 2026)**: Enterprise commercial multi-dealer logistics and fleet tracking platform in Python and Django.\n• **YourFinance**: Modern financial control center with AI-driven wealth advice powered by Google Gemini.\n• **Evershop**: High-performance full-stack eCommerce platform built with TypeScript and React."
     },
     {
       keywords: ["publication", "paper", "research", "ieee", "iementech", "doi"],

@@ -221,7 +221,7 @@ export class CinematicView {
           <div class="cine-section-header">
             <span class="cine-section-pill">Portfolio Showcase</span>
             <h2 class="cine-section-title">Featured Engineering Projects</h2>
-            <p class="cine-section-subtitle">Production systems spanning FinTech settlement engines, real-time agile platforms, digital forensics, computer vision, and bare-metal hardware.</p>
+            <p class="cine-section-subtitle">Production systems spanning real-time AI fraud detection, cloud DLP security, FinTech settlement engines, digital forensics, computer vision, and bare-metal hardware.</p>
           </div>
 
           <div class="cine-filter-tabs">
@@ -437,7 +437,7 @@ export class CinematicView {
     } else if (filter === 'embedded') {
       list = list.filter(p => p.tags.some(t => ['Embedded Systems', 'VLSI', 'IoT', 'Wokwi', 'Hardware', 'Thermal IR', 'YOLOv2', 'Finite State Machines'].includes(t)) || p.title.toLowerCase().includes('embedded') || p.title.toLowerCase().includes('traffic'));
     } else if (filter === 'software') {
-      list = list.filter(p => p.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'Django', 'REST APIs', 'Enterprise Architecture', 'AI', 'Digital Forensics', 'Cryptography', 'WebSockets', 'D3.js', 'FinTech', 'OCR Scanner', 'Debt Simplification'].includes(t)));
+      list = list.filter(p => p.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'Django', 'REST APIs', 'Enterprise Architecture', 'AI', 'Digital Forensics', 'Cryptography', 'WebSockets', 'D3.js', 'FinTech', 'OCR Scanner', 'Debt Simplification', 'Machine Learning', 'Explainable AI', 'Cloud Security', 'Data Loss Prevention', 'AES-256-GCM', 'SQL Injection', 'XGBoost'].includes(t)));
     }
 
     return list.map(p => {

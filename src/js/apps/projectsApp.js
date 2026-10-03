@@ -116,10 +116,10 @@ export class ProjectsApp {
         const isEmb = proj.tags.some(t => ['Embedded Systems', 'Embedded C', 'Microcontrollers', 'Wokwi', 'Xilinx Vivado', 'Finite State Machines', 'Thermal IR', 'YOLOv2'].includes(t));
         if (!isEmb) return false;
       } else if (this.activeFilter === 'software') {
-        const isSw = proj.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'Django', 'React', 'GraphQL', 'Gemini AI API', 'WebSockets', 'D3.js', 'FinTech', 'Enterprise Architecture'].includes(t));
+        const isSw = proj.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'Django', 'React', 'GraphQL', 'Gemini AI API', 'WebSockets', 'D3.js', 'FinTech', 'Enterprise Architecture', 'Machine Learning', 'Explainable AI', 'XGBoost'].includes(t));
         if (!isSw) return false;
       } else if (this.activeFilter === 'security') {
-        const isSec = proj.tags.some(t => ['Digital Forensics', 'Cryptography', 'Security Algorithms', 'Pixel Manipulation', 'Windows API', 'ISO 27037', 'C++'].includes(t));
+        const isSec = proj.tags.some(t => ['Digital Forensics', 'Cryptography', 'Security Algorithms', 'Pixel Manipulation', 'Windows API', 'ISO 27037', 'C++', 'Cloud Security', 'Data Loss Prevention', 'Cyber Defense', 'SQL Injection', 'AES-256-GCM'].includes(t));
         if (!isSec) return false;
       }
 

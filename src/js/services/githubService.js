@@ -34,7 +34,7 @@ export class GitHubService {
       name: resumeData.personal.name,
       avatar_url: "https://avatars.githubusercontent.com/u/153946376?v=4",
       html_url: `https://github.com/${this.username}`,
-      public_repos: 12,
+      public_repos: 14,
       followers: 1,
       following: 3,
       bio: resumeData.personal.tagline
@@ -175,6 +175,32 @@ export class GitHubService {
   getFallbackRepos() {
     return [
       {
+        id: 1397001001,
+        name: "detecting-data-leaks",
+        fullName: "abhishek947kumar/detecting-data-leaks",
+        description: "🛡️ Cloud DLP system detecting SQL injections and data leaks via Content Inspection, Contextual Behavioral Analysis, and AESX Authenticated Field-Level Encryption.",
+        url: "https://github.com/abhishek947kumar/detecting-data-leaks",
+        language: "JavaScript",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Sep 30, 2026",
+        isLast6Months: true,
+        topics: ["cloud-security", "dlp", "sqli-detection", "aes-256-gcm", "data-loss-prevention", "honeytokens"]
+      },
+      {
+        id: 1397002002,
+        name: "credit-card-fraud-detection",
+        fullName: "abhishek947kumar/credit-card-fraud-detection",
+        description: "💳 Enterprise Real-Time Credit Card Fraud Detection AI Platform with Sub-10ms Latency & Explainable AI (XGBoost + FastAPI).",
+        url: "https://github.com/abhishek947kumar/credit-card-fraud-detection",
+        language: "Python",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Sep 30, 2026",
+        isLast6Months: true,
+        topics: ["fraud-detection", "xgboost", "fastapi", "machine-learning", "explainable-ai", "fintech"]
+      },
+      {
         id: 1396154535,
         name: "splitflow",
         fullName: "abhishek947kumar/splitflow",
@@ -296,6 +322,24 @@ export class GitHubService {
 
   getFallbackEvents() {
     return [
+      {
+        id: "evt-leaks-1",
+        type: "PushEvent",
+        repo: "detecting-data-leaks",
+        repoUrl: "https://github.com/abhishek947kumar/detecting-data-leaks",
+        date: "Sep 30, 2026",
+        description: "Pushed: 'Release Cloud DLP Shield: Dual-engine AST SQLi detection, Luhn validation & AESX encryption'",
+        icon: "git-push"
+      },
+      {
+        id: "evt-fraud-1",
+        type: "PushEvent",
+        repo: "credit-card-fraud-detection",
+        repoUrl: "https://github.com/abhishek947kumar/credit-card-fraud-detection",
+        date: "Sep 30, 2026",
+        description: "Pushed: 'Release FraudGuard.AI: Real-time XGBoost ensemble, sub-10ms scoring & Explainable AI'",
+        icon: "git-push"
+      },
       {
         id: "evt-splitflow-1",
         type: "PushEvent",

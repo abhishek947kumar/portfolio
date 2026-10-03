@@ -311,6 +311,8 @@ export class MenuBar {
       { type: 'app', title: 'System Settings', sub: 'Academic CGPA, hardware stack, wallpapers', id: 'settings', icon: '⚙️' },
       { type: 'app', title: 'Safari Browser', sub: 'Web demos & publications', id: 'safari', icon: '🌐' },
       { type: 'app', title: 'Mail', sub: 'Send placement interview invitation', id: 'mail', icon: '✉️' },
+      { type: 'detail', title: 'FraudGuard.AI — Fraud Detection', sub: 'Real-time XGBoost ensemble, sub-10ms scoring & Explainable AI (Sep 2026)', id: 'projects', icon: '💳' },
+      { type: 'detail', title: 'Cloud DLP Shield — Data Leak Prevention', sub: 'Dual-engine SQLi detection, Luhn validation & AESX encryption (Sep 2026)', id: 'projects', icon: '🔒' },
       { type: 'detail', title: 'SplitFlow — Expense Splitter', sub: 'OCR receipt scanner, greedy debt graph & live FX rates (Sep 2026)', id: 'projects', icon: '⚡' },
       { type: 'detail', title: 'PulseFlow Agile Platform', sub: 'Real-time WebSockets, D3.js burndown & AI Copilot (Sep 2026)', id: 'projects', icon: '📊' },
       { type: 'detail', title: 'CGPA: 8.73 in B.Tech ECE', sub: 'Institute of Engineering & Management, Kolkata', id: 'resume', icon: '🎓' },

@@ -18,11 +18,15 @@
   - **Jadavpur University** — VLSI Design & Semiconductor EDA Intern (Dec 2025 – Jan 2026)
   - **Steel Authority of India Limited (SAIL)** — Industrial Automation Trainee (May 2025 – June 2025)
 
-## 🚀 Key Featured Projects (Recent & Highlighted)
-1. **BitTrace DFIR** ([Repository](https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems)): Automated Live Volatile Memory (RAM) & Postmortem Bitcoin Forensic Analysis Tool for Windows compliant with ISO/IEC 27037 evidence standards (FastAPI + React).
-2. **Embedded Night-Vision System** ([Repository](https://github.com/abhishek947kumar/Embedded-Night-Vision-System)): Active 850nm IR + LWIR Thermal sensor fusion with HAAR+AdaBoost and YOLOv2 for pedestrian recognition.
-3. **Logistics Management System (LogiTrack Pro)** ([Repository](https://github.com/abhishek947kumar/Logistics-Management-System)): Enterprise commercial multi-dealer freight & supply-chain platform built with Python & Django.
-4. **Piezo-Electric Wearable Device**: Microcontroller-based IoT acupressure therapy device powered by biomechanical energy harvesting (Published in IEEE).
+## 🚀 Key Featured Projects (Recent & Flagship Releases)
+1. **FraudGuard.AI** ([Repository](https://github.com/abhishek947kumar/credit-card-fraud-detection)): Enterprise Real-Time Credit Card Fraud Detection AI Platform with sub-10ms risk scoring, cost-weighted XGBoost ensemble (100% recall, 1.000 PR-AUC), geo-velocity impossible travel calculation, and Explainable AI (XAI) diagnostics compliant with FCRA/GDPR.
+2. **Cloud DLP Shield** ([Repository](https://github.com/abhishek947kumar/detecting-data-leaks)): Enterprise Cloud Data Loss Prevention (DLP) & Application Security Platform featuring dual-engine inspection (AST SQLi detection, Luhn validation, sub-15ms typing cadence analysis), AESX authenticated field encryption (AES-256-GCM), honeypot decoys, and live SSE SOC.
+3. **SplitFlow** ([Repository](https://github.com/abhishek947kumar/splitflow)): Smart group expense splitter with OCR receipt item parsing, greedy debt simplification graph, real-time multi-currency FX rates, and instant UPI QR payments.
+4. **PulseFlow Agile** ([Repository](https://github.com/abhishek947kumar/pulseflow-agile)): Enterprise agile workspace featuring real-time WebSockets synchronization, D3.js interactive sprint burndown telemetry, AI Copilot user story generation, and Gantt roadmap timelines.
+5. **BitTrace DFIR** ([Repository](https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems)): Automated Live Volatile Memory (RAM) & Postmortem Bitcoin Forensic Analysis Tool for Windows compliant with ISO/IEC 27037 evidence standards (FastAPI + React).
+6. **Embedded Night-Vision System** ([Repository](https://github.com/abhishek947kumar/Embedded-Night-Vision-System)): Active 850nm IR + LWIR Thermal sensor fusion with HAAR+AdaBoost and YOLOv2 for pedestrian recognition.
+7. **Logistics Management System (LogiTrack Pro)** ([Repository](https://github.com/abhishek947kumar/Logistics-Management-System)): Enterprise commercial multi-dealer freight & supply-chain platform built with Python & Django.
+8. **Piezo-Electric Wearable Device**: Microcontroller-based IoT acupressure therapy device powered by biomechanical energy harvesting (Published in IEEE).
 
 ---
 

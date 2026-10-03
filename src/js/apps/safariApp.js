@@ -53,6 +53,12 @@ export class SafariApp {
           <button class="safari-bookmark" data-url="https://doi.org/10.1109/IEMENTech202669403.2026.11434403">
             <span class="bm-icon">📄</span> IEEE Paper (DOI)
           </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/credit-card-fraud-detection">
+            <span class="bm-icon">💳</span> FraudGuard.AI
+          </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/detecting-data-leaks">
+            <span class="bm-icon">🔒</span> Cloud DLP Shield
+          </button>
           <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/splitflow">
             <span class="bm-icon">⚡</span> SplitFlow App
           </button>
@@ -117,6 +123,32 @@ export class SafariApp {
             <div class="li-body-section">
               <h3>Featured Projects & Activity (Latest Releases)</h3>
               <div class="li-projects-list">
+                <div class="li-project-item">
+                  <div class="li-proj-icon">💳</div>
+                  <div class="li-proj-details">
+                    <h4>FraudGuard.AI: Real-Time Credit Card Fraud Detection Platform</h4>
+                    <p class="li-proj-meta">Launched Sep 30, 2026 • Python, FastAPI, XGBoost, Scikit-Learn & Explainable AI (XAI)</p>
+                    <p class="li-proj-desc">Evaluates transaction risk under extreme class imbalance with 100% recall and PR-AUC 1.000, sub-10ms latency, geo-velocity impossible travel calculation, and automated tiered action routing (Approve, Challenge, Decline & Freeze).</p>
+                    <div class="li-proj-links">
+                      <a href="${resumeData.personal.linkedin}" target="_blank" class="li-link">View Post on LinkedIn &rarr;</a>
+                      <a href="https://github.com/abhishek947kumar/credit-card-fraud-detection" target="_blank" class="li-link-gh">GitHub Repo &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="li-project-item">
+                  <div class="li-proj-icon">🔒</div>
+                  <div class="li-proj-details">
+                    <h4>Cloud DLP Shield: Detecting Data Leaks Using SQL & Cloud DLP Architecture</h4>
+                    <p class="li-proj-meta">Launched Sep 30, 2026 • JavaScript, Node.js, Cloud Security, AES-256-GCM & Live SSE SOC</p>
+                    <p class="li-proj-desc">Dual-engine security combining AST Content Inspection (SQLi prevention, Luhn card verification) and Contextual Behavioral Analytics (sub-15ms typing cadence), with AESX field encryption and deceptive Honeypot Decoy Tokens.</p>
+                    <div class="li-proj-links">
+                      <a href="${resumeData.personal.linkedin}" target="_blank" class="li-link">View Post on LinkedIn &rarr;</a>
+                      <a href="https://github.com/abhishek947kumar/detecting-data-leaks" target="_blank" class="li-link-gh">GitHub Repo &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="li-project-item">
                   <div class="li-proj-icon">⚡</div>
                   <div class="li-proj-details">
@@ -300,6 +332,66 @@ export class SafariApp {
       `;
     }
 
+    if (url.includes('credit-card-fraud-detection') || url.includes('fraudguard')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">💳</span>
+              <h3>abhishek947kumar / <strong>credit-card-fraud-detection</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">Enterprise Real-Time Credit Card Fraud Detection AI Platform with Sub-10ms Latency & Explainable AI (FastAPI + XGBoost).</p>
+            <div class="gh-meta-row">
+              <span>🐍 Python 3.13+</span>
+              <span>⚡ FastAPI & XGBoost</span>
+              <span>🔍 Explainable AI (XAI)</span>
+              <span>⭐ Latest Release (Sep 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>Sub-10ms Scoring & Ensemble Benchmark:</strong> Evaluates transactions under extreme class imbalance (~1% fraud prevalence) with cost-weighted XGBoost, Balanced Random Forest, and Isolation Forest achieving 100% recall and 1.000 PR-AUC.</p>
+              <p><strong>Geo-Velocity Calculation:</strong> Calculates travel velocity in km/h between successive transactions to immediately flag impossible physical teleportation (card cloning).</p>
+              <p><strong>Automated Tiered Actions:</strong> Automated routing policies: AUTO_APPROVE (<25%), STEP_UP_AUTH (25-65% OTP / 3D Secure challenge), and DECLINE_AND_FREEZE (>65% risk with automated card lock).</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/credit-card-fraud-detection" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('detecting-data-leaks') || url.includes('cloud-dlp')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">🔒</span>
+              <h3>abhishek947kumar / <strong>detecting-data-leaks</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">Cloud DLP system detecting SQL injections and data leaks via Content Inspection, Contextual Behavioral Analysis, and AESX Authenticated Field-Level Encryption.</p>
+            <div class="gh-meta-row">
+              <span>🟡 JavaScript / Node.js</span>
+              <span>🛡️ Dual-Engine Cloud DLP</span>
+              <span>🔐 AES-256-GCM AuthTag</span>
+              <span>⭐ Latest Release (Sep 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>Dual-Engine Inspection Gateway:</strong> Layer 1 Content Engine intercepts SQL injection AST attacks, validates credit cards with mathematical Luhn algorithm, and neutralizes keyloggers; Layer 2 Contextual Engine tracks sub-15ms typing cadence and query burst velocity.</p>
+              <p><strong>AESX Field Encryption:</strong> Zero-trust database vault utilizing AES-256-GCM with key whitening, IV randomness, and tamper-resistant 128-bit authentication tags.</p>
+              <p><strong>Threat Categorization & Honeypots:</strong> Real-time risk categorization (Benign, Suspicious, Assaulter), serving deceptive Honeypot Decoy Tokens to assaulters.</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/detecting-data-leaks" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     if (url.includes('splitflow')) {
       return `
         <div class="safari-web-page gh-repo-page">
@@ -376,6 +468,16 @@ export class SafariApp {
           <div class="gh-pinned-repos">
             <h4>Pinned & Recent Repositories (Latest Releases)</h4>
             <div class="gh-pinned-grid">
+              <div class="gh-pin-card">
+                <h5>credit-card-fraud-detection</h5>
+                <p>Real-time fraud prevention with XGBoost ensemble, sub-10ms scoring & Explainable AI.</p>
+                <span class="pin-lang">Python & FastAPI</span>
+              </div>
+              <div class="gh-pin-card">
+                <h5>detecting-data-leaks</h5>
+                <p>Cloud DLP system with AST SQLi detection, Luhn validation & AESX field encryption.</p>
+                <span class="pin-lang">JavaScript & Node.js</span>
+              </div>
               <div class="gh-pin-card">
                 <h5>splitflow</h5>
                 <p>Modern group expense splitter with OCR receipt scanner, visual debt graph & FX rates.</p>
