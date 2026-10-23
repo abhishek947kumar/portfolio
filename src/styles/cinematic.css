@@ -651,25 +651,85 @@ html, body {
 .cine-tags-cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 24px;
+  gap: 7px;
+  margin-top: 10px;
 }
 
 .cine-tech-pill {
-  font-size: 11.5px;
-  padding: 4px 11px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--cine-border);
   color: var(--cine-text-secondary);
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
+  line-height: 1.4;
 }
 
 .cine-tech-pill:hover {
-  background: rgba(0, 112, 243, 0.15);
-  border-color: var(--cine-blue);
+  background: rgba(0, 112, 243, 0.18);
+  border-color: var(--cine-cyan);
   color: #fff;
   transform: translateY(-1px);
+}
+
+/* Project-Validated Skill Category Breakdown */
+.cine-skills-categories-container {
+  margin-top: 26px;
+  border-top: 1px solid var(--cine-border);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cine-skills-cat-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--cine-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 2px;
+}
+
+.cine-skill-cat-block {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 13px 15px;
+  transition: all 0.2s ease;
+}
+
+.cine-skill-cat-block:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(0, 242, 254, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cine-skill-cat-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cine-cat-icon-name {
+  font-size: 13px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cine-cat-context {
+  font-size: 10.5px;
+  color: var(--cine-cyan);
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 500;
 }
 
 /* ==========================================================================

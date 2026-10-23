@@ -53,6 +53,18 @@ export class SafariApp {
           <button class="safari-bookmark" data-url="https://doi.org/10.1109/IEMENTech202669403.2026.11434403">
             <span class="bm-icon">📄</span> IEEE Paper (DOI)
           </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/mips-32bit-pipelined-processor">
+            <span class="bm-icon">⚡</span> MIPS 32-Bit Core
+          </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/image-caption-generator">
+            <span class="bm-icon">🌌</span> Caption Studio
+          </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/Return-Guard">
+            <span class="bm-icon">🛡️</span> ReturnGuard Agent
+          </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/license-plate-recognition">
+            <span class="bm-icon">🚗</span> PlateVision ALPR
+          </button>
           <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/credit-card-fraud-detection">
             <span class="bm-icon">💳</span> FraudGuard.AI
           </button>
@@ -123,6 +135,45 @@ export class SafariApp {
             <div class="li-body-section">
               <h3>Featured Projects & Activity (Latest Releases)</h3>
               <div class="li-projects-list">
+                <div class="li-project-item">
+                  <div class="li-proj-icon">⚡</div>
+                  <div class="li-proj-details">
+                    <h4>32-Bit 5-Stage Pipelined MIPS Processor Core (Verilog & Vivado)</h4>
+                    <p class="li-proj-meta">Launched Oct 23, 2026 • Verilog HDL, Vivado, Artix-7 Basys 3 FPGA, Python Assembler</p>
+                    <p class="li-proj-desc">Classic Patterson & Hennessy 5-stage RISC pipeline with EX-to-EX/MEM-to-EX forwarding, load-use hazard stall unit, custom Python assembler, and Artix-7 FPGA synthesis (2,810 LUTs, 94 mW power, 0 DRC violations).</p>
+                    <div class="li-proj-links">
+                      <a href="${resumeData.personal.linkedin}" target="_blank" class="li-link">View Post on LinkedIn &rarr;</a>
+                      <a href="https://github.com/abhishek947kumar/mips-32bit-pipelined-processor" target="_blank" class="li-link-gh">GitHub Repo &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="li-project-item">
+                  <div class="li-proj-icon">🌌</div>
+                  <div class="li-proj-details">
+                    <h4>Neural Image Caption Studio: Deep Learning Multimodal AI</h4>
+                    <p class="li-proj-meta">Launched Oct 17, 2026 • PyTorch, CNN (MobileNetV3/ResNet-50) + LSTM, Beam Search</p>
+                    <p class="li-proj-desc">Multimodal computer vision and NLP app translating visual scenes into English captions. Features dual decoding (Greedy vs. Beam Search alpha=0.7), token-level softmax inspection tray, and BLEU metric lab.</p>
+                    <div class="li-proj-links">
+                      <a href="${resumeData.personal.linkedin}" target="_blank" class="li-link">View Post on LinkedIn &rarr;</a>
+                      <a href="https://github.com/abhishek947kumar/image-caption-generator" target="_blank" class="li-link-gh">GitHub Repo &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="li-project-item">
+                  <div class="li-proj-icon">🛡️</div>
+                  <div class="li-proj-details">
+                    <h4>ReturnGuard: Autonomous ReAct E-Commerce AI Refund Agent</h4>
+                    <p class="li-proj-meta">Launched Oct 17, 2026 • Python, FastAPI, React 18, Autonomous Agents, Multimodal CV</p>
+                    <p class="li-proj-desc">Governed ReAct cognitive loop (Thought -> Action -> Observe) verifying order states, evaluating defect photos with vision AI, and enforcing anti-fraud rules with a Human-in-the-Loop review desk.</p>
+                    <div class="li-proj-links">
+                      <a href="${resumeData.personal.linkedin}" target="_blank" class="li-link">View Post on LinkedIn &rarr;</a>
+                      <a href="https://github.com/abhishek947kumar/Return-Guard" target="_blank" class="li-link-gh">GitHub Repo &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="li-project-item">
                   <div class="li-proj-icon">💳</div>
                   <div class="li-proj-details">
@@ -325,6 +376,126 @@ export class SafariApp {
               <p>Full-stack enterprise supply chain engine for multi-dealer inventory management, freight manifests, and automated status telemetry.</p>
               <div class="gh-actions-row">
                 <a href="https://github.com/abhishek947kumar/Logistics-Management-System" target="_blank" class="gh-open-btn">View Full Code on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('mips-32bit-pipelined-processor') || url.includes('mips')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">⚡</span>
+              <h3>abhishek947kumar / <strong>mips-32bit-pipelined-processor</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">Custom 32-bit 5-stage pipelined MIPS processor core in Verilog with hazard detection, forwarding, custom Python assembler, and Xilinx Vivado synthesis on Artix-7 (Basys 3).</p>
+            <div class="gh-meta-row">
+              <span>💎 Verilog HDL</span>
+              <span>⚙️ Xilinx Vivado 2019.2+</span>
+              <span>⚡ Artix-7 Basys 3 FPGA</span>
+              <span>⭐ Latest Release (Oct 23, 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>Pipelined Microarchitecture:</strong> Classic Patterson & Hennessy 5-stage datapath (IF -> ID -> EX -> MEM -> WB) with EX-to-EX and MEM-to-EX data forwarding (zero stalls on ALU RAW dependencies) and hardware load-use hazard bubble insertion.</p>
+              <p><strong>Vivado Synthesis & Power:</strong> Synthesized for XC7A35TCPG236-1 utilizing 2,810 Slice LUTs (13.51%), 1,569 FFs (3.77%), drawing only 94 mW total on-chip power with zero DRC violations.</p>
+              <p><strong>Python Cross-Assembler & Verification:</strong> Custom two-pass assembler translating assembly to MIF machine code with 4/4 passing benchmark suites (Fibonacci, ALU, memory, hazards) and 7-segment display driver.</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/mips-32bit-pipelined-processor" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('image-caption-generator') || url.includes('caption')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">🌌</span>
+              <h3>abhishek947kumar / <strong>image-caption-generator</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">Full-stack AI Image Caption Generator using Deep Learning (CNN Feature Extractor + LSTM Language Decoder) with PyTorch, FastAPI, and an interactive Cyber-Neural Web Studio.</p>
+            <div class="gh-meta-row">
+              <span>🔥 PyTorch 2.0+</span>
+              <span>🐍 Python 3.10+</span>
+              <span>⚡ FastAPI & Docker</span>
+              <span>⭐ Latest Release (Oct 17, 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>Multimodal Architecture:</strong> Merged Show & Tell framework combining pre-trained CNN backbones (MobileNetV3 / ResNet-50) with an autoregressive LSTM decoder trained on Flickr8k.</p>
+              <p><strong>Dual Decoding Strategies:</strong> Fast deterministic greedy argmax search alongside multi-hypothesis Beam Search with length penalty normalization (alpha = 0.7).</p>
+              <p><strong>Interactive Cyber-Neural Studio:</strong> Token-level softmax probability inspector tray, Web Speech API TTS, and BLEU-1 to BLEU-4 benchmark lab with offline feature vector caching.</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/image-caption-generator" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('Return-Guard') || url.includes('returnguard')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">🛡️</span>
+              <h3>abhishek947kumar / <strong>Return-Guard</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">Autonomous ReAct (Reasoning and Acting) AI agent for e-commerce return verification, multimodal computer vision damage inspection, and automated refund/escalation workflows.</p>
+            <div class="gh-meta-row">
+              <span>🧠 ReAct Architecture</span>
+              <span>📸 Multimodal Vision</span>
+              <span>⚡ FastAPI + React 18</span>
+              <span>⭐ Latest Release (Oct 17, 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>Autonomous ReAct Core:</strong> Governed cognitive loop (Thought -> Action -> Observe) with tool telemetry resolving legitimate returns in under 850ms with ~81% throughput.</p>
+              <p><strong>Multimodal Defect Inspection:</strong> Evaluates customer defect photos (screen damage, broken seals) before return authorization.</p>
+              <p><strong>Anti-Fraud & Governance:</strong> Multi-dimensional fraud prevention (wardrobing, empty-box claims) with a $500 hard safety ceiling and Human-in-the-Loop review console.</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/Return-Guard" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('license-plate-recognition') || url.includes('platevision')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">🚗</span>
+              <h3>abhishek947kumar / <strong>license-plate-recognition</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">End-to-end Automatic License Plate Recognition (ALPR) system with an 8-stage OpenCV pipeline, Tesseract OCR ensemble, FastAPI visualizer, and CLI.</p>
+            <div class="gh-meta-row">
+              <span>👁️ OpenCV 4.8+</span>
+              <span>🔍 Tesseract 5.x</span>
+              <span>⚡ FastAPI REST API</span>
+              <span>⭐ Latest Release (Oct 05, 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>8-Stage CV Pipeline:</strong> Bilateral Filtering, Morphological TopHat/BlackHat, Canny edge detection, Aspect Ratio & Solidity filters, and Perspective Transform / Deskewing.</p>
+              <p><strong>Multi-PSM OCR Ensemble:</strong> Queries Tesseract OCR across modes (--psm 8, 7, 6) with character whitelisting and regex sanitization.</p>
+              <p><strong>Interactive Web Dashboard:</strong> Real-time stage inspector, video/webcam live stream processing, and Docker deployment.</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/license-plate-recognition" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
               </div>
             </div>
           </div>

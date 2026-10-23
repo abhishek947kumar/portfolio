@@ -19,18 +19,22 @@ export const resumeData = {
     headline: "Placement Candidate Profile: Abhishek Kumar",
     keyStrengths: [
       "High Academic Distinction: CGPA 8.73 (up to 6th semester) in B.Tech ECE at IEM Kolkata.",
-      "Dual Expertise: Strong grasp across both bare-metal hardware/embedded firmware (Wokwi, Vivado, C/C++, microcontrollers) and high-level software & systems engineering (Python, FastAPI, Django, React, AI Cloud).",
+      "Dual Expertise: Strong grasp across both bare-metal hardware/embedded firmware (Verilog HDL, Vivado, C/C++, microcontrollers) and high-level software & systems engineering (Python, PyTorch, FastAPI, Django, React, AI Cloud).",
+      "Computer Architecture & Processor Design: Engineered a complete 32-bit 5-stage pipelined MIPS processor core in Verilog HDL with hazard detection, data forwarding, custom Python cross-assembler, and Artix-7 Basys 3 FPGA synthesis in Xilinx Vivado (94 mW power, 0 DRC errors).",
+      "Deep Learning & Multimodal AI: Architected Neural Image Caption Studio (PyTorch MobileNetV3/ResNet-50 + LSTM with Beam Search & token probabilities) and ReturnGuard (Autonomous ReAct agent with multimodal vision defect inspection).",
       "Published IEEE Researcher: First-author publication at IEEE IEMENTECH 2026 on wearable piezoelectric energy harvesting & healthcare technology.",
       "Machine Learning & Cyber Defense: Engineered FraudGuard.AI (sub-10ms XGBoost ensemble & Explainable AI for real-time payment fraud prevention) and Cloud DLP Shield (dual-engine AST SQLi detection & AESX authenticated field encryption).",
       "Digital Forensics & Systems Security: Architected BitTrace DFIR for live volatile RAM inspection and ISO/IEC 27037 evidence preservation.",
+      "Computer Vision & Edge Pipelines: Built PlateVision AI (8-stage OpenCV ALPR pipeline with Tesseract OCR multi-PSM ensemble) and Embedded Night-Vision ADAS (active IR + thermal sensor fusion with YOLOv2).",
       "Hands-On Industrial Internships: Bare-metal IC design optimization at Jadavpur University & plant automation software systems at SAIL (Steel Authority of India Limited).",
-      "Active Continuous Learner: Built & deployed 14+ production-grade software, AI, cybersecurity, and embedded systems in 2026 alone with continuous GitHub releases."
+      "Active Continuous Learner: Built & deployed 18+ production-grade software, AI, cybersecurity, and embedded systems in 2026 alone with continuous GitHub releases (@abhishek947kumar)."
     ],
     targetRoles: [
       "Embedded Software Engineer / Firmware Engineer",
       "VLSI Design & Hardware Systems Engineer",
+      "Processor & Computer Architecture Engineer",
+      "AI / Machine Learning Engineer (Deep Learning & Computer Vision)",
       "Digital Forensics & Incident Response (DFIR) / Systems Security Engineer",
-      "AI / Machine Learning Engineer (Fraud Defense & Systems)",
       "IoT Systems & Hardware-Software Co-Design Engineer",
       "Software Development Engineer (Python / C++ / Full Stack)",
       "Systems Validation & Automation Engineer"
@@ -102,11 +106,75 @@ export const resumeData = {
 
   projects: [
     {
+      id: "mips-32bit-processor",
+      title: "32-Bit 5-Stage Pipelined MIPS Processor Core in Verilog & Vivado",
+      subtitle: "Hazard Resolution Unit, Hardware Forwarding, Custom Python Cross-Assembler & Basys 3 FPGA Synthesis",
+      badge: "Latest (Oct 2026) | VLSI & Processor Architecture",
+      createdPeriod: "Latest Release",
+      githubUrl: "https://github.com/abhishek947kumar/mips-32bit-pipelined-processor",
+      tags: ["Verilog HDL", "Xilinx Vivado", "MIPS32 ISA", "5-Stage Pipeline", "FPGA", "Artix-7", "Hardware Forwarding", "Python Assembler", "Computer Architecture"],
+      description: "A production-grade, 5-stage pipelined 32-bit MIPS processor core designed in Verilog HDL following the classic Patterson & Hennessy microarchitecture. Verified via cycle-accurate simulation with custom assembly benchmarks and synthesized targeting Xilinx Artix-7 FPGAs (XC7A35TCPG236-1 / Basys 3) with zero DRC violations and 94 mW total power consumption.",
+      highlights: [
+        "Pipelined Microarchitecture & Hazards: 5-stage datapath (IF -> ID -> EX -> MEM -> WB) with EX-to-EX and MEM-to-EX forwarding (zero-stall on ALU-ALU RAW dependencies), hardware load-use hazard detection unit (automatic 1-cycle bubble insertion), and branch/jump pipeline flush control.",
+        "FPGA Synthesis & Low Power: Synthesized on Xilinx Artix-7 Basys 3 FPGA utilizing 2,810 Slice LUTs (13.51%), 1,569 Flip-Flops (3.77%), and 0 Block RAM (leveraging distributed LUT-RAM), drawing only 94 mW total on-chip power with zero DRC errors.",
+        "Custom Two-Pass Cross-Assembler: Built a Python assembler translating symbolic MIPS assembly to hex/binary MIF memory initialization files with pseudo-instruction macro expansion, label resolution, and syntax validation.",
+        "Peripherals & Verification Suite: 4/4 passing automated assembly benchmark suites (Fibonacci sequence, ALU stress, memory load/store, hazard forward verification) with time-multiplexed 4-digit 7-segment display driver and 16 status LEDs."
+      ]
+    },
+    {
+      id: "neural-image-caption-studio",
+      title: "Neural Image Caption Studio — Deep Learning Vision-Language Generator",
+      subtitle: "PyTorch CNN (MobileNetV3/ResNet-50) + LSTM Decoder, Dual Beam Search & Cyber-Neural Studio",
+      badge: "Latest (Oct 2026) | Deep Learning & Multimodal AI",
+      createdPeriod: "Latest Release",
+      githubUrl: "https://github.com/abhishek947kumar/image-caption-generator",
+      tags: ["PyTorch", "Python", "FastAPI", "Deep Learning", "Computer Vision", "LSTM", "MobileNetV3", "Beam Search", "BLEU Lab", "Multimodal AI"],
+      description: "A full-stack, production-grade computer vision and NLP multimodal system that translates visual scenes into coherent natural language descriptions using merged CNN feature extractors and autoregressive LSTM language decoders trained on Flickr8k.",
+      highlights: [
+        "Multimodal Architecture: Combines pre-trained CNN backbones (MobileNetV3 & ResNet-50) with word embedding projections and a 256-unit LSTM recurrent language decoder utilizing teacher forcing and gradient clipping.",
+        "Dual Autoregressive Decoding: Implements both ultra-fast greedy argmax search and multi-trajectory Beam Search with length penalty normalization (alpha = 0.7) for optimal linguistic diversity.",
+        "Cyber-Neural Web Studio: Interactive dark glassmorphic dashboard featuring drag-and-drop image analysis, token-level softmax inspection tray, Web Speech API text-to-speech (TTS), and top-5 visual concept class activations.",
+        "BLEU Benchmark Lab & Feature Caching: Integrated metric calculation suite for BLEU-1 through BLEU-4 with Brevity Penalty (BP), alongside offline penultimate feature caching (features_cache.pt) enabling full training epochs in seconds."
+      ]
+    },
+    {
+      id: "return-guard",
+      title: "ReturnGuard — Autonomous ReAct E-Commerce AI Refund Agent",
+      subtitle: "ReAct Cognitive Loop, Multimodal CV Defect Inspection, Policy Matrix & AI Governance Guardrails",
+      badge: "Latest (Oct 2026) | Autonomous AI Agents & Vision",
+      createdPeriod: "Latest Release",
+      githubUrl: "https://github.com/abhishek947kumar/Return-Guard",
+      tags: ["Python", "FastAPI", "React 18", "Autonomous Agents", "ReAct Framework", "Multimodal Vision", "AI Governance", "Anti-Fraud", "REST APIs"],
+      description: "An autonomous, governed ReAct (Reasoning and Acting) AI agent that evaluates customer return inquiries, verifies order states, analyzes category return policies across 6 retail verticals, inspects defect photos via multimodal computer vision, and triggers automated refund/escalation workflows.",
+      highlights: [
+        "Autonomous ReAct Cognitive Loop: Step-by-step reasoning trace (Thought -> Action -> Observe) providing a fully transparent internal monologue and tool execution telemetry, resolving valid low-risk returns in under 850ms.",
+        "Multimodal Computer Vision Inspection: Evaluates uploaded product defect photos to verify physical damage claims (e.g. cracked displays, broken seal tags, crushed packaging) before granting return approvals.",
+        "Multi-Dimensional Anti-Fraud Engine: Detects wardrobing (used occasion wear returned late), serial returners, and empty-box abuse across dynamic policy matrices for Electronics, Fashion, Beauty, and Footwear.",
+        "Hard AI Governance & HITL Desk: Programmatic $500 autonomous ceiling with Human-in-the-Loop (HITL) supervisor triage desk for high-value edge cases, achieving ~81% autonomous resolution throughput."
+      ]
+    },
+    {
+      id: "platevision-ai",
+      title: "PlateVision AI — Automatic License Plate Recognition (ALPR)",
+      subtitle: "8-Stage OpenCV Pipeline, Tesseract OCR Multi-PSM Ensemble, Deskewing & FastAPI Web Visualizer",
+      badge: "Latest (Oct 2026) | Computer Vision & ALPR",
+      createdPeriod: "Latest Release",
+      githubUrl: "https://github.com/abhishek947kumar/license-plate-recognition",
+      tags: ["Python", "OpenCV", "Tesseract OCR", "Computer Vision", "FastAPI", "Digital Image Processing", "Edge Detection", "Docker"],
+      description: "An end-to-end, production-grade Automatic License Plate Recognition (ALPR/ANPR) system featuring an 8-stage Computer Vision pipeline, dual-engine comparison (Baseline vs Advanced), multi-PSM Tesseract OCR ensemble, and an interactive dark-mode web visualizer.",
+      highlights: [
+        "8-Stage Computer Vision Pipeline: Employs Bilateral Filtering, Morphological TopHat/BlackHat contrast enhancement, Canny Edge Detection, Contour Aspect Ratio (1.5 <= AR <= 6.0) & Solidity Filtering, and Perspective Transform / Deskewing to isolate license plates under harsh glare, shadows, and steep angles.",
+        "Multi-PSM OCR Ensemble: Ensembles Tesseract Page Segmentation Modes (--psm 8, 7, and 6) with border padding, character whitelisting, and regex sanitization to maximize alphanumeric plate accuracy.",
+        "Dual-Engine Benchmark: Implements both classic OpenCV contour detection and an Advanced Enhanced Pipeline that resolves real-world vehicle grille and windshield false positives.",
+        "Interactive Web Visualizer: Modern dark glassmorphic dashboard with real-time CV stage breakdown inspector, webcam/video feed analysis, CLI batch processing, and containerized Docker deployment."
+      ]
+    },
+    {
       id: "fraudguard-ai",
       title: "FraudGuard.AI — Real-Time Credit Card Fraud Detection Platform",
       subtitle: "Sub-10ms Risk Scoring, XGBoost Ensemble, Explainable AI & Automated Tiered Action Rules",
-      badge: "Latest (Sep 2026) | AI & Cyber Defense",
-      createdPeriod: "Last 1 Week",
+      badge: "Flagship | AI & Cyber Defense",
+      createdPeriod: "Last 1 Month",
       githubUrl: "https://github.com/abhishek947kumar/credit-card-fraud-detection",
       tags: ["Python", "FastAPI", "XGBoost", "Scikit-Learn", "Machine Learning", "Explainable AI", "Cyber Defense", "FinTech", "REST APIs"],
       description: "An enterprise AI platform engineered to evaluate credit card transaction risk in real-time under extreme class imbalance (~1% fraud prevalence). Features sub-10ms inference, domain geo-velocity calculation (impossible travel / card cloning), multi-model ensemble benchmark, and Explainable AI (XAI) diagnostics.",
@@ -286,33 +354,99 @@ export const resumeData = {
 
   skills: {
     domains: [
-      { name: "Microprocessors & Microcontrollers", icon: "cpu", level: 92 },
-      { name: "Embedded Systems & Firmware", icon: "chip", level: 90 },
-      { name: "Digital Electronics & Logic Design", icon: "git-commit", level: 88 },
-      { name: "Hardware Interfacing (GPIO, UART, SPI, I2C)", icon: "sliders", level: 92 },
-      { name: "Digital Forensics & Security Engineering", icon: "shield", level: 88 },
-      { name: "VLSI Design & EDA Workflows", icon: "layers", level: 84 },
-      { name: "Control Systems & Real-Time Processing", icon: "activity", level: 86 }
+      { name: "Processor Design, VLSI & Digital Logic", icon: "git-commit", level: 96 },
+      { name: "Deep Learning, Multimodal AI & Vision", icon: "cpu", level: 95 },
+      { name: "Cloud Security, DLP & Digital Forensics", icon: "shield", level: 94 },
+      { name: "Embedded Systems, Firmware & IoT", icon: "chip", level: 93 },
+      { name: "FinTech, Real-Time Web & Telemetry", icon: "activity", level: 92 },
+      { name: "Backend, Systems & API Architecture", icon: "layers", level: 91 }
+    ],
+    categories: [
+      {
+        id: "ai-ml",
+        name: "AI, Deep Learning & Computer Vision",
+        icon: "🤖",
+        projectContext: "Neural Image Caption Studio, ReturnGuard ReAct Agent, PlateVision ALPR & FraudGuard.AI",
+        skills: [
+          "PyTorch & Torchvision", "CNN + LSTM Encoder-Decoder", "Beam Search Decoding (alpha=0.7)",
+          "Autonomous ReAct Agents", "Multimodal Defect Vision", "8-Stage OpenCV ALPR",
+          "Tesseract OCR Ensemble", "XGBoost Ensemble", "Explainable AI (XAI / SHAP)",
+          "Scikit-Learn", "Balanced Random Forest", "Computer Vision (YOLOv2)",
+          "Active IR + Thermal Sensor Fusion", "Google Gemini AI API", "PR-AUC Optimization"
+        ]
+      },
+      {
+        id: "embedded-hardware",
+        name: "Processor Architecture, Embedded Systems & VLSI",
+        icon: "🔌",
+        projectContext: "MIPS 32-Bit Processor (Vivado FPGA), IEEE Wearable, Traffic FSM & Jadavpur VLSI",
+        skills: [
+          "Verilog HDL", "MIPS32 Core Architecture", "5-Stage Pipelining (IF/ID/EX/MEM/WB)",
+          "Hazard Detection & EX/MEM Forwarding", "Xilinx Vivado (Artix-7 XC7A35T Basys 3)",
+          "Custom Cross-Assembler (Python)", "Microcontrollers (ARM, AVR, ESP32)", "Embedded C / C++",
+          "Hardware Interfacing (GPIO, UART, SPI, I2C)", "Wokwi IoT Simulator",
+          "Bare-Metal EDA Optimization", "Gate-Level Delay Benchmarking", "Control Systems"
+        ]
+      },
+      {
+        id: "security-forensics",
+        name: "Cloud Security & Digital Forensics",
+        icon: "🛡️",
+        projectContext: "Cloud DLP Shield, BitTrace DFIR & Security Suite",
+        skills: [
+          "Cloud DLP Architecture", "AST SQLi Interception", "AES-256-GCM Authenticated Encryption",
+          "AuthTag Cryptographic Verification", "Volatile Memory (RAM) Triage", "ISO/IEC 27037 Evidence Handling",
+          "Windows Prefetch (.pf) & Registry Analysis", "Luhn PAN Validation", "Honeytoken Decoy Defense"
+        ]
+      },
+      {
+        id: "fintech-realtime",
+        name: "FinTech & Real-Time Distributed Systems",
+        icon: "⚡",
+        projectContext: "SplitFlow, PulseFlow Agile & Cloud DLP SOC",
+        skills: [
+          "Greedy Graph Debt Minimization", "Bidirectional WebSockets", "Server-Sent Events (SSE)",
+          "D3.js Sprint Burndown Telemetry", "OCR Receipt Scanning & Parsing", "Live FX Exchange Rate APIs",
+          "Dynamic UPI QR Code Generation", "Interactive Gantt Dependency Timelines"
+        ]
+      },
+      {
+        id: "languages-frameworks",
+        name: "Languages & Full-Stack Engineering",
+        icon: "💻",
+        projectContext: "Production Full-Stack & Microservices",
+        skills: [
+          "Python (FastAPI, Django)", "C / C++", "Embedded C", "JavaScript / TypeScript",
+          "Node.js & Express", "React 18", "SQL (PostgreSQL, SQLite)", "MATLAB", "RESTful APIs",
+          "Git / GitHub / CI-CD", "Linux / Bash", "LaTeX", "Agile / Scrum (Jira)"
+        ]
+      }
     ],
     languages: [
-      { name: "C / C++", level: 92, tag: "Primary Systems Language" },
-      { name: "Embedded C", level: 90, tag: "Firmware & Microcontrollers" },
-      { name: "Python", level: 95, tag: "Forensics, AI, Automation, Backend" },
-      { name: "MATLAB", level: 85, tag: "Simulation & Modeling" },
-      { name: "JavaScript / TypeScript", level: 84, tag: "Web & Tooling" },
-      { name: "OOP (Object-Oriented Programming)", level: 90, tag: "Software Architecture" }
+      { name: "Python", level: 96, tag: "AI, PyTorch, FastAPI, Django, Forensics, CV" },
+      { name: "Verilog HDL", level: 94, tag: "RTL, MIPS Core, Vivado FPGA Synthesis, Basys 3" },
+      { name: "C / C++", level: 92, tag: "Embedded Systems, Bare-Metal, Vivado FSM" },
+      { name: "Embedded C", level: 91, tag: "Microcontrollers (ARM, AVR, ESP), Sensors" },
+      { name: "JavaScript / TypeScript", level: 90, tag: "Node.js, Express, React, WebSockets, D3" },
+      { name: "SQL", level: 88, tag: "PostgreSQL, SQLite, AST SQLi Defense" },
+      { name: "MATLAB", level: 85, tag: "Signal Modeling & Simulation" },
+      { name: "OOP Architecture", level: 92, tag: "Object-Oriented Design & Clean Code" }
     ],
     tools: [
-      "Xilinx Vivado", "Wokwi Simulator", "Git / GitHub", "CI/CD Pipelines",
-      "FastAPI", "React", "LaTeX", "Agile / Jira", "Linux / Bash", "EDA Tools", "VS Code", "Django", "REST APIs"
+      "PyTorch", "OpenCV", "Tesseract OCR", "Xilinx Vivado", "Artix-7 Basys 3 FPGA",
+      "FastAPI", "XGBoost", "Scikit-Learn", "Node.js", "Express", "React 18", "D3.js",
+      "Django", "Wokwi Simulator", "Git / GitHub", "CI/CD Pipelines", "Docker",
+      "PostgreSQL", "SQLite", "Linux / Bash", "EDA Tools", "WebSockets", "Server-Sent Events", "LaTeX", "Agile / Jira"
     ],
     fundamentals: [
-      "Data Structures & Algorithms (DSA)",
+      "Real-Time ML Inference & Explainable AI (XAI)",
+      "Zero-Trust Cryptography & Authenticated Encryption (AESX)",
+      "Greedy Graph Debt Simplification & FSM Control Logic",
       "Digital Evidence Preservation (ISO/IEC 27037)",
-      "Finite State Machines (FSM)",
-      "Hardware-Software Co-Design",
-      "Software Testing & Validation",
-      "Power & Delay Optimization"
+      "Sensor Fusion & Edge Computer Vision",
+      "Hardware-Software Co-Design & Bare-Metal EDA",
+      "Data Structures & Algorithms (DSA) & OOP",
+      "Real-Time Telemetry & WebSocket Concurrency"
     ],
     languagesSpoken: [
       { language: "English", proficiency: "Professional / Fluent" },
@@ -364,6 +498,56 @@ export const resumeData = {
   ],
 
   socialFeed: [
+    {
+      id: "post-li-mips",
+      platform: "LinkedIn",
+      author: "Abhishek Kumar",
+      date: "October 23, 2026",
+      title: "Synthesized 32-Bit 5-Stage Pipelined MIPS Processor Core on Artix-7 FPGA in Vivado! ⚡💻",
+      content: "Delighted to release my latest computer architecture project: a complete 32-bit 5-stage pipelined MIPS processor core implemented in Verilog HDL! Implements full hardware forwarding (EX-to-EX, MEM-to-EX), hardware load-use hazard stall insertion, and branch flush logic. Synthesized in Xilinx Vivado 2019.2 for the Artix-7 Basys 3 FPGA (2,810 LUTs, 1,569 FFs, 94 mW total power, 0 DRC violations). Features a custom two-pass Python cross-assembler and 4-digit 7-segment hardware telemetry driver.",
+      url: "https://www.linkedin.com/in/abhishek947kumar",
+      tags: ["#Verilog", "#MIPS", "#FPGA", "#Vivado", "#ComputerArchitecture", "#VLSI", "#DigitalDesign"]
+    },
+    {
+      id: "post-gh-mips",
+      platform: "GitHub",
+      author: "abhishek947kumar",
+      date: "October 23, 2026",
+      title: "Pushed mips-32bit-pipelined-processor to GitHub @abhishek947kumar 🚀",
+      content: "Open-sourced 5-stage pipelined MIPS processor core in Verilog HDL with Patterson & Hennessy microarchitecture, custom Python cross-assembler, Basys 3 FPGA constraints, and 4/4 passing automated assembly benchmark suites.",
+      url: "https://github.com/abhishek947kumar/mips-32bit-pipelined-processor",
+      tags: ["#Verilog", "#MIPS", "#FPGA", "#Vivado", "#OpenSource"]
+    },
+    {
+      id: "post-li-caption",
+      platform: "LinkedIn",
+      author: "Abhishek Kumar",
+      date: "October 17, 2026",
+      title: "Unveiled Neural Image Caption Studio: Deep Learning Multimodal AI! 🌌🤖",
+      content: "Excited to share Neural Image Caption Studio, a full-stack deep learning application combining CNN feature extractors (MobileNetV3/ResNet-50) with an autoregressive LSTM language decoder trained on Flickr8k. Features dual decoding (Greedy & Beam Search with length penalty alpha=0.7), an interactive token probability inspector tray, Web Speech API TTS, and a standalone BLEU metric evaluation laboratory.",
+      url: "https://www.linkedin.com/in/abhishek947kumar",
+      tags: ["#DeepLearning", "#PyTorch", "#ComputerVision", "#NLP", "#FastAPI", "#MachineLearning"]
+    },
+    {
+      id: "post-li-returnguard",
+      platform: "LinkedIn",
+      author: "Abhishek Kumar",
+      date: "October 17, 2026",
+      title: "Launched ReturnGuard: Autonomous ReAct E-Commerce AI Refund Agent! 🛡️🛍️",
+      content: "Thrilled to present ReturnGuard, an autonomous ReAct (Reasoning and Acting) AI agent engineered for governed e-commerce returns. Features an automated cognitive loop (Thought -> Action -> Observe), multimodal computer vision defect inspection, anti-fraud policy enforcement against wardrobing and empty-box claims, and a Human-in-the-Loop review desk. Achieves ~81% autonomous resolution throughput in sub-850ms.",
+      url: "https://www.linkedin.com/in/abhishek947kumar",
+      tags: ["#AutonomousAgents", "#ReAct", "#AI", "#ComputerVision", "#FastAPI", "#React", "#FinTech"]
+    },
+    {
+      id: "post-li-platevision",
+      platform: "LinkedIn",
+      author: "Abhishek Kumar",
+      date: "October 5, 2026",
+      title: "Built PlateVision AI: Automatic License Plate Recognition System! 🚗📸",
+      content: "Engineered PlateVision AI, an end-to-end production ALPR/ANPR system featuring an 8-stage Computer Vision pipeline (Bilateral Filtering, Morphological TopHat/BlackHat, Canny, Aspect Ratio & Solidity filters, Perspective Deskewing) combined with a multi-PSM Tesseract OCR ensemble, dark-mode web visualizer, and FastAPI REST API.",
+      url: "https://www.linkedin.com/in/abhishek947kumar",
+      tags: ["#ComputerVision", "#OpenCV", "#OCR", "#Tesseract", "#Python", "#FastAPI", "#ImageProcessing"]
+    },
     {
       id: "post-li-fraudguard",
       platform: "LinkedIn",
@@ -479,8 +663,76 @@ export const resumeData = {
   // Structured Knowledge Base for Instant Natural Language Search
   qaKnowledgeBase: [
     {
-      keywords: ["bittrace", "bitcoin", "forensic", "forensics", "dfir", "cybersecurity", "memory", "ram", "iso 27037", "postmortem", "volatile"],
-      answer: "BitTrace DFIR (Automated Live & Postmortem Bitcoin Forensic Analysis Tool for Windows - Built Sep 2026):\n• **Live Volatile Memory Forensics**: Inspects running wallet processes (Bitcoin-Qt, Electrum, Armory) to recover 12–24 word BIP-39 recovery seeds, WIF/Hex private keys, and Bitcoin addresses with an aligned byte Hex/ASCII viewer.\n• **Postmortem Disk & Registry Analysis**: Scans %APPDATA% for Berkeley DB wallet.dat files (0x00053162), decodes UserAssist ROT13 registry launch logs, and parses Windows Prefetch (.pf) files for uninstalled remnants.\n• **ISO/IEC 27037 Evidence Vault**: Computes SHA-256 and MD5 cryptographic hashes with real-time tamper re-verification and 1-click court-ready printable PDF/HTML reports.\n• **Tech Stack**: Python 3.10+, FastAPI, React 18, Vite, Windows API, Cryptography.\n• **GitHub**: [github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems](https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems)"
+      keywords: ["mips", "processor", "verilog", "vivado", "fpga", "basys 3", "artix-7", "pipeline", "hazard", "forwarding", "assembler", "isa"],
+      answer: "32-Bit 5-Stage Pipelined MIPS Processor Core (Released Oct 23, 2026 on GitHub @abhishek947kumar):\n• **Microarchitecture & Hazards**: Classic Patterson & Hennessy 5-stage RISC pipeline (IF -> ID -> EX -> MEM -> WB) designed in Verilog HDL. Features EX-to-EX and MEM-to-EX forwarding (zero-stall for consecutive ALU dependencies), hardware load-use hazard detection (automatic 1-cycle bubble insertion), and branch flush controls.\n• **FPGA Synthesis in Xilinx Vivado**: Synthesized targeting Xilinx Artix-7 (XC7A35TCPG236-1 / Basys 3) utilizing 2,810 Slice LUTs (13.51%), 1,569 FFs (3.77%), drawing only 94 mW total power with zero DRC errors.\n• **Custom Python Cross-Assembler**: Two-pass assembler converting symbolic MIPS assembly to binary/hex MIF files with label resolution, pseudo-instruction macro expansion, and automated verification.\n• **Hardware Verification**: 4/4 passing automated assembly benchmark suites (Fibonacci, ALU stress, memory load/store, hazard test) interfaced with a time-multiplexed 4-digit 7-segment display driver and 16 LEDs.\n• **Repository**: [github.com/abhishek947kumar/mips-32bit-pipelined-processor](https://github.com/abhishek947kumar/mips-32bit-pipelined-processor)"
+    },
+    {
+      keywords: ["image caption", "caption generator", "pytorch", "lstm", "cnn", "mobilenet", "resnet", "beam search", "bleu", "flickr8k"],
+      answer: "Neural Image Caption Studio (Deep Learning Vision-Language Studio - Released Oct 17, 2026 on GitHub @abhishek947kumar):\n• **Multimodal Architecture**: Merged Show & Tell architecture combining deep CNN feature extractors (MobileNetV3 / ResNet-50) with an autoregressive LSTM language decoder trained on Flickr8k.\n• **Dual Decoding Strategies**: Implements ultra-fast greedy argmax search and multi-hypothesis Beam Search with length penalty normalization (alpha = 0.7).\n• **Cyber-Neural Web Studio**: Modern dark glassmorphic dashboard with token-level softmax inspection tray, Web Speech API text-to-speech (TTS), and top-5 ImageNet visual concept activations.\n• **BLEU Metric Lab & Fast Caching**: Evaluates BLEU-1 to BLEU-4 benchmarks with Brevity Penalty, with offline penultimate feature caching enabling full epoch training in seconds.\n• **Repository**: [github.com/abhishek947kumar/image-caption-generator](https://github.com/abhishek947kumar/image-caption-generator)"
+    },
+    {
+      keywords: ["returnguard", "return-guard", "refund", "react", "react agent", "autonomous agent", "ecommerce return", "hitl", "multimodal vision"],
+      answer: "ReturnGuard (Autonomous ReAct E-Commerce AI Refund Agent - Released Oct 17, 2026 on GitHub @abhishek947kumar):\n• **Cognitive ReAct Agent Core**: Step-by-step reasoning trace (Thought -> Action -> Observe) providing a transparent internal monologue and tool execution telemetry, resolving valid returns in sub-850ms.\n• **Multimodal Vision Defect Inspection**: Computer vision engine evaluating uploaded product damage photos (screen fractures, severed tags, crushed packaging) to confirm defect claims.\n• **AI Governance & Guardrails**: Hard $500 autonomous decision ceiling, anti-hallucination grounding, and Human-in-the-Loop (HITL) review desk for high-value disputes.\n• **Anti-Fraud Engine**: Dynamic policy rules across 6 retail categories protecting against wardrobing, empty-box fraud, and serial returners with ~81% autonomous resolution throughput.\n• **Repository**: [github.com/abhishek947kumar/Return-Guard](https://github.com/abhishek947kumar/Return-Guard)"
+    },
+    {
+      keywords: ["license plate", "platevision", "alpr", "anpr", "opencv", "tesseract", "ocr", "deskew"],
+      answer: "PlateVision AI (Automatic License Plate Recognition - Released Oct 5, 2026 on GitHub @abhishek947kumar):\n• **8-Stage Computer Vision Pipeline**: Bilateral Filtering, Morphological TopHat/BlackHat contrast enhancement, Canny Edge Detection, Contour Aspect Ratio (1.5 <= AR <= 6.0) & Solidity Filtering, and Perspective Transform / Deskewing.\n• **Multi-PSM OCR Ensemble**: Queries Tesseract OCR across Page Segmentation Modes (--psm 8, 7, and 6) with character whitelisting and regex sanitization to maximize alphanumeric precision.\n• **Dual Engine Benchmark**: Baseline OpenCV pipeline vs. Advanced Enhanced Pipeline solving real-world reflections, steep tilt angles, and windshield false positives.\n• **Interactive Dashboard**: Modern glassmorphic dark-mode web visualizer with real-time CV stage breakdown inspector, webcam feeds, and FastAPI REST API.\n• **Repository**: [github.com/abhishek947kumar/license-plate-recognition](https://github.com/abhishek947kumar/license-plate-recognition)"
+    },
+    {
+      keywords: ["fraud", "fraudguard", "credit card", "xgboost", "explainable ai", "xai", "financial fraud", "sub-10ms"],
+      answer: "FraudGuard.AI (Enterprise Real-Time Credit Card Fraud Detection Platform - Released Sep 30, 2026 on GitHub @abhishek947kumar):\n• **Architecture & Performance**: Ultra-fast FastAPI inference service scoring transactions in under 2.8ms, achieving 100% recall and a perfect 1.000 PR-AUC on holdout test benchmarks under extreme class imbalance (~1% fraud prevalence).\n• **Machine Learning Ensemble**: Cost-weighted XGBoost, Balanced Random Forest, HistGradientBoosting, and unsupervised Isolation Forest for catching zero-day and anomalous fraud vectors.\n• **Feature Engineering & Geo-Velocity**: Calculates real-time physical geo-velocity in km/h to catch impossible travel/card cloning, 1h/24h velocity spikes, and 30-day cardholder spend outlier ratios.\n• **Explainable AI (XAI)**: Generates human-readable risk drivers compliant with FCRA and GDPR Art. 22 standards, mapping into automated tiered actions (AUTO_APPROVE, STEP_UP_AUTH with OTP/3D Secure, DECLINE_AND_FREEZE).\n• **Repository**: [github.com/abhishek947kumar/credit-card-fraud-detection](https://github.com/abhishek947kumar/credit-card-fraud-detection)"
+    },
+    {
+      keywords: ["dlp", "data leak", "data loss prevention", "cloud dlp", "sqli", "sql injection", "aesx", "aes-256-gcm", "honeypot", "honeytoken", "luhn"],
+      answer: "Cloud DLP Shield (Detecting Data Leaks Using SQL & Cloud DLP Architecture - Released Sep 30, 2026 on GitHub @abhishek947kumar):\n• **Dual-Engine Inspection Gateway**: Layer 1 Content Engine intercepts SQL injection AST signatures (Tautology, Union exfiltration, Schema harvesting), validates credit cards with the mathematical Luhn algorithm, and neutralizes keylogger scripts. Layer 2 Contextual Engine analyzes user behavioral signals, query bursts, and typing cadence anomalies (<15ms).\n• **AESX Field Encryption**: Zero-trust database storage utilizing AES-256-GCM authenticated encryption with key whitening, dynamic IVs, and 128-bit authentication tags preventing ciphertext tampering.\n• **User Threat Categorization & Honeytokens**: Classifies traffic into Benign (0-29), Suspicious (30-69), and Assaulter (70-100), feeding deceptive synthetic honeytokens to bad actors while locking down production databases.\n• **Live SOC & Demo**: Real-time Server-Sent Events (SSE) threat stream, AST sandbox terminal, database vault explorer, and interactive Nexus E-Shop featuring a toggleable 'DLP Shield vs Vulnerable Raw SQL' comparison.\n• **Repository**: [github.com/abhishek947kumar/detecting-data-leaks](https://github.com/abhishek947kumar/detecting-data-leaks)"
+    },
+    {
+      keywords: ["splitflow", "expense splitter", "split", "expense", "receipt", "ocr", "debt graph", "settlement", "upi", "greedy"],
+      answer: "SplitFlow (Smart Group Expense Splitter & Settlement Engine - Launched Sep 29, 2026 on GitHub @abhishek947kumar):\n• **Greedy Debt Minimization**: Algorithmic settlement graph engine eliminating circular debt and reducing multi-person group obligations into the minimum number of direct transactions, visualized via dynamic Canvas/SVG debt graphs.\n• **OCR Receipt Parsing**: Ingests receipt photos to extract line-item costs, taxes, and service fees, supporting equal, percentage, and exact custom splits.\n• **Real-Time FX & UPI Settlements**: Live multi-currency conversion via exchange rate APIs with integrated UPI and instant dynamic payment QR codes.\n• **Audit Trail**: Generates exportable financial reports in PDF, CSV, and Excel with tamper-evident ledgers.\n• **Repository**: [github.com/abhishek947kumar/splitflow](https://github.com/abhishek947kumar/splitflow)"
+    },
+    {
+      keywords: ["pulseflow", "agile", "scrum", "kanban", "burndown", "websockets", "d3", "gantt", "copilot"],
+      answer: "PulseFlow Agile (Enterprise Project Management & Telemetry Platform - Launched Sep 29, 2026 on GitHub @abhishek947kumar):\n• **Real-Time WebSockets Collaboration**: Multi-user Kanban boards with bidirectional WebSockets, optimistic UI updates, conflict resolution, and granular role permissions.\n• **D3.js Sprint Telemetry**: Interactive D3.js burndown/burnup velocity tracking, scope-creep detection, and cumulative flow diagrams computed in real time.\n• **AI Copilot for Agile**: Automated drafting of user stories, acceptance criteria, velocity prediction, and blocker triage.\n• **Interactive Gantt Timeline**: Drag-and-drop chronological roadmap with milestone dependency tracking and critical path calculation.\n• **Repository**: [github.com/abhishek947kumar/pulseflow-agile](https://github.com/abhishek947kumar/pulseflow-agile)"
+    },
+    {
+      keywords: ["bittrace", "bitcoin", "forensic", "forensics", "dfir", "cybersecurity", "memory", "ram", "iso 27037", "postmortem", "volatile", "bip-39"],
+      answer: "BitTrace DFIR (Automated Live & Postmortem Bitcoin Forensic Analysis Tool for Windows - Released Sep 21, 2026 on GitHub @abhishek947kumar):\n• **Live Volatile Memory Forensics**: Inspects running wallet processes (Bitcoin-Qt, Electrum, Armory) to recover 12–24 word BIP-39 recovery seeds, WIF/Hex private keys, and addresses with an aligned byte Hex/ASCII memory viewer.\n• **Postmortem Disk & Registry Analysis**: Scans %APPDATA% for Berkeley DB wallet.dat files (0x00053162), decodes UserAssist ROT13 registry launch logs, parses Windows Prefetch (.pf) files, and performs SQLite shadow copying on browser wallet extensions.\n• **ISO/IEC 27037 Evidence Vault**: Computes SHA-256 and MD5 cryptographic hashes with real-time tamper re-verification and 1-click court-ready printable PDF/HTML reports.\n• **Tech Stack**: Python 3.10+, FastAPI, React 18, Vite, Windows API, Cryptography.\n• **Repository**: [github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems](https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems)"
+    },
+    {
+      keywords: ["night vision", "night-vision", "pedestrian", "thermal", "infrared", "ir", "yolov2", "adas", "edge ai", "haar"],
+      answer: "Embedded Night-Vision System for Pedestrian Detection (Released Sep 19, 2026 on GitHub @abhishek947kumar):\n• **Multi-Modal Sensor Fusion**: Combines active 850nm infrared illumination with LWIR thermal imaging streams for reliable night-time object detection under pitch-black and harsh atmospheric road conditions.\n• **Dual-Stage Processing Pipeline**: Employs HAAR+AdaBoost candidate filters for fast pre-filtering, paired with a custom-pruned, quantized YOLOv2 convolutional network for precise real-time pedestrian localization.\n• **Edge Optimization**: Tailored for resource-constrained embedded automotive and edge hardware, minimizing latency while maintaining high precision and low false-positive rates.\n• **Repository**: [github.com/abhishek947kumar/Embedded-Night-Vision-System](https://github.com/abhishek947kumar/Embedded-Night-Vision-System)"
+    },
+    {
+      keywords: ["logistics", "logitrack", "supply chain", "fleet", "dealer", "django", "consignment"],
+      answer: "Logistics Management System (LogiTrack Pro - Released Sep 18, 2026 on GitHub @abhishek947kumar):\n• **Multi-Tenant Architecture**: Full-stack commercial logistics engine built in Python and Django with PostgreSQL, coordinating inventory, dispatches, and fleet tracking across independent dealer networks.\n• **Dispatch & Route Optimization**: Generates automated consignment manifests, shipment dispatch scheduling, and delivery confirmation pipelines.\n• **Security & Webhooks**: Implements secure JWT authentication, role-based access control (RBAC), and automated tracking webhook alerts.\n• **Repository**: [github.com/abhishek947kumar/Logistics-Management-System](https://github.com/abhishek947kumar/Logistics-Management-System)"
+    },
+    {
+      keywords: ["piezo", "wearable", "acupressure", "depression", "healthcare", "wokwi", "transducer", "energy harvesting"],
+      answer: "Piezo-electric Acupressure Wearable Device (Published with IEEE at IEMENTECH 2026):\n• **Self-Sustaining IoT Architecture**: Healthcare wearable engineered in Embedded C and verified via Wokwi simulation, combining biomechanical energy harvesting with therapeutic acupressure stimulation.\n• **Hardware Interfacing**: Interfaces piezoelectric energy transducers and pulse monitoring channels over SPI/I2C micro-buses to extend battery autonomy.\n• **Peer-Reviewed Paper**: First-author research officially indexed on IEEE Xplore (DOI: 10.1109/IEMENTech202669403.2026.11434403)."
+    },
+    {
+      keywords: ["traffic", "vivado", "fsm", "finite state machine", "7-state", "xilinx", "queue"],
+      answer: "Camera-Assisted Adaptive 7-State Traffic Controller:\n• **Hardware Architecture**: Implemented as an adaptive 7-state Finite State Machine (FSM) in C and verified in Xilinx Vivado with full timing closure and clock-domain validation.\n• **Dynamic Green-Light Control**: Ingests real-time optical vehicle density metrics to calculate variable phase durations, reducing intersection wait times by 35% compared to static cycles."
+    },
+    {
+      keywords: ["yourfinance", "finance", "gemini", "expense tracker", "budget", "wealth"],
+      answer: "YourFinance — AI Expense Tracker & Budget Insights (Released Jul 2026):\n• **AI Wealth Advisory**: Personal finance control center integrating the Google Gemini AI API to analyze spending transactions and generate actionable budgeting recommendations.\n• **Interactive Dashboard**: Modern glassmorphic interface with interactive category expense charts, custom threshold alerts, and local data persistence.\n• **Repository**: [github.com/abhishek947kumar/YourFinance-Advanced-Expense-Tracker-with-Budget-Insights](https://github.com/abhishek947kumar/YourFinance-Advanced-Expense-Tracker-with-Budget-Insights)"
+    },
+    {
+      keywords: ["evershop", "ecommerce", "graphql", "typescript", "cart", "catalog"],
+      answer: "EverShop — Modern eCommerce Platform (Released Aug 2026):\n• **Modular Architecture**: Modern full-stack eCommerce platform built with TypeScript, React, and GraphQL for high-performance product indexing and checkout flows.\n• **Type-Safe Data**: End-to-end typed queries and mutations with flexible cart and catalog state management.\n• **Repository**: [github.com/abhishek947kumar/Evershop](https://github.com/abhishek947kumar/Evershop)"
+    },
+    {
+      keywords: ["security suite", "cryptographic tools", "pixel manipulation", "caesar", "password entropy", "prodigy"],
+      answer: "Cryptographic Tools & Security Suite (Prodigy InfoTech Engineering):\n• **Image Encryption**: Pixel manipulation algorithms altering visual entropy while ensuring reversible decryption.\n• **Classical Cryptanalysis**: Automated Caesar cipher brute-force and frequency analysis decoder.\n• **Security Tools**: Mathematical password entropy scoring engine and event-driven logging utilities."
+    },
+    {
+      keywords: ["project skills", "skills in projects", "technologies used in projects", "how skills relate to projects", "skills used"],
+      answer: "Abhishek's skills are directly validated across his production projects:\n• **Processor Design & VLSI (96%)**: Applied in **MIPS 32-Bit Pipelined Processor** (Verilog HDL, 5-stage pipeline, hazard forwarding unit, Python cross-assembler, Basys 3 FPGA Vivado synthesis) and **7-State Traffic Controller** (Vivado FSM).\n• **Deep Learning & Multimodal AI (95%)**: Applied in **Neural Image Caption Studio** (PyTorch CNN+LSTM, Beam Search alpha=0.7, token softmax probability inspection) and **ReturnGuard** (Autonomous ReAct agent, multimodal CV defect inspection).\n• **Computer Vision & OCR (94%)**: Applied in **PlateVision AI** (8-stage OpenCV ALPR pipeline, multi-PSM Tesseract OCR) and **Embedded Night-Vision** (active IR + thermal sensor fusion with quantized YOLOv2).\n• **Cloud Security & Digital Forensics (94%)**: Applied in **Cloud DLP Shield** (AST SQLi detection, AES-256-GCM zero-trust encryption, Honeytokens, Luhn validation) and **BitTrace DFIR** (volatile RAM triage, BIP-39 recovery, ISO/IEC 27037 vault).\n• **FinTech & Real-Time Web (92%)**: Applied in **FraudGuard.AI** (sub-2.8ms XGBoost ensemble & Explainable AI), **SplitFlow** (greedy debt graph optimization, OCR receipt parsing, UPI QR), and **PulseFlow Agile** (WebSockets, D3.js sprint burndown telemetry, AI Copilot).\n• **Embedded Systems & Microcontrollers (93%)**: Applied in **Piezoelectric Wearable** (Embedded C, Wokwi, SPI/I2C, IEEE paper) and **Jadavpur University VLSI Internship** (bare-metal EDA delay optimization).\n• **Backend & Full-Stack (91%)**: Applied across **FastAPI**, **Node.js/Express**, **Django**, **React 18**, and **PostgreSQL** in his flagship systems."
+    },
+    {
+      keywords: ["github", "recent projects", "last 6 months", "6 months", "latest", "new projects", "last 1 week", "1 week", "last week"],
+      answer: "Abhishek engineered and released 18+ high-impact projects on GitHub (@abhishek947kumar) and LinkedIn, featuring brand new October 2026 releases:\n• **32-Bit Pipelined MIPS Processor (Oct 23, 2026)**: Complete 5-stage MIPS core in Verilog HDL with hazard detection, data forwarding, Python cross-assembler, and Artix-7 Basys 3 FPGA Vivado synthesis.\n• **Neural Image Caption Studio (Oct 17, 2026)**: Full-stack multimodal deep learning app with PyTorch CNN+LSTM, Beam Search decoding, token inspector, and BLEU metric lab.\n• **ReturnGuard (Oct 17, 2026)**: Autonomous ReAct e-commerce refund agent with multimodal vision defect inspection, anti-fraud governance, and HITL review desk.\n• **PlateVision AI (Oct 5, 2026)**: End-to-end 8-stage OpenCV license plate recognition pipeline with multi-PSM Tesseract OCR ensemble and FastAPI visualizer.\n• **FraudGuard.AI (Sep 30, 2026)**: Enterprise credit card fraud detection with sub-2.8ms scoring, XGBoost ensemble, and Explainable AI (XAI).\n• **Cloud DLP Shield (Sep 30, 2026)**: Enterprise Cloud Data Loss Prevention platform with AST SQLi interception, Luhn validation, AESX field encryption, and live SSE SOC.\n• **SplitFlow (Sep 29, 2026)**: Smart group expense splitter with OCR receipt scanner, live FX conversion, greedy debt simplification graph, and UPI QR settlements.\n• **PulseFlow Agile (Sep 29, 2026)**: Enterprise agile platform with real-time WebSockets, D3.js sprint burndown telemetry, AI Copilot, and Gantt roadmaps.\n• **BitTrace DFIR (Sep 21, 2026)**: Automated Live RAM and Postmortem Bitcoin Forensics Tool for Windows compliant with ISO/IEC 27037.\n• **Embedded-Night-Vision-System (Sep 19, 2026)**: Active IR & thermal sensor fusion with quantized YOLOv2 for real-time pedestrian recognition.\n• **Logistics-Management-System (Sep 18, 2026)**: Enterprise commercial multi-dealer logistics and fleet tracking platform in Python and Django.\n• **YourFinance & Evershop**: AI wealth advisory (Google Gemini) and TypeScript/GraphQL eCommerce."
     },
     {
       keywords: ["cgpa", "marks", "grades", "percentage", "score", "academic", "standing", "result"],
@@ -495,44 +747,16 @@ export const resumeData = {
       answer: "At Steel Authority of India Limited (SAIL) Bokaro (May 2025 – June 2025):\n• Developed and maintained real-time software modules for plant automation systems.\n• Managed mission-critical database telemetry to monitor continuous plant manufacturing data.\n• Gained practical exposure to heavy industrial process control protocols and automation standards."
     },
     {
-      keywords: ["piezo", "wearable", "acupressure", "depression", "healthcare", "wokwi"],
-      answer: "Piezo-electric Acupressure Wearable Device (Published with IEEE):\n• Engineered an IoT healthcare wearable simulated on Wokwi and implemented in Embedded C.\n• Integrated piezoelectric transducers to harvest mechanical energy and extend battery autonomy.\n• Interfaced biomedical sensor channels via SPI/I2C for adaptive, non-invasive acupressure therapy.\n• Research accepted and published at IEEE IEMENTECH 2026 (DOI: 10.1109/IEMENTech202669403.2026.11434403)."
-    },
-    {
-      keywords: ["traffic", "vivado", "fsm", "finite state machine", "7-state", "xilinx"],
-      answer: "Camera-Assisted Adaptive 7-State Traffic Controller:\n• Synthesized and simulated on Xilinx Vivado with full timing analysis.\n• Architected a 7-state Finite State Machine (FSM) in C to dynamically balance multi-directional traffic flow.\n• Drastically minimized state transition latency and eliminated traffic gridlock conditions."
-    },
-    {
-      keywords: ["fraud", "fraudguard", "credit card", "xgboost", "explainable ai", "xai", "financial fraud"],
-      answer: "FraudGuard.AI (Enterprise Real-Time Credit Card Fraud Detection Platform - Released Sep 30, 2026 on GitHub @abhishek947kumar):\n• **Architecture & Performance**: Real-time FastAPI scoring pipeline evaluating transactions in under 2.8ms with 100% recall and 1.000 PR-AUC under extreme ~1% class imbalance.\n• **ML Ensemble**: Cost-weighted XGBoost, Balanced Random Forest, HistGradientBoosting, and unsupervised Isolation Forest for zero-day fraud pattern discovery.\n• **Geo-Velocity & Feature Engineering**: Calculates impossible travel speeds in km/h (card cloning detection), 1h/24h velocity surges, and 30-day cardholder spend outlier ratios.\n• **Explainable AI (XAI)**: Generates transparent risk drivers for regulatory compliance (FCRA, GDPR Art. 22) and automated tiered actions (AUTO_APPROVE, STEP_UP_AUTH, DECLINE_AND_FREEZE).\n• **Repository**: [github.com/abhishek947kumar/credit-card-fraud-detection](https://github.com/abhishek947kumar/credit-card-fraud-detection)"
-    },
-    {
-      keywords: ["dlp", "data leak", "data loss prevention", "cloud dlp", "sqli", "sql injection", "aesx", "aes-256-gcm", "honeypot"],
-      answer: "Cloud DLP Shield (Detecting Data Leaks Using SQL & Cloud DLP Architecture - Released Sep 30, 2026 on GitHub @abhishek947kumar):\n• **Dual-Engine Inspection**: Layer 1 Content Engine intercepts SQL injection AST patterns, Luhn-validates credit card numbers, and detects keylogger scripts; Layer 2 Contextual Engine monitors user behavior, query velocity bursts, and sub-15ms typing cadences.\n• **AESX Field Encryption**: Zero-trust AES-256-GCM authenticated encryption with key whitening and 128-bit authentication tags preventing ciphertext tampering.\n• **User Threat Categorization & Honeypots**: Categorizes users into Benign, Suspicious, and Assaulters, serving deceptive Honeytoken decoys to assaulters while locking down sessions.\n• **Real-Time SOC Observability**: Live Server-Sent Events (SSE) threat stream, deep payload AST sandbox terminal, and toggleable 'DLP Shield vs Raw SQL' store demonstration.\n• **Repository**: [github.com/abhishek947kumar/detecting-data-leaks](https://github.com/abhishek947kumar/detecting-data-leaks)"
-    },
-    {
-      keywords: ["splitflow", "expense splitter", "split", "expense", "receipt", "ocr", "debt graph", "settlement"],
-      answer: "SplitFlow (Launched Sep 29, 2026 on GitHub @abhishek947kumar):\n• **Architecture**: Modern group expense splitter with real-time multi-currency FX rates, flexible unequal splits, and instant UPI QR payments.\n• **OCR Scanner**: Optical Character Recognition engine parsing itemized receipt totals, taxes, and service fees.\n• **Debt Simplification**: Greedy graph algorithm minimizing transactions across multi-person group trips.\n• **Repository**: [github.com/abhishek947kumar/splitflow](https://github.com/abhishek947kumar/splitflow)"
-    },
-    {
-      keywords: ["pulseflow", "agile", "scrum", "kanban", "burndown", "websockets", "d3", "gantt"],
-      answer: "PulseFlow Agile (Launched Sep 29, 2026 on GitHub @abhishek947kumar):\n• **Architecture**: Enterprise agile workspace with real-time WebSocket collaborative boards and multi-theme engine.\n• **Telemetry & Analytics**: D3.js interactive sprint burndown, velocity distribution, and cumulative flow diagrams.\n• **AI Copilot**: Automatically generates user stories, acceptance criteria, and flags scope creep before sprint close.\n• **Repository**: [github.com/abhishek947kumar/pulseflow-agile](https://github.com/abhishek947kumar/pulseflow-agile)"
-    },
-    {
-      keywords: ["github", "recent projects", "last 6 months", "6 months", "latest", "new projects", "last 1 week", "1 week", "last week"],
-      answer: "Over the last week and recent releases (September 2026), Abhishek engineered and released major flagship projects on GitHub (@abhishek947kumar) and LinkedIn:\n• **FraudGuard.AI (Sep 30, 2026)**: Enterprise real-time credit card fraud detection platform with sub-10ms scoring, XGBoost ensemble, and Explainable AI (XAI).\n• **Cloud DLP Shield (Sep 30, 2026)**: Enterprise Cloud Data Loss Prevention platform with AST SQLi interception, Luhn validation, AESX field encryption, and live SSE SOC.\n• **SplitFlow (Sep 29, 2026)**: Smart group expense splitter with OCR receipt scanner, live FX conversion, greedy debt simplification graph, and UPI QR settlements.\n• **PulseFlow Agile (Sep 29, 2026)**: Enterprise agile platform with real-time WebSockets, D3.js sprint burndown telemetry, AI Copilot, and Gantt roadmaps.\n• **BitTrace DFIR (Sep 21, 2026)**: Automated Live RAM and Postmortem Bitcoin Forensics Tool for Windows compliant with ISO/IEC 27037.\n• **Embedded-Night-Vision-System (Sep 19, 2026)**: Active IR & thermal sensor fusion with quantized YOLOv2 for real-time pedestrian recognition.\n• **Logistics-Management-System (Sep 18, 2026)**: Enterprise commercial multi-dealer logistics and fleet tracking platform in Python and Django.\n• **YourFinance**: Modern financial control center with AI-driven wealth advice powered by Google Gemini.\n• **Evershop**: High-performance full-stack eCommerce platform built with TypeScript and React."
-    },
-    {
       keywords: ["publication", "paper", "research", "ieee", "iementech", "doi"],
       answer: "Abhishek's Peer-Reviewed IEEE Publication Details:\n• **Title**: Enhancing Wearable Depression Management: Integrating Piezoelectric Energy Harvesting and Acupressure-Based Therapy\n• **Conference**: IEEE IEMENTECH 2026\n• **Role**: First Author & Lead Hardware Architect\n• **DOI**: 10.1109/IEMENTech202669403.2026.11434403"
     },
     {
-      keywords: ["skills", "technologies", "languages", "tech stack", "python", "c++", "embedded"],
-      answer: "Abhishek's verified technical proficiencies:\n• **Programming Languages**: C, C++, Embedded C, Python, MATLAB, JavaScript/TypeScript, SQL\n• **Hardware & Protocols**: ARM/AVR/ESP Microcontrollers, GPIO, UART, SPI, I2C, VLSI Design, Control Systems\n• **EDA & Simulation Tools**: Xilinx Vivado, Wokwi Simulator, Logic Analyzers, Multisim\n• **Security & Forensics**: Live Volatile RAM Triage, ISO/IEC 27037 Evidence Handling, Windows Prefetch & Registry Analysis, Cryptographic Hashing\n• **Software & Web Engineering**: FastAPI, Django, React, REST APIs, Google Gemini AI, Git/GitHub, CI/CD, Agile/Jira"
+      keywords: ["skills", "technologies", "languages", "tech stack", "python", "c++", "embedded", "stacks"],
+      answer: "Abhishek's comprehensive technical proficiencies, validated by production projects:\n• **Processor Design & Hardware Architecture**: Verilog HDL, MIPS32 5-stage pipelined datapath, hazard resolution units, data forwarding, Xilinx Vivado (Artix-7 Basys 3 FPGA), custom Python cross-assemblers, timing closure.\n• **AI, Deep Learning & Vision**: PyTorch, CNN + LSTM encoder-decoder, Beam Search decoding, Autonomous ReAct agents, 8-stage OpenCV ALPR, Tesseract OCR ensemble, cost-weighted XGBoost, Explainable AI (XAI / SHAP), Scikit-Learn, YOLOv2, Active IR/Thermal sensor fusion, Gemini AI.\n• **Cybersecurity & Forensics**: Cloud DLP Architecture, AST SQLi Interception, AES-256-GCM Field Encryption, Live RAM Forensics, ISO/IEC 27037 Evidence Vault, Windows Prefetch & Registry, Luhn Validation.\n• **FinTech & Real-Time Systems**: Greedy Graph Debt Minimization, Bidirectional WebSockets, Server-Sent Events (SSE), D3.js Sprint Burndown, OCR Receipt Parsing, Live FX APIs, UPI QR Payments.\n• **Embedded & Hardware**: Microcontrollers (ARM, AVR, ESP32), Embedded C, C/C++, Hardware Interfacing (SPI, I2C, UART, GPIO), Vivado FSM, Wokwi Simulator, VLSI EDA Workflows.\n• **Languages & Web**: Python, Verilog HDL, C, C++, Embedded C, JavaScript, TypeScript, SQL, MATLAB, FastAPI, Node.js, Express, Django, React 18, Docker, PostgreSQL, SQLite, Git, CI/CD, Agile/Jira."
     },
     {
       keywords: ["why hire", "hire", "placement", "value", "strengths", "fit", "candidate"],
-      answer: "Why Abhishek Kumar is a top candidate for engineering teams:\n• **Top Academic Rigor**: 8.73 CGPA in B.Tech ECE with deep fundamentals in OOP, DSA, and Control Systems.\n• **Rare Bridge of Hardware & Software**: Hands-on mastery from bare-metal VLSI/firmware up to Python/FastAPI/Django/AI systems.\n• **Proven Researcher**: First-author IEEE conference publication at IEMENTECH 2026.\n• **Real Industrial Exposure**: On-site internships at Jadavpur University (VLSI EDA) and SAIL (Plant Automation).\n• **Systems & Security Depth**: Built and demonstrated end-to-end DFIR platforms (BitTrace) and real-time ADAS edge models.\n• **Placement Ready**: Immediately productive in Embedded Systems, Firmware, Hardware Design, or Software Engineering roles."
+      answer: "Why Abhishek Kumar is an exceptional candidate for engineering teams:\n• **Top Academic Distinction**: 8.73 CGPA in B.Tech ECE with deep fundamentals in OOP, DSA, and Control Systems.\n• **End-to-End Dual Capability**: Rare ability to bridge bare-metal processor design & FPGA synthesis (MIPS 32-bit core in Verilog HDL) up to deep learning, autonomous ReAct agents, and high-throughput Python/FastAPI/Node.js/AI systems.\n• **Production-Grade Project Portfolio**: Built and deployed MIPS 32-Bit Processor (Vivado FPGA), Neural Image Caption Studio (PyTorch CNN+LSTM), ReturnGuard (ReAct agent), PlateVision ALPR (8-stage OpenCV), FraudGuard.AI (sub-2.8ms ML scoring), Cloud DLP Shield (AST SQLi & AES-256-GCM), SplitFlow, PulseFlow Agile, and BitTrace DFIR.\n• **Published IEEE Author**: First-author conference publication at IEEE IEMENTECH 2026 on self-sustaining IoT healthcare.\n• **Industrial Internships**: On-site VLSI EDA research at Jadavpur University and industrial plant automation at SAIL.\n• **Immediate Value**: Highly adaptable for Processor & VLSI Design, Embedded Firmware, Machine Learning / Computer Vision, Cybersecurity, or Full-Stack Systems roles."
     },
     {
       keywords: ["contact", "email", "phone", "reach", "call", "address", "location", "message", "portfolio", "website", "live link", "link", "url"],

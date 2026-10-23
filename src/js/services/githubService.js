@@ -34,7 +34,7 @@ export class GitHubService {
       name: resumeData.personal.name,
       avatar_url: "https://avatars.githubusercontent.com/u/153946376?v=4",
       html_url: `https://github.com/${this.username}`,
-      public_repos: 14,
+      public_repos: 18,
       followers: 1,
       following: 3,
       bio: resumeData.personal.tagline
@@ -174,6 +174,58 @@ export class GitHubService {
 
   getFallbackRepos() {
     return [
+      {
+        id: 1430565363,
+        name: "mips-32bit-pipelined-processor",
+        fullName: "abhishek947kumar/mips-32bit-pipelined-processor",
+        description: "⚡ Custom 32-bit 5-stage pipelined MIPS processor core in Verilog with hazard detection, forwarding, custom Python assembler, and Xilinx Vivado synthesis on Artix-7 (Basys 3).",
+        url: "https://github.com/abhishek947kumar/mips-32bit-pipelined-processor",
+        language: "Verilog",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Oct 23, 2026",
+        isLast6Months: true,
+        topics: ["mips", "verilog", "vivado", "fpga", "basys3", "processor", "pipelining", "computer-architecture"]
+      },
+      {
+        id: 1422992846,
+        name: "image-caption-generator",
+        fullName: "abhishek947kumar/image-caption-generator",
+        description: "🌌 Full-stack AI Image Caption Generator using Deep Learning (CNN Feature Extractor + LSTM Language Decoder) with PyTorch, FastAPI, and an interactive Cyber-Neural Web Studio.",
+        url: "https://github.com/abhishek947kumar/image-caption-generator",
+        language: "Python",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Oct 17, 2026",
+        isLast6Months: true,
+        topics: ["deep-learning", "pytorch", "image-captioning", "lstm", "fastapi", "computer-vision", "nlp", "beam-search"]
+      },
+      {
+        id: 1422962824,
+        name: "Return-Guard",
+        fullName: "abhishek947kumar/Return-Guard",
+        description: "🛡️ Autonomous ReAct (Reasoning and Acting) AI agent for e-commerce return verification, multimodal computer vision damage inspection, and automated refund/escalation workflows.",
+        url: "https://github.com/abhishek947kumar/Return-Guard",
+        language: "JavaScript",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Oct 17, 2026",
+        isLast6Months: true,
+        topics: ["ai-agent", "react-agent", "fastapi", "multimodal-vision", "ecommerce", "refunds", "governance"]
+      },
+      {
+        id: 1406033578,
+        name: "license-plate-recognition",
+        fullName: "abhishek947kumar/license-plate-recognition",
+        description: "🚗 End-to-end Automatic License Plate Recognition (ALPR) system with an 8-stage OpenCV pipeline, Tesseract OCR ensemble, FastAPI visualizer, and CLI.",
+        url: "https://github.com/abhishek947kumar/license-plate-recognition",
+        language: "Python",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Oct 05, 2026",
+        isLast6Months: true,
+        topics: ["opencv", "alpr", "anpr", "tesseract-ocr", "fastapi", "computer-vision", "image-processing"]
+      },
       {
         id: 1397001001,
         name: "detecting-data-leaks",
@@ -322,6 +374,42 @@ export class GitHubService {
 
   getFallbackEvents() {
     return [
+      {
+        id: "evt-mips-1",
+        type: "PushEvent",
+        repo: "mips-32bit-pipelined-processor",
+        repoUrl: "https://github.com/abhishek947kumar/mips-32bit-pipelined-processor",
+        date: "Oct 23, 2026",
+        description: "Pushed: 'Release 32-bit pipelined MIPS core: 5-stage datapath, hazard forwarding & Vivado Artix-7 synthesis'",
+        icon: "git-push"
+      },
+      {
+        id: "evt-caption-1",
+        type: "PushEvent",
+        repo: "image-caption-generator",
+        repoUrl: "https://github.com/abhishek947kumar/image-caption-generator",
+        date: "Oct 17, 2026",
+        description: "Pushed: 'Release Neural Image Caption Studio: PyTorch CNN+LSTM, Beam Search & BLEU benchmark lab'",
+        icon: "git-push"
+      },
+      {
+        id: "evt-returnguard-1",
+        type: "PushEvent",
+        repo: "Return-Guard",
+        repoUrl: "https://github.com/abhishek947kumar/Return-Guard",
+        date: "Oct 17, 2026",
+        description: "Pushed: 'Release ReturnGuard: ReAct cognitive loop, multimodal CV defect inspection & anti-fraud governance'",
+        icon: "git-push"
+      },
+      {
+        id: "evt-alpr-1",
+        type: "PushEvent",
+        repo: "license-plate-recognition",
+        repoUrl: "https://github.com/abhishek947kumar/license-plate-recognition",
+        date: "Oct 05, 2026",
+        description: "Pushed: 'Release PlateVision AI: 8-stage OpenCV ALPR pipeline, multi-PSM Tesseract OCR & dark web studio'",
+        icon: "git-push"
+      },
       {
         id: "evt-leaks-1",
         type: "PushEvent",

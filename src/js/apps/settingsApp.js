@@ -108,11 +108,11 @@ export class SettingsApp {
               <h4>Placement Readiness</h4>
               <p class="settings-desc">${resumeData.personal.summary}</p>
               <div class="target-roles-row">
-                <span class="role-pill">Embedded Systems</span>
-                <span class="role-pill">VLSI Hardware Co-Design</span>
-                <span class="role-pill">Firmware Engineering</span>
-                <span class="role-pill">Python / Software Engineering</span>
-                <span class="role-pill">IoT Systems</span>
+                <span class="role-pill">VLSI & FPGA Design</span>
+                <span class="role-pill">Embedded Software & Firmware</span>
+                <span class="role-pill">AI & Deep Learning</span>
+                <span class="role-pill">Full Stack & Systems</span>
+                <span class="role-pill">IoT Edge Computing</span>
               </div>
             </div>
           </div>
@@ -250,14 +250,20 @@ export class SettingsApp {
                   <div class="chip-circuits"></div>
                 </div>
                 <div class="chip-pins">
+                  <span class="pin-tag">MIPS-32 Core</span>
+                  <span class="pin-tag">Verilog HDL</span>
+                  <span class="pin-tag">Artix-7 FPGA</span>
+                  <span class="pin-tag">Hazard Unit</span>
+                  <span class="pin-tag">PyTorch DL</span>
+                  <span class="pin-tag">OpenCV ALPR</span>
                   <span class="pin-tag">GPIO</span>
                   <span class="pin-tag">UART</span>
-                  <span class="pin-tag">SPI</span>
-                  <span class="pin-tag">I2C</span>
-                  <span class="pin-tag">FSM 7-State</span>
-                  <span class="pin-tag">EDA Bare-Metal</span>
+                  <span class="pin-tag">SPI / I2C</span>
                   <span class="pin-tag">Vivado Timing</span>
-                  <span class="pin-tag">Wokwi IoT</span>
+                  <span class="pin-tag">Cloud DLP</span>
+                  <span class="pin-tag">AES-256-GCM</span>
+                  <span class="pin-tag">WebSockets</span>
+                  <span class="pin-tag">ReAct AI</span>
                 </div>
               </div>
             </div>

@@ -73,30 +73,32 @@ export class TerminalApp {
   <span class="term-bold">${resumeData.personal.name}</span> (${resumeData.personal.tagline})<br>
   📍 ${resumeData.personal.location}<br>
   🎓 CGPA: 8.73 in B.Tech ECE (Institute of Engineering & Management, Kolkata)<br>
-  ⚡ Published IEEE Author (IEMENTECH 2026) | VLSI Intern (Jadavpur Univ) | Automation Trainee (SAIL)<br>
-  💼 Target: Embedded Software, VLSI / Hardware Co-Design, Firmware & Python/Systems Roles.
+  ⚡ Published IEEE Author (IEMENTECH 2026) | VLSI Intern (Jadavpur Univ) | FPGA Core Designer | Automation Trainee (SAIL)<br>
+  💼 Target: VLSI / FPGA Design, Embedded Software, Firmware, Deep Learning & Systems Roles.
 </div>`;
         break;
 
       case 'skills':
         response = `
-<div class="term-section-title">=== TECHNICAL SKILLS & PROFICIENCY ===</div>
+<div class="term-section-title">=== TECHNICAL SKILLS & PROJECT PROFICIENCY ===</div>
 <br>
 <span class="term-bold">Programming Languages:</span><br>
-• C / C++          [====================] 92% (Primary Systems Language)<br>
-• Embedded C       [=================== ] 90% (Firmware, Microcontrollers)<br>
-• Python           [====================] 94% (AI, Backend, Automation)<br>
-• MATLAB           [=================   ] 85% (Simulation & Modeling)<br>
-• JS / TypeScript  [=================   ] 82% (Web & Tooling)<br>
+• Python           [====================] 96% (PyTorch, Deep Learning, FastAPI, OpenCV, Forensics)<br>
+• Verilog HDL      [=================== ] 94% (5-Stage Pipelined MIPS, Hazard Unit, Forwarding)<br>
+• C / C++          [=================== ] 92% (Bare-Metal Systems, Vivado FSM, Assembler Engine)<br>
+• Embedded C       [=================== ] 91% (Microcontrollers, Firmware, Sensors, Wokwi)<br>
+• JS / TypeScript  [=================== ] 90% (Node.js, Express, React, WebSockets, D3.js)<br>
+• SQL              [==================  ] 88% (PostgreSQL, SQLite, AST SQLi Defense)<br>
+• MATLAB           [=================   ] 85% (Simulation & Signal Modeling)<br>
 <br>
-<span class="term-bold">Hardware & Embedded Domains:</span><br>
-• Microprocessors & Microcontrollers (ARM, ESP, 8051, AVR)<br>
-• Hardware Interfacing: GPIO, UART, SPI, I2C Buses<br>
-• VLSI Design & EDA Workflows (IC Fabrication Flow, Bare-metal pipelines)<br>
-• Control Systems, Finite State Machines (FSM), Real-Time Processing<br>
+<span class="term-bold">Project-Validated Engineering Domains:</span><br>
+• <span class="term-cmd">Embedded & VLSI (96%):</span> Synthesizable 32-Bit 5-Stage MIPS Core, Hazard Unit & Forwarding, Xilinx Vivado (Artix-7 Basys 3 FPGA, 94 mW), ARM/AVR/ESP Microcontrollers, SPI/I2C/UART/GPIO, Wokwi<br>
+• <span class="term-cmd">AI & Machine Learning (95%):</span> PyTorch CNN+LSTM Captioning, Beam Search, Autonomous ReAct Agents (Gemini AI), OpenCV ALPR Pipeline, Cost-Weighted XGBoost, Explainable AI (SHAP), YOLOv2<br>
+• <span class="term-cmd">Cloud Security & DFIR (94%):</span> Cloud DLP Architecture, AST SQLi Interception, AES-256-GCM Zero-Trust, Live RAM Forensics, ISO/IEC 27037 (Cloud DLP Shield, BitTrace DFIR)<br>
+• <span class="term-cmd">FinTech & Real-Time (92%):</span> Greedy Debt Graph Simplification, Bidirectional WebSockets, Server-Sent Events, D3.js Burndown, OCR Parsing (SplitFlow, PulseFlow Agile)<br>
 <br>
-<span class="term-bold">Tools & Platforms:</span><br>
-Xilinx Vivado, Wokwi Simulator, Git, CI/CD, Agile (Jira), Linux/Bash, Django, LaTeX.`;
+<span class="term-bold">Frameworks, Tools & Platforms:</span><br>
+Xilinx Vivado, Basys 3 FPGA, PyTorch, OpenCV, Tesseract OCR, FastAPI, Node.js, Express, React 18, D3.js, Wokwi Simulator, Docker, Git/GitHub, CI/CD, PostgreSQL, SQLite, Linux/Bash.`;
         break;
 
       case 'projects':
@@ -194,7 +196,7 @@ INTERNSHIPS:<br>
 PUBLICATIONS:<br>
 • IEEE IEMENTECH 2026: Enhancing Wearable Depression Management (DOI: 10.1109/IEMENTech202669403.2026.11434403)<br><br>
 SKILLS:<br>
-Microcontrollers, Embedded C, C++, Python, MATLAB, Vivado, Wokwi, Git, GPIO/UART/SPI/I2C.
+Verilog HDL, 5-Stage MIPS Vivado FPGA, PyTorch CNN-LSTM, OpenCV, ReAct AI, Embedded C, C++, Python, Microcontrollers, Wokwi, Git, Docker, Linux.
 </div>`;
         } else {
           response = `cat: ${parts[1] || 'file'}: No such file or directory. Try 'cat resume'.`;
@@ -220,7 +222,7 @@ Microcontrollers, Embedded C, C++, Python, MATLAB, Vivado, Wokwi, Git, GPIO/UART
    <span class="nf-apple">:MMMMMMMMMMMMMMMMMMMMMMMM:      </span> <span class="nf-bold">Internships:</span> Jadavpur Univ & SAIL
    <span class="nf-apple">.MMMMMMMMMMMMMMMMMMMMMMMMX.     </span> <span class="nf-bold">Shell:</span> zsh 5.9 (x86_64-apple-darwin24.0)
    <span class="nf-apple"> kMMMMMMMMMMMMMMMMMMMMMMMMWd.   </span> <span class="nf-bold">Uptime:</span> 6 Semesters Completed
-   <span class="nf-apple">  .XMMMMMMMMMMMMMMMMMMMMMMMMk   </span> <span class="nf-bold">Memory:</span> 94% Python, 92% C++, 90% Emb-C
+   <span class="nf-apple">  .XMMMMMMMMMMMMMMMMMMMMMMMMk   </span> <span class="nf-bold">Proficiency:</span> Verilog HDL, PyTorch, C++, Python
    <span class="nf-apple">    .cooollllllccccllllllol.    </span>
 </pre>`;
         break;

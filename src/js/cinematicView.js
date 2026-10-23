@@ -152,9 +152,9 @@ export class CinematicView {
             <span class="metric-desc">Bare-metal IC EDA design at Jadavpur Univ & plant automation systems at SAIL.</span>
           </div>
           <div class="metric-stat-card">
-            <span class="metric-num">15+</span>
+            <span class="metric-num">18+</span>
             <span class="metric-title">Production & Embedded Projects</span>
-            <span class="metric-desc">From night-vision sensor fusion & 7-state traffic FSMs to full-stack logistics platforms.</span>
+            <span class="metric-desc">From 32-bit MIPS RISC core & PyTorch deep learning to real-time AI fraud detection & IoT architectures.</span>
           </div>
         </div>
 
@@ -209,8 +209,19 @@ export class CinematicView {
                 </div>
               `).join('')}
 
-              <div class="cine-tags-cluster">
-                ${resumeData.skills.tools.map(t => `<span class="cine-tech-pill">${t}</span>`).join('')}
+              <div class="cine-skills-categories-container">
+                <div class="cine-skills-cat-title">Project-Validated Technical Proficiencies</div>
+                ${resumeData.skills.categories.map(cat => `
+                  <div class="cine-skill-cat-block">
+                    <div class="cine-skill-cat-head">
+                      <span class="cine-cat-icon-name">${cat.icon} <strong>${cat.name}</strong></span>
+                      <span class="cine-cat-context">${cat.projectContext}</span>
+                    </div>
+                    <div class="cine-tags-cluster">
+                      ${cat.skills.map(t => `<span class="cine-tech-pill">${t}</span>`).join('')}
+                    </div>
+                  </div>
+                `).join('')}
               </div>
             </div>
           </div>
@@ -323,12 +334,14 @@ export class CinematicView {
             </div>
 
             <div class="cine-ai-suggestions">
-              <button class="ai-suggest-chip" data-q="Why should we hire Abhishek for our engineering team?">Why hire Abhishek?</button>
-              <button class="ai-suggest-chip" data-q="Tell me about the BitTrace Bitcoin Forensics tool built this week">BitTrace Bitcoin Forensics?</button>
-              <button class="ai-suggest-chip" data-q="What are Abhishek's VLSI and bare-metal EDA skills?">VLSI & Bare-Metal Skills?</button>
-              <button class="ai-suggest-chip" data-q="Tell me about his IEEE conference publication">IEEE Publication Details?</button>
-              <button class="ai-suggest-chip" data-q="What projects did Abhishek build in the last week and recent months?">Projects in Last Week?</button>
-              <button class="ai-suggest-chip" data-q="What is his CGPA and college track record?">CGPA & College?</button>
+              <button class="ai-suggest-chip" data-q="Tell me about the 32-bit pipelined MIPS processor project in Verilog">💻 MIPS 32-Bit Core (Verilog & Vivado)</button>
+              <button class="ai-suggest-chip" data-q="Tell me about the Image Caption Generator project using PyTorch and LSTM">🧠 Caption Studio (PyTorch CNN-LSTM)</button>
+              <button class="ai-suggest-chip" data-q="Tell me about the Return-Guard autonomous AI returns agent">🤖 ReturnGuard (ReAct & Vision Agent)</button>
+              <button class="ai-suggest-chip" data-q="Tell me about the license plate recognition project">🚗 PlateVision ALPR (OpenCV & OCR)</button>
+              <button class="ai-suggest-chip" data-q="Tell me about FraudGuard.AI credit card fraud detection">💳 FraudGuard.AI (Sub-2.8ms Fraud AI)</button>
+              <button class="ai-suggest-chip" data-q="Explain Cloud DLP Shield and AST SQLi interception">🔒 Cloud DLP Shield (SQLi & AESX)</button>
+              <button class="ai-suggest-chip" data-q="Why should we hire Abhishek for our engineering team?">⭐ Why Hire Abhishek?</button>
+              <button class="ai-suggest-chip" data-q="What is his CGPA and college track record?">🎓 CGPA (8.73) & Internships</button>
             </div>
 
             <div class="cine-ai-chat-box" id="cine-chat-log">
@@ -435,9 +448,9 @@ export class CinematicView {
     if (filter === 'recent') {
       list = list.filter(p => p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week' || p.badge.includes('Recent') || p.badge.includes('Latest'));
     } else if (filter === 'embedded') {
-      list = list.filter(p => p.tags.some(t => ['Embedded Systems', 'VLSI', 'IoT', 'Wokwi', 'Hardware', 'Thermal IR', 'YOLOv2', 'Finite State Machines'].includes(t)) || p.title.toLowerCase().includes('embedded') || p.title.toLowerCase().includes('traffic'));
+      list = list.filter(p => p.tags.some(t => ['Embedded Systems', 'VLSI', 'Verilog HDL', 'MIPS Architecture', 'FPGA', 'Xilinx Vivado', 'IoT', 'Wokwi', 'Hardware', 'Thermal IR', 'YOLOv2', 'Finite State Machines'].includes(t)) || p.title.toLowerCase().includes('embedded') || p.title.toLowerCase().includes('mips') || p.title.toLowerCase().includes('traffic'));
     } else if (filter === 'software') {
-      list = list.filter(p => p.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'Django', 'REST APIs', 'Enterprise Architecture', 'AI', 'Digital Forensics', 'Cryptography', 'WebSockets', 'D3.js', 'FinTech', 'OCR Scanner', 'Debt Simplification', 'Machine Learning', 'Explainable AI', 'Cloud Security', 'Data Loss Prevention', 'AES-256-GCM', 'SQL Injection', 'XGBoost'].includes(t)));
+      list = list.filter(p => p.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'PyTorch', 'Computer Vision', 'Deep Learning', 'Autonomous Agents', 'ReAct Framework', 'OpenCV', 'Tesseract OCR', 'Django', 'REST APIs', 'Enterprise Architecture', 'AI', 'Digital Forensics', 'Cryptography', 'WebSockets', 'D3.js', 'FinTech', 'OCR Scanner', 'Debt Simplification', 'Machine Learning', 'Explainable AI', 'Cloud Security', 'Data Loss Prevention', 'AES-256-GCM', 'SQL Injection', 'XGBoost'].includes(t)));
     }
 
     return list.map(p => {
@@ -791,7 +804,7 @@ export class CinematicView {
         loadingMsg.innerHTML = formatAiResponse(answer);
       } catch (err) {
         console.error('AI query error:', err);
-        loadingMsg.innerHTML = "I am ready to assist! Please ask about Abhishek's <strong>CGPA (8.73)</strong>, <strong>VLSI internship</strong>, <strong>SAIL automation</strong>, <strong>IEEE publication</strong>, or <strong>projects in the last 6 months</strong>.";
+        loadingMsg.innerHTML = "I am ready to assist! Please ask about Abhishek's <strong>CGPA (8.73)</strong>, <strong>latest projects (MIPS 32-Bit Processor, Caption Studio, ReturnGuard, PlateVision, FraudGuard.AI)</strong>, <strong>technical skills</strong>, <strong>VLSI internship</strong>, or <strong>IEEE publication</strong>.";
       }
       chatLog.scrollTop = chatLog.scrollHeight;
     };

@@ -8,7 +8,7 @@ export class AIApp {
     this.history = [
       {
         role: 'assistant',
-        text: `Hello! I am **Siri for Abhishek**, an AI assistant pre-trained on Abhishek Kumar's complete engineering resume, research publications, and GitHub activity.\n\nRecruiters and visitors can search anything directly about his **8.73 CGPA**, **VLSI internship at Jadavpur**, **SAIL automation training**, **IEEE paper**, or **projects built in the last 6 months**! Try asking below or click a suggestion chip.`
+        text: `Hello! I am **Resume Assistant for Abhishek**, an AI assistant pre-trained on Abhishek Kumar's verified engineering credentials, latest October 2026 GitHub releases, and technical skills.\n\nRecruiters and hiring managers can query anything directly about his **32-Bit Pipelined MIPS Processor (Verilog HDL)**, **Neural Image Caption Studio (PyTorch CNN-LSTM)**, **ReturnGuard Multimodal Agent**, **PlateVision ALPR**, **FraudGuard.AI**, **Cloud DLP Shield**, **8.73 CGPA**, **VLSI internship**, or **IEEE paper**! Try asking below or click a prompt chip.`
       }
     ];
     this.isThinking = false;
@@ -30,16 +30,16 @@ export class AIApp {
             </div>
             <div class="ai-title-meta">
               <div class="ai-title-row">
-                <span class="ai-title">Apple Intelligence & Gemini AI</span>
+                <span class="ai-title">Placement Resume Assistant</span>
                 <span class="ai-status-badge" id="ai-active-mode-badge">Resume Intelligence Ready</span>
               </div>
-              <span class="ai-subtitle">Direct semantic resume search for recruiters & hiring managers</span>
+              <span class="ai-subtitle">Direct semantic resume & project search for recruiters and engineering leads</span>
             </div>
           </div>
 
           <div class="ai-header-actions">
             <button class="ai-action-btn" id="btn-ai-key-settings" title="Configure Live Google Gemini API Key">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0 2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
               <span>API Key</span>
             </button>
             <button class="ai-action-btn" id="btn-clear-ai-chat" title="Clear Chat History">
@@ -58,12 +58,16 @@ export class AIApp {
         <div class="ai-suggestions-tray">
           <span class="suggestion-tray-title">Quick Recruiter Prompts:</span>
           <div class="suggestion-chips-carousel">
-            <button class="chip-btn 3d-chip" data-query="What is Abhishek's CGPA and academic background?">🎓 CGPA & College</button>
+            <button class="chip-btn 3d-chip" data-query="Tell me about the 32-bit pipelined MIPS processor project in Verilog">💻 MIPS 32-Bit Core (Verilog & Vivado)</button>
+            <button class="chip-btn 3d-chip" data-query="Tell me about the Image Caption Generator project using PyTorch and LSTM">🧠 Caption Studio (PyTorch CNN-LSTM)</button>
+            <button class="chip-btn 3d-chip" data-query="Tell me about the Return-Guard autonomous AI returns agent">🤖 ReturnGuard (ReAct & Vision Agent)</button>
+            <button class="chip-btn 3d-chip" data-query="Tell me about the license plate recognition project">🚗 PlateVision ALPR (OpenCV & OCR)</button>
+            <button class="chip-btn 3d-chip" data-query="Tell me about FraudGuard.AI credit card fraud detection">💳 FraudGuard.AI (Sub-2.8ms Fraud AI)</button>
+            <button class="chip-btn 3d-chip" data-query="Explain Cloud DLP Shield and AST SQLi interception">🔒 Cloud DLP Shield (SQLi & AESX)</button>
+            <button class="chip-btn 3d-chip" data-query="How do SplitFlow and PulseFlow Agile work?">⚡ SplitFlow & PulseFlow</button>
             <button class="chip-btn 3d-chip" data-query="Tell me about his VLSI internship at Jadavpur University">⚡ VLSI Internship</button>
-            <button class="chip-btn 3d-chip" data-query="What projects has he created in the last 6 months on GitHub?">🚀 Last 6-Month Projects</button>
             <button class="chip-btn 3d-chip" data-query="Explain his published IEEE research paper">📄 IEEE Publication</button>
             <button class="chip-btn 3d-chip" data-query="Why should our company hire Abhishek for an engineering role?">⭐ Why Hire Abhishek?</button>
-            <button class="chip-btn 3d-chip" data-query="What are his core technical skills and programming languages?">💻 Core Tech Skills</button>
             <button class="chip-btn 3d-chip" data-query="How can I contact Abhishek for an interview?">✉️ Contact & Email</button>
           </div>
         </div>
@@ -162,7 +166,7 @@ export class AIApp {
     } catch (e) {
       this.history.push({
         role: 'assistant',
-        text: `Abhishek Kumar is an ECE undergraduate at IEM Kolkata (8.73 CGPA) with VLSI and automation internships, IEEE publication, and strong hands-on embedded and software engineering skills.`
+        text: `Abhishek Kumar is a B.Tech ECE candidate at IEM Kolkata (8.73 CGPA) with 18+ production projects in Processor Design & FPGA (MIPS 32-Bit Core in Verilog), Deep Learning & Vision (Neural Caption Studio, PlateVision ALPR), Autonomous Agents (ReturnGuard), Cyber Defense (FraudGuard.AI, Cloud DLP Shield), Systems (SplitFlow, PulseFlow, BitTrace DFIR), VLSI EDA at Jadavpur, and an IEEE publication.`
       });
     } finally {
       this.isThinking = false;
