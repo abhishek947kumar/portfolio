@@ -8,7 +8,7 @@ export class AIApp {
     this.history = [
       {
         role: 'assistant',
-        text: `Hello! I am **Resume Assistant for Abhishek**, an AI assistant pre-trained on Abhishek Kumar's verified engineering credentials, latest October 2026 GitHub releases, and technical skills.\n\nRecruiters and hiring managers can query anything directly about his **32-Bit Pipelined MIPS Processor (Verilog HDL)**, **Neural Image Caption Studio (PyTorch CNN-LSTM)**, **ReturnGuard Multimodal Agent**, **PlateVision ALPR**, **FraudGuard.AI**, **Cloud DLP Shield**, **8.73 CGPA**, **VLSI internship**, or **IEEE paper**! Try asking below or click a prompt chip.`
+        text: `Hello! I am **Resume Assistant for Abhishek**, an AI assistant pre-trained on Abhishek Kumar's verified engineering credentials, latest October 2026 GitHub releases, and technical skills.\n\nRecruiters and hiring managers can query anything directly about his **AMBA AXI4 Protocol Subsystem (100 MHz Timing Closure)**, **32-Bit Pipelined MIPS Processor (Verilog HDL)**, **Dual-Port RAM Modules**, **Sensor Decision Unit**, **Neural Image Caption Studio (PyTorch CNN-LSTM)**, **ReturnGuard Multimodal Agent**, **PlateVision ALPR**, **FraudGuard.AI**, **Cloud DLP Shield**, **8.73 CGPA**, **VLSI internship**, or **IEEE paper**! Try asking below or click a prompt chip.`
       }
     ];
     this.isThinking = false;
@@ -166,7 +166,7 @@ export class AIApp {
     } catch (e) {
       this.history.push({
         role: 'assistant',
-        text: `Abhishek Kumar is a B.Tech ECE candidate at IEM Kolkata (8.73 CGPA) with 18+ production projects in Processor Design & FPGA (MIPS 32-Bit Core in Verilog), Deep Learning & Vision (Neural Caption Studio, PlateVision ALPR), Autonomous Agents (ReturnGuard), Cyber Defense (FraudGuard.AI, Cloud DLP Shield), Systems (SplitFlow, PulseFlow, BitTrace DFIR), VLSI EDA at Jadavpur, and an IEEE publication.`
+        text: `Abhishek Kumar is a B.Tech ECE candidate at IEM Kolkata (8.73 CGPA) with 21+ production projects in SoC Protocols & Processor Architecture (AMBA AXI4 Protocol, MIPS 32-Bit Core, Dual-Port BRAM, Sensor Telemetry in Verilog), Deep Learning & Vision (Neural Caption Studio, PlateVision ALPR), Autonomous Agents (ReturnGuard), Cyber Defense (FraudGuard.AI, Cloud DLP Shield), Systems (SplitFlow, PulseFlow, BitTrace DFIR), VLSI EDA at Jadavpur, and an IEEE publication.`
       });
     } finally {
       this.isThinking = false;

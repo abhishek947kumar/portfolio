@@ -34,7 +34,7 @@ export class GitHubService {
       name: resumeData.personal.name,
       avatar_url: "https://avatars.githubusercontent.com/u/153946376?v=4",
       html_url: `https://github.com/${this.username}`,
-      public_repos: 18,
+      public_repos: 21,
       followers: 1,
       following: 3,
       bio: resumeData.personal.tagline
@@ -174,6 +174,45 @@ export class GitHubService {
 
   getFallbackRepos() {
     return [
+      {
+        id: 1435201001,
+        name: "sensor-status-decision-unit",
+        fullName: "abhishek947kumar/sensor-status-decision-unit",
+        description: "🚨 Combinational logic-based sensor decision unit designed in Verilog HDL using AMD/Xilinx Vivado. Classifies 8-bit digital sensor input into Normal, Warning, and Critical states with active LED indicators, alarm buzzer, and automated test suite. Synthesized for Artix-7 (Basys 3).",
+        url: "https://github.com/abhishek947kumar/sensor-status-decision-unit",
+        language: "Verilog",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Oct 25, 2026",
+        isLast6Months: true,
+        topics: ["verilog", "vivado", "fpga", "basys3", "artix7", "combinational-logic", "sensor-decision", "telemetry"]
+      },
+      {
+        id: 1435102002,
+        name: "simple-memory-module",
+        fullName: "abhishek947kumar/simple-memory-module",
+        description: "💾 Production-ready synthesizable RAM module project in Verilog RTL for AMD/Xilinx Vivado. Demonstrates Single-Port & True Dual-Port synchronous RAMs with READ_FIRST/WRITE_FIRST modes, BRAM & Distributed LUT RAM inference, and GitHub Actions CI.",
+        url: "https://github.com/abhishek947kumar/simple-memory-module",
+        language: "Verilog",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Oct 25, 2026",
+        isLast6Months: true,
+        topics: ["verilog", "vivado", "fpga", "ram", "bram", "lut-ram", "dual-port", "semiconductor-memory", "icarus-verilog"]
+      },
+      {
+        id: 1430983003,
+        name: "axi-protocol-fpga",
+        fullName: "abhishek947kumar/axi-protocol-fpga",
+        description: "🏛️ ARM AMBA AXI4 high-performance communication protocol subsystem for Xilinx Artix-7 FPGAs with 5-channel burst engine (1-256 beats), 1x2 crossbar router, AXI4-Lite bridge, dual-port BRAM, 100 MHz timing closure, and SystemVerilog SVA test suite.",
+        url: "https://github.com/abhishek947kumar/axi-protocol-fpga",
+        language: "Verilog",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Oct 23, 2026",
+        isLast6Months: true,
+        topics: ["amba", "axi4", "axi4-lite", "verilog", "systemverilog", "sva", "vivado", "fpga", "artix7", "soc", "timing-closure"]
+      },
       {
         id: 1430565363,
         name: "mips-32bit-pipelined-processor",
@@ -374,6 +413,33 @@ export class GitHubService {
 
   getFallbackEvents() {
     return [
+      {
+        id: "evt-sensor-1",
+        type: "PushEvent",
+        repo: "sensor-status-decision-unit",
+        repoUrl: "https://github.com/abhishek947kumar/sensor-status-decision-unit",
+        date: "Oct 25, 2026",
+        description: "Pushed: 'Release combinational sensor decision unit: 8-bit range classifier, Artix-7 Basys 3 XDC & Python tester'",
+        icon: "git-push"
+      },
+      {
+        id: "evt-memory-1",
+        type: "PushEvent",
+        repo: "simple-memory-module",
+        repoUrl: "https://github.com/abhishek947kumar/simple-memory-module",
+        date: "Oct 25, 2026",
+        description: "Pushed: 'Release synthesizable RAM modules: Single/True Dual-Port RAMs, BRAM/LUT inference & Icarus CI'",
+        icon: "git-push"
+      },
+      {
+        id: "evt-axi-1",
+        type: "PushEvent",
+        repo: "axi-protocol-fpga",
+        repoUrl: "https://github.com/abhishek947kumar/axi-protocol-fpga",
+        date: "Oct 23, 2026",
+        description: "Pushed: 'Release AMBA AXI4 protocol subsystem: 5 channels, 1x2 crossbar, 100 MHz timing closure & SVA tests'",
+        icon: "git-push"
+      },
       {
         id: "evt-mips-1",
         type: "PushEvent",

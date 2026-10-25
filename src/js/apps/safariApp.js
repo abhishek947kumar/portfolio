@@ -53,6 +53,15 @@ export class SafariApp {
           <button class="safari-bookmark" data-url="https://doi.org/10.1109/IEMENTech202669403.2026.11434403">
             <span class="bm-icon">📄</span> IEEE Paper (DOI)
           </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/sensor-status-decision-unit">
+            <span class="bm-icon">🚨</span> Sensor Decision Unit
+          </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/simple-memory-module">
+            <span class="bm-icon">💾</span> Dual-Port RAM Module
+          </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/axi-protocol-fpga">
+            <span class="bm-icon">🏛️</span> AMBA AXI4 Protocol
+          </button>
           <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/mips-32bit-pipelined-processor">
             <span class="bm-icon">⚡</span> MIPS 32-Bit Core
           </button>
@@ -376,6 +385,96 @@ export class SafariApp {
               <p>Full-stack enterprise supply chain engine for multi-dealer inventory management, freight manifests, and automated status telemetry.</p>
               <div class="gh-actions-row">
                 <a href="https://github.com/abhishek947kumar/Logistics-Management-System" target="_blank" class="gh-open-btn">View Full Code on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('sensor-status-decision-unit') || url.includes('sensor')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">🚨</span>
+              <h3>abhishek947kumar / <strong>sensor-status-decision-unit</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">Combinational logic-based sensor decision unit designed in Verilog HDL using AMD/Xilinx Vivado. Classifies 8-bit digital sensor input into Normal, Warning, and Critical states with active LED indicators and alarm output.</p>
+            <div class="gh-meta-row">
+              <span>💎 Verilog HDL</span>
+              <span>⚙️ AMD/Xilinx Vivado</span>
+              <span>⚡ Artix-7 Basys 3 FPGA</span>
+              <span>⭐ Latest Release (Oct 25, 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>Combinational Logic Architecture:</strong> Single-cycle, zero-latency pure combinational datapath (zero FFs, zero latches) evaluating 8-bit unsigned sensor telemetry (0-255) in real time.</p>
+              <p><strong>Deterministic 3-State Partitioning:</strong> Classifies inputs into Normal (0–49, green LED), Warning (50–79, yellow LED), and Critical (80–255, red LED + continuous alarm buzzer) states.</p>
+              <p><strong>FPGA Synthesis & Verification:</strong> Fully synthesized, placed, and routed for AMD/Xilinx Artix-7 (XC7A35TCPG236-1) with Basys 3 XDC constraints and clean DRC reports, tested with an interactive Python CLI simulator.</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/sensor-status-decision-unit" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('simple-memory-module') || url.includes('memory-module')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">💾</span>
+              <h3>abhishek947kumar / <strong>simple-memory-module</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">Production-ready synthesizable RAM module project in Verilog RTL for AMD/Xilinx Vivado with Single-Port and True Dual-Port synchronous architectures.</p>
+            <div class="gh-meta-row">
+              <span>💎 Verilog-2001 RTL</span>
+              <span>⚙️ AMD Vivado</span>
+              <span>⚡ Xilinx 7-Series (Artix-7)</span>
+              <span>⭐ Latest Release (Oct 25, 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>RAM Architectures:</strong> Parameterized Single-Port and True Dual-Port synchronous semiconductor RAM modules with independent read/write ports and clock domains.</p>
+              <p><strong>Read-During-Write Modes:</strong> Supports both READ_FIRST (native BRAM read-before-write) and WRITE_FIRST (transparent) modes for collision handling.</p>
+              <p><strong>FPGA Primitive Inference:</strong> Demonstrates automated synthesis and mapping into target FPGA Block RAM (BRAM) and Distributed Slice LUT-RAM with automated GitHub Actions CI (Icarus Verilog).</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/simple-memory-module" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('axi-protocol-fpga') || url.includes('axi')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">🏛️</span>
+              <h3>abhishek947kumar / <strong>axi-protocol-fpga</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">AMBA AXI4 High-Performance Protocol Subsystem on FPGA with 5-channel burst engine, 1x2 crossbar router, AXI4-Lite bridge, and 100 MHz Artix-7 timing closure.</p>
+            <div class="gh-meta-row">
+              <span>💎 Verilog-2001</span>
+              <span>🛡️ SystemVerilog (SVA)</span>
+              <span>⚡ Xilinx Artix-7 FPGA</span>
+              <span>⭐ Latest Release (Oct 23, 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>AMBA AXI4 Protocol Engine:</strong> Full 5-channel memory-mapped transfers (AW, W, B, AR, R) supporting multi-beat burst generation up to 256 beats (INCR, WRAP, FIXED).</p>
+              <p><strong>Single-Cycle WRAP Hardware Optimization:</strong> Bitwise masking replacing hardware division/multiplication for power-of-2 cacheline bursts, saving DSP48 slices and eliminating multi-cycle latency.</p>
+              <p><strong>FPGA Timing Closure & Verification:</strong> Synthesized targeting Artix-7 (xc7a35t) meeting timing at 106.4 MHz (+0.605ns positive WNS) with 21/21 passing testbench verification scenarios validated via SystemVerilog Assertions (SVA).</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/axi-protocol-fpga" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
               </div>
             </div>
           </div>

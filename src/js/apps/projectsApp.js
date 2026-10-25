@@ -73,7 +73,7 @@ export class ProjectsApp {
                 <span class="stat-label">IEEE Publication</span>
               </div>
               <div class="stat-box">
-                <span class="stat-num">18+</span>
+                <span class="stat-num">21+</span>
                 <span class="stat-label">GitHub Repos</span>
               </div>
               <div class="stat-box">
@@ -113,7 +113,13 @@ export class ProjectsApp {
       if (this.activeFilter === 'recent') {
         if (proj.createdPeriod !== 'Last 6 Months' && proj.createdPeriod !== 'Last 1 Week' && proj.createdPeriod !== 'Latest Release' && !proj.badge.includes('Recent') && !proj.badge.includes('Latest')) return false;
       } else if (this.activeFilter === 'embedded') {
-        const isEmb = proj.tags.some(t => ['Embedded Systems', 'Embedded C', 'Microcontrollers', 'Wokwi', 'Xilinx Vivado', 'Finite State Machines', 'Thermal IR', 'YOLOv2', 'Verilog HDL', 'MIPS32 ISA', '5-Stage Pipeline', 'FPGA', 'Artix-7', 'Hardware Forwarding', 'Computer Architecture'].includes(t));
+        const isEmb = proj.tags.some(t => [
+          'Embedded Systems', 'Embedded C', 'Microcontrollers', 'Wokwi', 'Xilinx Vivado', 'Finite State Machines',
+          'Thermal IR', 'YOLOv2', 'Verilog HDL', 'MIPS32 ISA', '5-Stage Pipeline', 'FPGA', 'Artix-7',
+          'Hardware Forwarding', 'Computer Architecture', 'AMBA AXI4', 'AXI4-Lite', 'RAM', 'Block RAM (BRAM)',
+          'Distributed LUT RAM', 'RTL Design', 'Digital Design', 'Combinational Logic', 'Sensor Telemetry',
+          'Hardware Design', 'Basys 3', 'SystemVerilog (SVA)', 'SoC Interconnect', 'Bus Protocols', 'Timing Closure'
+        ].includes(t)) || proj.title.toLowerCase().includes('verilog') || proj.title.toLowerCase().includes('fpga') || proj.title.toLowerCase().includes('axi') || proj.title.toLowerCase().includes('ram');
         if (!isEmb) return false;
       } else if (this.activeFilter === 'software') {
         const isSw = proj.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'Django', 'React', 'GraphQL', 'Gemini AI API', 'WebSockets', 'D3.js', 'FinTech', 'Enterprise Architecture', 'Machine Learning', 'Explainable AI', 'XGBoost', 'PyTorch', 'Deep Learning', 'Computer Vision', 'LSTM', 'MobileNetV3', 'Beam Search', 'Autonomous Agents', 'ReAct Framework', 'Multimodal Vision', 'OpenCV', 'Tesseract OCR'].includes(t));

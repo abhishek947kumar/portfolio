@@ -84,7 +84,7 @@ export class TerminalApp {
 <br>
 <span class="term-bold">Programming Languages:</span><br>
 • Python           [====================] 96% (PyTorch, Deep Learning, FastAPI, OpenCV, Forensics)<br>
-• Verilog HDL      [=================== ] 94% (5-Stage Pipelined MIPS, Hazard Unit, Forwarding)<br>
+• Verilog HDL      [=================== ] 95% (AMBA AXI4 Subsystem, 5-Stage MIPS Core, Dual-Port RAM)<br>
 • C / C++          [=================== ] 92% (Bare-Metal Systems, Vivado FSM, Assembler Engine)<br>
 • Embedded C       [=================== ] 91% (Microcontrollers, Firmware, Sensors, Wokwi)<br>
 • JS / TypeScript  [=================== ] 90% (Node.js, Express, React, WebSockets, D3.js)<br>
@@ -92,13 +92,13 @@ export class TerminalApp {
 • MATLAB           [=================   ] 85% (Simulation & Signal Modeling)<br>
 <br>
 <span class="term-bold">Project-Validated Engineering Domains:</span><br>
-• <span class="term-cmd">Embedded & VLSI (96%):</span> Synthesizable 32-Bit 5-Stage MIPS Core, Hazard Unit & Forwarding, Xilinx Vivado (Artix-7 Basys 3 FPGA, 94 mW), ARM/AVR/ESP Microcontrollers, SPI/I2C/UART/GPIO, Wokwi<br>
+• <span class="term-cmd">Embedded & VLSI (96%):</span> AMBA AXI4 Protocol Subsystem (100 MHz Timing Met), 32-Bit 5-Stage MIPS Core, Dual-Port BRAM/LUT-RAM, Combinational Sensor Telemetry, Xilinx Vivado (Artix-7 Basys 3 FPGA, 94 mW), ARM/AVR/ESP Microcontrollers, SPI/I2C/UART/GPIO, Wokwi<br>
 • <span class="term-cmd">AI & Machine Learning (95%):</span> PyTorch CNN+LSTM Captioning, Beam Search, Autonomous ReAct Agents (Gemini AI), OpenCV ALPR Pipeline, Cost-Weighted XGBoost, Explainable AI (SHAP), YOLOv2<br>
 • <span class="term-cmd">Cloud Security & DFIR (94%):</span> Cloud DLP Architecture, AST SQLi Interception, AES-256-GCM Zero-Trust, Live RAM Forensics, ISO/IEC 27037 (Cloud DLP Shield, BitTrace DFIR)<br>
 • <span class="term-cmd">FinTech & Real-Time (92%):</span> Greedy Debt Graph Simplification, Bidirectional WebSockets, Server-Sent Events, D3.js Burndown, OCR Parsing (SplitFlow, PulseFlow Agile)<br>
 <br>
 <span class="term-bold">Frameworks, Tools & Platforms:</span><br>
-Xilinx Vivado, Basys 3 FPGA, PyTorch, OpenCV, Tesseract OCR, FastAPI, Node.js, Express, React 18, D3.js, Wokwi Simulator, Docker, Git/GitHub, CI/CD, PostgreSQL, SQLite, Linux/Bash.`;
+Xilinx Vivado, Artix-7 Basys 3 FPGA, AMBA AXI4, SystemVerilog (SVA), PyTorch, OpenCV, Tesseract OCR, FastAPI, Node.js, Express, React 18, D3.js, Wokwi Simulator, Docker, Git/GitHub, CI/CD, PostgreSQL, SQLite, Linux/Bash.`;
         break;
 
       case 'projects':

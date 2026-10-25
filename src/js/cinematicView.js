@@ -152,9 +152,9 @@ export class CinematicView {
             <span class="metric-desc">Bare-metal IC EDA design at Jadavpur Univ & plant automation systems at SAIL.</span>
           </div>
           <div class="metric-stat-card">
-            <span class="metric-num">18+</span>
+            <span class="metric-num">21+</span>
             <span class="metric-title">Production & Embedded Projects</span>
-            <span class="metric-desc">From 32-bit MIPS RISC core & PyTorch deep learning to real-time AI fraud detection & IoT architectures.</span>
+            <span class="metric-desc">From AMBA AXI4 protocol & 32-bit MIPS RISC core to deep learning vision, cloud DLP & real-time telemetry.</span>
           </div>
         </div>
 
@@ -446,9 +446,14 @@ export class CinematicView {
   renderProjectCards(filter) {
     let list = resumeData.projects;
     if (filter === 'recent') {
-      list = list.filter(p => p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week' || p.badge.includes('Recent') || p.badge.includes('Latest'));
+      list = list.filter(p => p.createdPeriod === 'Last 6 Months' || p.createdPeriod === 'Last 1 Week' || p.createdPeriod === 'Latest Release' || p.badge.includes('Recent') || p.badge.includes('Latest'));
     } else if (filter === 'embedded') {
-      list = list.filter(p => p.tags.some(t => ['Embedded Systems', 'VLSI', 'Verilog HDL', 'MIPS Architecture', 'FPGA', 'Xilinx Vivado', 'IoT', 'Wokwi', 'Hardware', 'Thermal IR', 'YOLOv2', 'Finite State Machines'].includes(t)) || p.title.toLowerCase().includes('embedded') || p.title.toLowerCase().includes('mips') || p.title.toLowerCase().includes('traffic'));
+      list = list.filter(p => p.tags.some(t => [
+        'Embedded Systems', 'VLSI', 'Verilog HDL', 'MIPS Architecture', 'FPGA', 'Xilinx Vivado', 'IoT', 'Wokwi', 'Hardware',
+        'Thermal IR', 'YOLOv2', 'Finite State Machines', 'AMBA AXI4', 'AXI4-Lite', 'RAM', 'Block RAM (BRAM)',
+        'Distributed LUT RAM', 'RTL Design', 'Digital Design', 'Combinational Logic', 'Sensor Telemetry', 'Hardware Design',
+        'Basys 3', 'SystemVerilog (SVA)', 'SoC Interconnect', 'Bus Protocols', 'Timing Closure'
+      ].includes(t)) || p.title.toLowerCase().includes('embedded') || p.title.toLowerCase().includes('mips') || p.title.toLowerCase().includes('traffic') || p.title.toLowerCase().includes('axi') || p.title.toLowerCase().includes('ram') || p.title.toLowerCase().includes('sensor'));
     } else if (filter === 'software') {
       list = list.filter(p => p.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'PyTorch', 'Computer Vision', 'Deep Learning', 'Autonomous Agents', 'ReAct Framework', 'OpenCV', 'Tesseract OCR', 'Django', 'REST APIs', 'Enterprise Architecture', 'AI', 'Digital Forensics', 'Cryptography', 'WebSockets', 'D3.js', 'FinTech', 'OCR Scanner', 'Debt Simplification', 'Machine Learning', 'Explainable AI', 'Cloud Security', 'Data Loss Prevention', 'AES-256-GCM', 'SQL Injection', 'XGBoost'].includes(t)));
     }

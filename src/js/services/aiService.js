@@ -211,7 +211,10 @@ Always answer accurately, concisely, and with concrete technical proof from his 
     }
 
     if (qLower.includes('project') || qLower.includes('work') || qLower.includes('portfolio') || qLower.includes('build') || qLower.includes('repo')) {
-      return `Abhishek has engineered 18+ production projects across processor architecture, deep learning, cloud security, digital forensics, real-time systems, and embedded hardware:\n\n` +
+      return `Abhishek has engineered 21+ production projects across processor architecture, deep learning, cloud security, digital forensics, real-time systems, and embedded hardware:\n\n` +
+        `• **Sensor Status Decision Unit** (Oct 25, 2026): Pure combinational logic telemetry classifier in Verilog HDL for Artix-7 Basys 3 FPGA with zero-latency LED status and audio/visual alarm outputs.\n` +
+        `• **Synthesizable Synchronous RAM Modules** (Oct 25, 2026): Parameterized Single-Port & True Dual-Port synchronous semiconductor RAM modules with READ_FIRST/WRITE_FIRST modes, BRAM & Distributed LUT-RAM inference, and automated CI.\n` +
+        `• **AMBA AXI4 Protocol Subsystem** (Oct 23, 2026): 5-channel high-performance memory-mapped AXI4 burst engine (1-256 beats), 1x2 crossbar router, AXI4-Lite bridge, dual-port BRAM, 100 MHz Artix-7 timing closure, and SystemVerilog SVA test suite.\n` +
         `• **32-Bit 5-Stage Pipelined MIPS Processor** (Oct 23, 2026): Custom Verilog RISC processor core with EX/MEM hardware forwarding, load-use hazard bubble unit, custom Python assembler, and Artix-7 Basys 3 FPGA synthesis in Vivado (94 mW, 0 DRC violations).\n` +
         `• **Neural Image Caption Studio** (Oct 17, 2026): Full-stack multimodal deep learning app combining CNN feature extractors (MobileNetV3/ResNet-50) with an autoregressive LSTM decoder, Beam Search, and token probability inspection.\n` +
         `• **ReturnGuard ReAct Agent** (Oct 17, 2026): Autonomous governed ReAct AI agent with multimodal computer vision defect inspection, anti-fraud rules, and Human-in-the-Loop triage.\n` +
@@ -272,7 +275,7 @@ Always answer accurately, concisely, and with concrete technical proof from his 
     }
 
     // Default intelligent overview
-    return `Abhishek Kumar is a B.Tech ECE candidate at IEM Kolkata (CGPA 8.73, Class of 2027) with an IEEE publication at IEMENTECH 2026, VLSI internship at Jadavpur University, industrial training at SAIL, and 18+ production projects in Processor Design & FPGA (MIPS 32-Bit Core in Verilog), Deep Learning & Vision (Neural Caption Studio, PlateVision ALPR), Autonomous Agents (ReturnGuard ReAct Agent), Cyber Defense (FraudGuard.AI, Cloud DLP Shield), and Real-Time Systems (SplitFlow, PulseFlow Agile, BitTrace DFIR).\n\nFeel free to ask about his **CGPA (8.73)**, **internships**, **latest flagship projects (MIPS Processor, Caption Studio, ReturnGuard, PlateVision, FraudGuard.AI)**, **skills matrix**, **IEEE paper**, or **why you should hire him**!`;
+    return `Abhishek Kumar is a B.Tech ECE candidate at IEM Kolkata (CGPA 8.73, Class of 2027) with an IEEE publication at IEMENTECH 2026, VLSI internship at Jadavpur University, industrial training at SAIL, and 21+ production projects in SoC Protocols & FPGA (AMBA AXI4 Protocol Subsystem, MIPS 32-Bit Core, Dual-Port BRAM, Sensor Unit in Verilog), Deep Learning & Vision (Neural Caption Studio, PlateVision ALPR), Autonomous Agents (ReturnGuard ReAct Agent), Cyber Defense (FraudGuard.AI, Cloud DLP Shield), and Real-Time Systems (SplitFlow, PulseFlow Agile, BitTrace DFIR).\n\nFeel free to ask about his **CGPA (8.73)**, **internships**, **latest flagship projects (AMBA AXI4, MIPS Processor, Caption Studio, ReturnGuard, PlateVision, FraudGuard.AI)**, **skills matrix**, **IEEE paper**, or **why you should hire him**!`;
   }
 }
 
