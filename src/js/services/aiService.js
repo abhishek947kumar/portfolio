@@ -37,7 +37,34 @@ Candidate Profile & Credentials:
   2) Vocational Trainee @ Steel Authority of India Limited (SAIL) (May 2025 – June 2025): Real-time plant automation software modules, industrial database telemetry, fault logging.
 
 Flagship Engineering Projects (Verified on GitHub @abhishek947kumar):
-1) 32-Bit 5-Stage Pipelined MIPS Processor Core (Released Oct 23, 2026):
+1) AMBA AXI4 High-Performance Protocol Subsystem on FPGA (Released Oct 23, 2026):
+   - Industry-standard ARM AMBA AXI4 memory-mapped subsystem supporting 5 independent channels (AW, W, B, AR, R) with multi-beat burst generation (INCR, WRAP, FIXED) up to 256 beats.
+   - Patented single-cycle bitwise masking formula replacing hardware division/multiplication for power-of-2 cacheline WRAP bursts, saving DSP48 slices and eliminating multi-cycle latency.
+   - 1x2 crossbar router with address decoding routing bursts to dual-port BRAM and bridging single-beat transfers to AXI4-Lite CSR peripherals with DECERR handling.
+   - Synthesized on Xilinx Artix-7 (xc7a35t) meeting timing closure at 106.4 MHz (+0.605ns WNS, 0 failing endpoints) with 21/21 passing verification scenarios validated via SystemVerilog Assertions (SVA).
+   - Tech: Verilog HDL, AMBA AXI4, AXI4-Lite, SystemVerilog (SVA), Xilinx Vivado, Artix-7 FPGA, Timing Closure.
+
+2) Sensor Status Decision Unit in Verilog HDL & Artix-7 FPGA (Released Oct 25, 2026):
+   - Pure combinational logic core in Verilog HDL classifying raw 8-bit digital sensor telemetry (0-255) into Normal (0-49, green LED), Warning (50-79, yellow LED), and Critical (80-255, red LED + continuous alarm buzzer) operational states with single-cycle zero latency (zero FFs, zero latches).
+   - Fully synthesized, placed, and routed for AMD/Xilinx Artix-7 (Basys 3) with clean DRC reports and Basys 3 XDC constraints.
+   - Exhaustive automated testbench suite alongside an interactive Python CLI simulator.
+   - Tech: Verilog HDL, Xilinx Vivado, Artix-7 Basys 3, Combinational Logic, Sensor Telemetry.
+
+3) Synthesizable Synchronous RAM Modules in Verilog RTL (Released Oct 25, 2026):
+   - Parameterized Single-Port and True Dual-Port synchronous semiconductor RAM memory designs in Verilog-2001.
+   - Parameterized address and data widths supporting independent synchronous read/write access with concurrent clock domains, chip enables, and both READ_FIRST (native BRAM) and WRITE_FIRST (transparent) modes.
+   - Synthesizable into Xilinx 7-Series target primitives with automated inference between Block RAM (BRAM) and distributed Slice LUT-RAM.
+   - Automated CI workflow on GitHub Actions using Icarus Verilog running self-checking testbenches with scoreboards.
+   - Tech: Verilog HDL, Xilinx Vivado, RAM, BRAM, Distributed LUT-RAM, FPGA, RTL Design.
+
+4) AirCanvas AI — Touchless Gesture-Based Virtual Drawing System (Released Oct 25, 2026):
+   - Real-time touchless drawing application transforming hand gestures into digital brush strokes via webcam, allowing users to draw in the air without a mouse or touchscreen.
+   - Powered by Google MediaPipe Hand Landmarker tracking 21 3D hand landmarks at 30+ FPS, distinguishing draw (1 finger), select/hover (2 fingers), erase (3 fingers/fist), and hold-to-clear (5-finger open palm) states.
+   - Custom velocity-adaptive Exponential Moving Average (EMA) coordinate smoothing that eliminates camera sensor jitter while preserving crisp corners and fast gestures.
+   - Dual-panel interactive studio with mirrored skeleton webcam feed and digital drawing canvas featuring 7 vibrant colors, 4 brush thicknesses, dwell-time visual countdown, instant thumb-index pinch selection, hold-to-clear palm confirmation, and high-resolution PNG export.
+   - Tech: Python, OpenCV, MediaPipe, Computer Vision, NumPy, Gesture Recognition, Interactive AI.
+
+5) 32-Bit 5-Stage Pipelined MIPS Processor Core (Released Oct 23, 2026):
    - Patterson & Hennessy 5-stage RISC pipeline (IF -> ID -> EX -> MEM -> WB) in Verilog HDL.
    - Hardware forwarding unit (EX-to-EX & MEM-to-EX zero-stall ALU dependencies), hardware load-use hazard stall unit (1-cycle bubble), and branch flush control.
    - Synthesized on Xilinx Artix-7 Basys 3 FPGA (XC7A35TCPG236-1) in Vivado: 2,810 Slice LUTs (13.51%), 1,569 FFs (3.77%), 94 mW total power, 0 DRC violations.

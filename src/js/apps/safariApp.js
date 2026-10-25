@@ -53,6 +53,9 @@ export class SafariApp {
           <button class="safari-bookmark" data-url="https://doi.org/10.1109/IEMENTech202669403.2026.11434403">
             <span class="bm-icon">📄</span> IEEE Paper (DOI)
           </button>
+          <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/air-canvas-ai">
+            <span class="bm-icon">🎨</span> AirCanvas AI
+          </button>
           <button class="safari-bookmark" data-url="https://github.com/abhishek947kumar/sensor-status-decision-unit">
             <span class="bm-icon">🚨</span> Sensor Decision Unit
           </button>
@@ -385,6 +388,36 @@ export class SafariApp {
               <p>Full-stack enterprise supply chain engine for multi-dealer inventory management, freight manifests, and automated status telemetry.</p>
               <div class="gh-actions-row">
                 <a href="https://github.com/abhishek947kumar/Logistics-Management-System" target="_blank" class="gh-open-btn">View Full Code on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (url.includes('air-canvas-ai') || url.includes('aircanvas')) {
+      return `
+        <div class="safari-web-page gh-repo-page">
+          <div class="page-card gh-card">
+            <div class="gh-repo-header">
+              <span class="gh-icon">🎨</span>
+              <h3>abhishek947kumar / <strong>air-canvas-ai</strong></h3>
+              <span class="gh-public-tag">Public</span>
+            </div>
+            <p class="gh-repo-desc">Touchless gesture-based virtual drawing system in Python using Google MediaPipe 3D Hand Landmarker, OpenCV, velocity-adaptive EMA coordinate smoothing, and touchless dwell & pinch selection.</p>
+            <div class="gh-meta-row">
+              <span>🐍 Python 3.10+</span>
+              <span>👁️ OpenCV & MediaPipe</span>
+              <span>⚡ Adaptive EMA Filter</span>
+              <span>⭐ Latest Release (Oct 25, 2026)</span>
+            </div>
+            <div class="gh-readme-box">
+              <h4>README.md</h4>
+              <p><strong>3D Hand Landmarker Tracking:</strong> Real-time tracking of 21 3D hand coordinates via webcam at 30+ FPS, distinguishing single-finger drawing, two-finger pointer/hover, 3-finger/fist eraser, and 5-finger hold-to-clear gestures.</p>
+              <p><strong>Velocity-Adaptive EMA Smoothing:</strong> Dynamically adjusts smoothing factor based on fingertip velocity, eliminating sensor jitter during intricate drawing while keeping rapid strokes responsive.</p>
+              <p><strong>Dual-Panel Interactive Studio:</strong> Side-by-side view with mirrored skeleton webcam feed and digital drawing canvas featuring 7 colors, 4 brush thicknesses, dwell visual countdown, pinch selection, and 1-click PNG export.</p>
+              <div class="gh-actions-row">
+                <a href="https://github.com/abhishek947kumar/air-canvas-ai" target="_blank" class="gh-open-btn">View Full Code & Repository on GitHub</a>
               </div>
             </div>
           </div>

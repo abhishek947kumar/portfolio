@@ -2,8 +2,8 @@
 import { resumeData } from '../data/resumeData.js';
 
 const GITHUB_USERNAME = 'abhishek947kumar';
-const CACHE_KEY_REPOS = 'agy_portfolio_repos_cache';
-const CACHE_KEY_EVENTS = 'agy_portfolio_events_cache';
+const CACHE_KEY_REPOS = 'agy_portfolio_repos_cache_v4';
+const CACHE_KEY_EVENTS = 'agy_portfolio_events_cache_v4';
 const CACHE_EXPIRY_MS = 10 * 60 * 1000; // 10 minutes
 
 export class GitHubService {
@@ -34,7 +34,7 @@ export class GitHubService {
       name: resumeData.personal.name,
       avatar_url: "https://avatars.githubusercontent.com/u/153946376?v=4",
       html_url: `https://github.com/${this.username}`,
-      public_repos: 21,
+      public_repos: 22,
       followers: 1,
       following: 3,
       bio: resumeData.personal.tagline
@@ -174,6 +174,19 @@ export class GitHubService {
 
   getFallbackRepos() {
     return [
+      {
+        id: 1435300000,
+        name: "air-canvas-ai",
+        fullName: "abhishek947kumar/air-canvas-ai",
+        description: "🎨 Touchless gesture-based virtual drawing system in Python using MediaPipe 3D Hand Landmarker, OpenCV, velocity-adaptive EMA coordinate smoothing, and touchless dwell & pinch selection.",
+        url: "https://github.com/abhishek947kumar/air-canvas-ai",
+        language: "Python",
+        stars: 0,
+        forks: 0,
+        updatedFormatted: "Oct 25, 2026",
+        isLast6Months: true,
+        topics: ["python", "opencv", "mediapipe", "computer-vision", "hand-tracking", "gesture-recognition", "virtual-canvas"]
+      },
       {
         id: 1435201001,
         name: "sensor-status-decision-unit",
@@ -413,6 +426,15 @@ export class GitHubService {
 
   getFallbackEvents() {
     return [
+      {
+        id: "evt-aircanvas-1",
+        type: "PushEvent",
+        repo: "air-canvas-ai",
+        repoUrl: "https://github.com/abhishek947kumar/air-canvas-ai",
+        date: "Oct 25, 2026",
+        description: "Pushed: 'Release AirCanvas AI: MediaPipe 21-landmark 3D hand tracking, adaptive EMA smoothing & dual-panel canvas'",
+        icon: "git-push"
+      },
       {
         id: "evt-sensor-1",
         type: "PushEvent",

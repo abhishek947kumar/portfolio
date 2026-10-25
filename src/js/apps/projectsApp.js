@@ -73,7 +73,7 @@ export class ProjectsApp {
                 <span class="stat-label">IEEE Publication</span>
               </div>
               <div class="stat-box">
-                <span class="stat-num">21+</span>
+                <span class="stat-num">22+</span>
                 <span class="stat-label">GitHub Repos</span>
               </div>
               <div class="stat-box">
@@ -122,7 +122,7 @@ export class ProjectsApp {
         ].includes(t)) || proj.title.toLowerCase().includes('verilog') || proj.title.toLowerCase().includes('fpga') || proj.title.toLowerCase().includes('axi') || proj.title.toLowerCase().includes('ram');
         if (!isEmb) return false;
       } else if (this.activeFilter === 'software') {
-        const isSw = proj.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'Django', 'React', 'GraphQL', 'Gemini AI API', 'WebSockets', 'D3.js', 'FinTech', 'Enterprise Architecture', 'Machine Learning', 'Explainable AI', 'XGBoost', 'PyTorch', 'Deep Learning', 'Computer Vision', 'LSTM', 'MobileNetV3', 'Beam Search', 'Autonomous Agents', 'ReAct Framework', 'Multimodal Vision', 'OpenCV', 'Tesseract OCR'].includes(t));
+        const isSw = proj.tags.some(t => ['JavaScript', 'TypeScript', 'Python', 'FastAPI', 'Django', 'React', 'GraphQL', 'Gemini AI API', 'WebSockets', 'D3.js', 'FinTech', 'Enterprise Architecture', 'Machine Learning', 'Explainable AI', 'XGBoost', 'PyTorch', 'Deep Learning', 'Computer Vision', 'LSTM', 'MobileNetV3', 'Beam Search', 'Autonomous Agents', 'ReAct Framework', 'Multimodal Vision', 'OpenCV', 'Tesseract OCR', 'MediaPipe', 'Gesture Recognition', 'NumPy'].includes(t));
         if (!isSw) return false;
       } else if (this.activeFilter === 'security') {
         const isSec = proj.tags.some(t => ['Digital Forensics', 'Cryptography', 'Security Algorithms', 'Pixel Manipulation', 'Windows API', 'ISO 27037', 'C++', 'Cloud Security', 'Data Loss Prevention', 'Cyber Defense', 'SQL Injection', 'AES-256-GCM'].includes(t));

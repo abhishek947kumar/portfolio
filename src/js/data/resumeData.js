@@ -26,9 +26,10 @@ export const resumeData = {
       "Published IEEE Researcher: First-author publication at IEEE IEMENTECH 2026 on wearable piezoelectric energy harvesting & healthcare technology.",
       "Machine Learning & Cyber Defense: Engineered FraudGuard.AI (sub-10ms XGBoost ensemble & Explainable AI for real-time payment fraud prevention) and Cloud DLP Shield (dual-engine AST SQLi detection & AESX authenticated field encryption).",
       "Digital Forensics & Systems Security: Architected BitTrace DFIR for live volatile RAM inspection and ISO/IEC 27037 evidence preservation.",
+      "Computer Vision & Gesture Systems: Engineered AirCanvas AI, a real-time touchless drawing application utilizing MediaPipe 21-landmark 3D hand tracking, velocity-adaptive EMA coordinate smoothing, and touchless dwell/pinch interactions.",
       "Computer Vision & Edge Pipelines: Built PlateVision AI (8-stage OpenCV ALPR pipeline with Tesseract OCR multi-PSM ensemble) and Embedded Night-Vision ADAS (active IR + thermal sensor fusion with YOLOv2).",
       "Hands-On Industrial Internships: Bare-metal IC design optimization at Jadavpur University & plant automation software systems at SAIL (Steel Authority of India Limited).",
-      "Active Continuous Learner: Built & deployed 21+ production-grade software, AI, cybersecurity, and embedded systems in 2026 alone with continuous GitHub releases (@abhishek947kumar)."
+      "Active Continuous Learner: Built & deployed 22+ production-grade software, AI, cybersecurity, and embedded systems in 2026 alone with continuous GitHub releases (@abhishek947kumar)."
     ],
     targetRoles: [
       "Embedded Software Engineer / Firmware Engineer",
@@ -123,22 +124,6 @@ export const resumeData = {
       ]
     },
     {
-      id: "mips-32bit-processor",
-      title: "32-Bit 5-Stage Pipelined MIPS Processor Core in Verilog & Vivado",
-      subtitle: "Hazard Resolution Unit, Hardware Forwarding, Custom Python Cross-Assembler & Basys 3 FPGA Synthesis",
-      badge: "Latest (Oct 2026) | VLSI & Processor Architecture",
-      createdPeriod: "Latest Release",
-      githubUrl: "https://github.com/abhishek947kumar/mips-32bit-pipelined-processor",
-      tags: ["Verilog HDL", "Xilinx Vivado", "MIPS32 ISA", "5-Stage Pipeline", "FPGA", "Artix-7", "Hardware Forwarding", "Python Assembler", "Computer Architecture"],
-      description: "A production-grade, 5-stage pipelined 32-bit MIPS processor core designed in Verilog HDL following the classic Patterson & Hennessy microarchitecture. Verified via cycle-accurate simulation with custom assembly benchmarks and synthesized targeting Xilinx Artix-7 FPGAs (XC7A35TCPG236-1 / Basys 3) with zero DRC violations and 94 mW total power consumption.",
-      highlights: [
-        "Pipelined Microarchitecture & Hazards: 5-stage datapath (IF -> ID -> EX -> MEM -> WB) with EX-to-EX and MEM-to-EX forwarding (zero-stall on ALU-ALU RAW dependencies), hardware load-use hazard detection unit (automatic 1-cycle bubble insertion), and branch/jump pipeline flush control.",
-        "FPGA Synthesis & Low Power: Synthesized on Xilinx Artix-7 Basys 3 FPGA utilizing 2,810 Slice LUTs (13.51%), 1,569 Flip-Flops (3.77%), and 0 Block RAM (leveraging distributed LUT-RAM), drawing only 94 mW total on-chip power with zero DRC errors.",
-        "Custom Two-Pass Cross-Assembler: Built a Python assembler translating symbolic MIPS assembly to hex/binary MIF memory initialization files with pseudo-instruction macro expansion, label resolution, and syntax validation.",
-        "Peripherals & Verification Suite: 4/4 passing automated assembly benchmark suites (Fibonacci sequence, ALU stress, memory load/store, hazard forward verification) with time-multiplexed 4-digit 7-segment display driver and 16 status LEDs."
-      ]
-    },
-    {
       id: "sensor-status-decision-unit",
       title: "Sensor Status Decision Unit in Verilog HDL & Artix-7 FPGA",
       subtitle: "Combinational Range Telemetry Classifier (Normal / Warning / Critical), Status LED Drivers & Vivado Synthesis",
@@ -168,6 +153,38 @@ export const resumeData = {
         "Read-During-Write Hazard Mitigation: Implements both READ_FIRST (native BRAM read-before-write) and WRITE_FIRST (transparent feed-through) memory access behaviors.",
         "FPGA Hardware Mapping: Synthesizable into Xilinx 7-Series target primitives, validating automated inference between dedicated Block RAM (BRAM) and distributed Slice LUT-RAM.",
         "Self-Checking Verification & CI: Comprehensive testbench with automated data integrity scoreboards running in continuous integration (GitHub Actions + Icarus Verilog)."
+      ]
+    },
+    {
+      id: "air-canvas-ai",
+      title: "AirCanvas AI — Touchless Gesture-Based Virtual Drawing System",
+      subtitle: "MediaPipe 21-Landmark Hand Tracking, Velocity-Adaptive EMA Smoothing, 7-Color Palette & Virtual Canvas",
+      badge: "Latest (Oct 2026) | Computer Vision & AI Gestures",
+      createdPeriod: "Latest Release",
+      githubUrl: "https://github.com/abhishek947kumar/air-canvas-ai",
+      tags: ["Python", "OpenCV", "MediaPipe", "Computer Vision", "NumPy", "Gesture Recognition", "Interactive AI", "Digital Canvas"],
+      description: "A real-time, touchless drawing application that transforms physical hand gestures into digital brush strokes via webcam, enabling users to create art in the air without a mouse, keyboard, or touchscreen. Powered by Google MediaPipe Hand Landmarker (21 3D landmarks) and velocity-adaptive Exponential Moving Average (EMA) coordinate smoothing.",
+      highlights: [
+        "3D Hand Landmarker Pipeline: Tracks 21 3D hand coordinates in real time at 30+ FPS using MediaPipe, distinguishing single-finger drawing, two-finger pointer/hover, 3-finger/fist eraser, and 5-finger hold-to-clear gestures.",
+        "Velocity-Adaptive EMA Smoothing: Implements an exponential moving average filter with dynamic alpha scaling that eliminates camera sensor jitter during slow deliberate drawing while preserving responsiveness during rapid strokes.",
+        "Touchless Interactive Studio: Dual-panel workspace with live mirrored skeleton webcam feed and digital drawing canvas featuring 7 vibrant colors, 4 brush thicknesses, dwell-time visual countdown, and instant thumb-index pinch selection.",
+        "Advanced Canvas Controls: Hold-to-clear 5-finger palm confirmation, multi-level stroke undo/redo stack, eraser mode, dark slate / light paper theme toggling, and timestamped high-resolution PNG export."
+      ]
+    },
+    {
+      id: "mips-32bit-processor",
+      title: "32-Bit 5-Stage Pipelined MIPS Processor Core in Verilog & Vivado",
+      subtitle: "Hazard Resolution Unit, Hardware Forwarding, Custom Python Cross-Assembler & Basys 3 FPGA Synthesis",
+      badge: "Latest (Oct 2026) | VLSI & Processor Architecture",
+      createdPeriod: "Latest Release",
+      githubUrl: "https://github.com/abhishek947kumar/mips-32bit-pipelined-processor",
+      tags: ["Verilog HDL", "Xilinx Vivado", "MIPS32 ISA", "5-Stage Pipeline", "FPGA", "Artix-7", "Hardware Forwarding", "Python Assembler", "Computer Architecture"],
+      description: "A production-grade, 5-stage pipelined 32-bit MIPS processor core designed in Verilog HDL following the classic Patterson & Hennessy microarchitecture. Verified via cycle-accurate simulation with custom assembly benchmarks and synthesized targeting Xilinx Artix-7 FPGAs (XC7A35TCPG236-1 / Basys 3) with zero DRC violations and 94 mW total power consumption.",
+      highlights: [
+        "Pipelined Microarchitecture & Hazards: 5-stage datapath (IF -> ID -> EX -> MEM -> WB) with EX-to-EX and MEM-to-EX forwarding (zero-stall on ALU-ALU RAW dependencies), hardware load-use hazard detection unit (automatic 1-cycle bubble insertion), and branch/jump pipeline flush control.",
+        "FPGA Synthesis & Low Power: Synthesized on Xilinx Artix-7 Basys 3 FPGA utilizing 2,810 Slice LUTs (13.51%), 1,569 Flip-Flops (3.77%), and 0 Block RAM (leveraging distributed LUT-RAM), drawing only 94 mW total on-chip power with zero DRC errors.",
+        "Custom Two-Pass Cross-Assembler: Built a Python assembler translating symbolic MIPS assembly to hex/binary MIF memory initialization files with pseudo-instruction macro expansion, label resolution, and syntax validation.",
+        "Peripherals & Verification Suite: 4/4 passing automated assembly benchmark suites (Fibonacci sequence, ALU stress, memory load/store, hazard forward verification) with time-multiplexed 4-digit 7-segment display driver and 16 status LEDs."
       ]
     },
     {
@@ -415,8 +432,9 @@ export const resumeData = {
         id: "ai-ml",
         name: "AI, Deep Learning & Computer Vision",
         icon: "🤖",
-        projectContext: "Neural Image Caption Studio, ReturnGuard ReAct Agent, PlateVision ALPR & FraudGuard.AI",
+        projectContext: "AirCanvas AI, Neural Image Caption Studio, ReturnGuard ReAct Agent, PlateVision ALPR & FraudGuard.AI",
         skills: [
+          "MediaPipe Hand Landmarker (21 3D)", "Velocity-Adaptive EMA Smoothing", "Gesture Recognition Systems",
           "PyTorch & Torchvision", "CNN + LSTM Encoder-Decoder", "Beam Search Decoding (alpha=0.7)",
           "Autonomous ReAct Agents", "Multimodal Defect Vision", "8-Stage OpenCV ALPR",
           "Tesseract OCR Ensemble", "XGBoost Ensemble", "Explainable AI (XAI / SHAP)",
@@ -551,6 +569,26 @@ export const resumeData = {
   ],
 
   socialFeed: [
+    {
+      id: "post-li-aircanvas",
+      platform: "LinkedIn",
+      author: "Abhishek Kumar",
+      date: "October 25, 2026",
+      title: "Launched AirCanvas AI — Touchless Gesture Drawing System with MediaPipe & Python! 🎨🖐️",
+      content: "Delighted to release AirCanvas AI: a real-time touchless drawing application transforming hand gestures into digital brush strokes via webcam! Uses Google's MediaPipe Hand Landmarker to track 21 3D landmarks at 30+ FPS, paired with a custom velocity-adaptive Exponential Moving Average (EMA) filter that completely eliminates camera sensor jitter. Features a dual-panel studio with skeleton tracking, 7 vibrant colors, 4 brush thicknesses, dwell-time & pinch selection, hold-to-clear palm confirmation, and high-res PNG export.",
+      url: "https://www.linkedin.com/in/abhishek947kumar",
+      tags: ["#ComputerVision", "#MediaPipe", "#Python", "#OpenCV", "#GestureRecognition", "#AI", "#HCI"]
+    },
+    {
+      id: "post-gh-aircanvas",
+      platform: "GitHub",
+      author: "abhishek947kumar",
+      date: "October 25, 2026",
+      title: "Released air-canvas-ai on GitHub @abhishek947kumar 🎨",
+      content: "Touchless gesture-based virtual drawing system in Python using MediaPipe 3D Hand Landmarker, OpenCV, velocity-adaptive EMA coordinate smoothing, and touchless dwell & pinch selection.",
+      url: "https://github.com/abhishek947kumar/air-canvas-ai",
+      tags: ["#Python", "#OpenCV", "#MediaPipe", "#ComputerVision", "#GestureRecognition"]
+    },
     {
       id: "post-li-sensor",
       platform: "LinkedIn",
@@ -775,6 +813,10 @@ export const resumeData = {
 
   // Structured Knowledge Base for Instant Natural Language Search
   qaKnowledgeBase: [
+    {
+      keywords: ["aircanvas", "air canvas", "gesture", "drawing", "hand tracking", "mediapipe", "hand landmarker", "touchless", "brush", "canvas"],
+      answer: "AirCanvas AI — Touchless Gesture-Based Virtual Drawing System (Released Oct 25, 2026):\n• **Computer Vision & Hand Tracking**: Powered by Google MediaPipe Hand Landmarker tracking 21 3D hand landmarks in real time at 30+ FPS, distinguishing draw (1 finger), select/hover (2 fingers), erase (3 fingers/fist), and hold-to-clear (5-finger open palm) states.\n• **Velocity-Adaptive EMA Smoothing**: Features an adaptive exponential moving average filter with dynamic alpha coefficient scaling based on fingertip velocity, eliminating camera sensor jitter while preserving sharp corners and rapid strokes.\n• **Interactive Studio**: Dual-panel interface with mirrored camera feed and high-resolution digital art canvas featuring 7 vibrant colors, 4 brush thicknesses, dwell-time visual countdown, and instant thumb-index pinch selection.\n• **Advanced Features**: Multi-level stroke undo/redo stack, hold confirmation for canvas clearing, dark/light paper theme toggle, and 1-click timestamped PNG export.\n• **Repository**: [github.com/abhishek947kumar/air-canvas-ai](https://github.com/abhishek947kumar/air-canvas-ai)"
+    },
     {
       keywords: ["sensor", "sensor status", "decision unit", "telemetry", "alarm", "normal_led", "warning_led", "critical_led", "combinational logic"],
       answer: "Sensor Status Decision Unit (Verilog HDL & Artix-7 FPGA - Released Oct 25, 2026 on GitHub @abhishek947kumar):\n• **Combinational Architecture**: Optimized combinational logic core in Verilog HDL evaluating raw 8-bit unsigned digital telemetry (0-255) with single-cycle zero latency (zero flip-flops, zero latches).\n• **Operational States**: Maps telemetry into 3 discrete states: Normal (0-49, green LED), Warning (50-79, yellow LED), and Critical (80-255, red LED + continuous alarm buzzer output).\n• **FPGA Synthesis**: Synthesized and routed for AMD/Xilinx Artix-7 (XC7A35TCPG236-1 / Basys 3) using Vivado Design Suite with clean DRC reports and Basys 3 XDC constraints.\n• **Interactive Tester**: Includes automated testbenches covering edge boundaries (49/50, 79/80, 0, 255) alongside an interactive Python CLI simulator.\n• **Repository**: [github.com/abhishek947kumar/sensor-status-decision-unit](https://github.com/abhishek947kumar/sensor-status-decision-unit)"

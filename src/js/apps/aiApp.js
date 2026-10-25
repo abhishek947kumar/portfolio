@@ -58,6 +58,10 @@ export class AIApp {
         <div class="ai-suggestions-tray">
           <span class="suggestion-tray-title">Quick Recruiter Prompts:</span>
           <div class="suggestion-chips-carousel">
+            <button class="chip-btn 3d-chip" data-query="Tell me about the AirCanvas AI touchless gesture drawing project">🎨 AirCanvas AI (Gesture Studio)</button>
+            <button class="chip-btn 3d-chip" data-query="Tell me about the AMBA AXI4 protocol subsystem on FPGA">🏛️ AMBA AXI4 Subsystem (100MHz FPGA)</button>
+            <button class="chip-btn 3d-chip" data-query="Tell me about the synthesizable synchronous RAM modules in Verilog">💾 Dual-Port RAM Modules (Vivado BRAM)</button>
+            <button class="chip-btn 3d-chip" data-query="Tell me about the Sensor Status Decision Unit on Artix-7">🚨 Sensor Decision Unit (Basys 3)</button>
             <button class="chip-btn 3d-chip" data-query="Tell me about the 32-bit pipelined MIPS processor project in Verilog">💻 MIPS 32-Bit Core (Verilog & Vivado)</button>
             <button class="chip-btn 3d-chip" data-query="Tell me about the Image Caption Generator project using PyTorch and LSTM">🧠 Caption Studio (PyTorch CNN-LSTM)</button>
             <button class="chip-btn 3d-chip" data-query="Tell me about the Return-Guard autonomous AI returns agent">🤖 ReturnGuard (ReAct & Vision Agent)</button>
